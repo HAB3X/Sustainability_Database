@@ -2,6 +2,15 @@
 
 A free, open-source website listing sustainable businesses across Australia and New Zealand. Each listing includes a sustainability rating, business type, key practices, and indicators of greenwashing where applicable.
 
+The platform will include a public submission feature, allowing users to suggest companies for review. All submissions will be moderated and verified before publication.
+
+Research and business profiles will be documented using GitHub Issues and Markdown files.
+
+All information will be peer-reviewed or supported by credible sources before inclusion.
+
+The website will be built using HTML, CSS, and JavaScript;  Hosted publicly via GitHub Pages;
+Open source and freely accessible
+
 ### Defining Sustainability
 
 Our sustainability criteria draw from circular economy principles and social responsibility standards:
@@ -38,20 +47,19 @@ Our sustainability criteria draw from circular economy principles and social res
 ### Sector Categories (examples)
 
 - Fashion
-Food & Beverage
-Technology
-Automotive
-Health & Wellness
-Home & Furniture
-Travel & Tourism
-Transport
-Education
-Finance
-Construction & Real Estate
-Energy
-Entertainment
-Agriculture
-Event Management
-Pets
-Sport
-Advocacy
+- Food & Beverage
+- Technology
+- Automotive
+- Health & Wellness
+- Home & Furniture
+- Travel & Tourism
+- Transport
+- Education
+- Finance
+- Construction & Real Estate
+- Energy
+- Entertainment
+- Agriculture
+- Event Management
+- Pets
+- Sport
