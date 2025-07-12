@@ -1,7 +1,5 @@
 # Businesses
 
----
-
 title: example
 
 slug: example (e.g. ethical-threads)
@@ -9,9 +7,9 @@ slug: example (e.g. ethical-threads)
 sector: example
 
 tags:
-  - B-Corp
-  - Virgin materials used
-  - Fair Trade
+  - `B-Corp`
+  - `Virgin materials used`
+  - `Fair Trade`
 
 certifications:
 
