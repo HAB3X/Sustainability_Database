@@ -64,7 +64,6 @@
       margin-top: 1rem;
     }
 
-    /* 🔍 Search bar styles */
     #search-container {
       margin-top: 2rem;
     }
@@ -103,7 +102,6 @@
 
   <h1>Sustainable Business Directory: Australia & New Zealand</h1>
 
-  <!-- 🔍 Search Bar -->
   <div id="search-container">
     <input type="text" id="search-input" placeholder="Search pages or categories...">
     <ul id="results"></ul>
@@ -129,57 +127,73 @@
   </p>
 
   <h2>Defining Sustainability</h2>
-  <p>Our sustainability criteria draw from circular economy principles and social responsibility standards:</p>
+  <p>Our sustainability criteria are grounded in circular economy principles and social responsibility standards. These provide a balanced framework for evaluating how businesses affect the environment, society, and long-term economic wellbeing.</p>
 
   <h3>Environmental Sustainability</h3>
   <ul>
-    <li>Product longevity and durability</li>
-    <li>Reuse, repair, or refurbishment of materials</li>
-    <li>Energy and material efficiency throughout production</li>
-    <li>Circular and product-as-a-service business models</li>
-    <li>Use of renewable and biodegradable resources (biological cycles)</li>
-    <li>Net-positive environmental impact</li>
+    <li>Designing products for longevity, durability, and minimal waste</li>
+    <li>Encouraging reuse, repair, and refurbishment over disposal</li>
+    <li>Ensuring high energy and material efficiency throughout production</li>
+    <li>Embracing circular models and product-as-a-service solutions</li>
+    <li>Using renewable, compostable, or biodegradable resources within regenerative cycles</li>
+    <li>Striving for a net-positive environmental impact</li>
   </ul>
 
   <h3>Social Responsibility</h3>
   <ul>
-    <li>Fair and ethical treatment of workers</li>
-    <li>Support for communities and charitable engagement</li>
-    <li>Safe products and practices that do not harm people</li>
-    <li>Contribution to broader societal well-being</li>
-    <li>Long-term vision beyond short-term profit</li>
-    <li>Transparent governance and value alignment</li>
+    <li>Fair and ethical treatment of workers throughout supply chains</li>
+    <li>Support for communities and meaningful charitable engagement</li>
+    <li>Safe, inclusive, and non-harmful products and services</li>
+    <li>Contribution to social equity, public health, and collective wellbeing</li>
+    <li>Operating with a long-term vision beyond short-term profit</li>
+    <li>Transparent governance and values-aligned decision-making</li>
   </ul>
 
   <h2>Business Assessment Criteria</h2>
   <ul>
-    <li>Transparency and disclosure</li>
-    <li>Worker welfare and labour practices</li>
+    <li>Transparency and disclosure of sustainability and governance practices</li>
+    <li>Worker rights and fair labour standards</li>
     <li>Community impact (DEI, CSR, philanthropy)</li>
-    <li>Environmental practices (especially circularity)</li>
-    <li>Customer outcomes (ethical, safe, high-quality products)</li>
-    <li>Relevant certifications (e.g., B Corp, Fair Trade, Carbon Neutral)</li>
+    <li>Environmental performance, especially in relation to circularity and carbon impact</li>
+    <li>Customer wellbeing through ethical, safe, high-quality products or services</li>
+    <li>Recognition by trusted third-party certifications (e.g., B Corp, Fair Trade, Carbon Neutral)</li>
   </ul>
 
-  <h2>Sector Categories (Examples)</h2>
+  <h2>Sector Categories by Umbrella Group</h2>
+
+  <h3>Goods & Products</h3>
   <ul>
     <li>Fashion</li>
-    <li>Food &amp; Beverage</li>
+    <li>Food & Beverage</li>
+    <li>Home & Furniture</li>
     <li>Technology</li>
     <li>Automotive</li>
-    <li>Health &amp; Wellness</li>
-    <li>Home &amp; Furniture</li>
-    <li>Travel &amp; Tourism</li>
-    <li>Transport</li>
+    <li>Pet & Animal Services</li>
+  </ul>
+
+  <h3>Services & Lifestyle</h3>
+  <ul>
+    <li>Health & Wellness</li>
+    <li>Travel & Tourism</li>
+    <li>Sport & Recreation</li>
+    <li>Events & Conferences</li>
     <li>Education</li>
-    <li>Finance</li>
-    <li>Construction &amp; Real Estate</li>
-    <li>Energy</li>
-    <li>Entertainment</li>
-    <li>Agriculture</li>
-    <li>Event Management</li>
-    <li>Pets</li>
-    <li>Sport</li>
+    <li>Entertainment & Media</li>
+  </ul>
+
+  <h3>Infrastructure & Industry</h3>
+  <ul>
+    <li>Construction & Real Estate</li>
+    <li>Energy & Utilities</li>
+    <li>Transport & Mobility</li>
+    <li>Agriculture & Farming</li>
+  </ul>
+
+  <h3>Finance & Governance</h3>
+  <ul>
+    <li>Finance & Banking</li>
+    <li>Consultancy & Certification</li>
+    <li>Government & NGOs</li>
   </ul>
 
   <p><a href="index.html">← Back to homepage</a></p>
@@ -188,26 +202,27 @@
     &copy; 2025 Sustainability Database Project
   </div>
 
-  <!-- 🔍 JavaScript Search Logic -->
   <script>
     const pages = [
       { title: "About Us", file: "about_us.html" },
       { title: "Fashion", file: "fashion.html" },
-      { title: "Finance", file: "finance.html" },
+      { title: "Finance & Banking", file: "finance.html" },
       { title: "Technology", file: "technology.html" },
       { title: "Food & Beverage", file: "food.html" },
       { title: "Automotive", file: "automotive.html" },
       { title: "Health & Wellness", file: "health.html" },
       { title: "Education", file: "education.html" },
       { title: "Construction & Real Estate", file: "construction.html" },
-      { title: "Energy", file: "energy.html" },
-      { title: "Entertainment", file: "entertainment.html" },
-      { title: "Agriculture", file: "agriculture.html" },
-      { title: "Pets", file: "pets.html" },
-      { title: "Sport", file: "sport.html" },
-      { title: "Event Management", file: "events.html" },
+      { title: "Energy & Utilities", file: "energy.html" },
+      { title: "Entertainment & Media", file: "entertainment.html" },
+      { title: "Agriculture & Farming", file: "agriculture.html" },
+      { title: "Pets & Animal Services", file: "pets.html" },
+      { title: "Sport & Recreation", file: "sport.html" },
+      { title: "Events & Conferences", file: "events.html" },
       { title: "Travel & Tourism", file: "travel.html" },
-      { title: "Transport", file: "transport.html" }
+      { title: "Transport & Mobility", file: "transport.html" },
+      { title: "Consultancy & Certification", file: "consultancy.html" },
+      { title: "Government & NGOs", file: "government.html" }
     ];
 
     const input = document.getElementById("search-input");
