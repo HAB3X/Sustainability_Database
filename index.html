@@ -138,7 +138,25 @@
 
   <script>
     const pages = [
-      { title: "About Us", file: "about_us.html" }
+      { title: "About Us", file: "about_us.html" },
+      { title: "Fashion", file: "fashion.html" },
+      { title: "Finance & Banking", file: "finance.html" },
+      { title: "Technology", file: "technology.html" },
+      { title: "Food & Beverage", file: "food.html" },
+      { title: "Automotive", file: "automotive.html" },
+      { title: "Health & Wellness", file: "health.html" },
+      { title: "Education", file: "education.html" },
+      { title: "Construction & Real Estate", file: "construction.html" },
+      { title: "Energy & Utilities", file: "energy.html" },
+      { title: "Entertainment & Media", file: "entertainment.html" },
+      { title: "Agriculture & Farming", file: "agriculture.html" },
+      { title: "Pets & Animal Services", file: "pets.html" },
+      { title: "Sport & Recreation", file: "sport.html" },
+      { title: "Events & Conferences", file: "events.html" },
+      { title: "Travel & Tourism", file: "travel.html" },
+      { title: "Transport & Mobility", file: "transport.html" },
+      { title: "Consultancy & Certification", file: "consultancy.html" },
+      { title: "Government & NGOs", file: "government.html" }
     ];
 
     const input = document.getElementById("search-input");
@@ -153,6 +171,13 @@
       const filtered = pages.filter(page =>
         page.title.toLowerCase().includes(query)
       );
+
+      if (filtered.length === 0) {
+        const li = document.createElement("li");
+        li.textContent = "No results found.";
+        results.appendChild(li);
+        return;
+      }
 
       filtered.forEach(page => {
         const li = document.createElement("li");
