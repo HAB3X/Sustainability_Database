@@ -1,5 +1,3 @@
-# About Us
-
 # Sustainable Business Directory: Australia & New Zealand
 
 A free, open-source website listing sustainable businesses across Australia and New Zealand. Each listing includes a sustainability rating, business type, key practices, and indicators of greenwashing where applicable.
@@ -25,3 +23,35 @@ Our sustainability criteria draw from circular economy principles and social res
 -  Contribution to broader societal well-being
 -  Long-term vision beyond short-term profit
 -  Transparent governance and value alignment
+
+
+### Business Assessment Criteria
+
+- Transparency and disclosure
+- worker welfare and labour practices
+- Community impact (DEI, CSR, philanthropy)
+- Environmental practices (especially circularity)
+- Customer outcomes (ethical, safe, high-quality products)
+- Relevant certifications (e.g., B Corp, Fair Trade, Carbon Neutral)
+
+
+### Sector Categories (examples)
+
+- Fashion
+Food & Beverage
+Technology
+Automotive
+Health & Wellness
+Home & Furniture
+Travel & Tourism
+Transport
+Education
+Finance
+Construction & Real Estate
+Energy
+Entertainment
+Agriculture
+Event Management
+Pets
+Sport
+Advocacy
