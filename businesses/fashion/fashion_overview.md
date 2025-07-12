@@ -1,4 +1,4 @@
-# fashion-overview
+# Industry: Fashion
 
 *Talk about fashion industry and important factors to consider about sustainability*
 
