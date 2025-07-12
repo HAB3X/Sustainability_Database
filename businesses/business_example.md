@@ -14,10 +14,14 @@ tags:
   - Fair Trade
 
 certifications:
+
 - B-Corp
 - Fair Trade
+
 location: Brisbane, QLD
+
 last_verified: 2025-07-12
+
 layout: business
 ---
 
