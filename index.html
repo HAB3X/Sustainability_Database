@@ -55,16 +55,6 @@
       padding-top: 1rem;
     }
 
-    .nav {
-      margin-top: 2rem;
-    }
-
-    .nav a {
-      display: inline-block;
-      margin-right: 1rem;
-    }
-
-    /* 🔍 Search bar styles */
     #search-container {
       margin-top: 2rem;
     }
@@ -103,60 +93,43 @@
 
   <h1>Welcome to the Sustainability Database</h1>
 
-  <!-- 🔍 Search Bar -->
   <div id="search-container">
     <input type="text" id="search-input" placeholder="Search pages or categories...">
     <ul id="results"></ul>
   </div>
 
   <p>
-    The <strong>Sustainability Database</strong> is an open-source platform for exploring businesses in Australia and New Zealand that prioritise environmental responsibility and social ethics.
-    This site lists sustainable companies by sector, assesses their practices, and flags potential greenwashing using transparent, peer-reviewed criteria.
+    The <strong>Sustainability Database</strong> is a public, open-source platform dedicated to cataloguing sustainable businesses across Australia and New Zealand. It serves as an educational resource aligned with <strong>UN Sustainable Development Goal 4 (Quality Education)</strong> by making sustainability practices transparent, accessible, and usable for consumers, researchers, and students alike.
   </p>
 
   <p>
-    Built entirely with HTML, CSS, and JavaScript, the project is hosted freely on GitHub Pages and maintained by a community of contributors. All data is publicly accessible and openly licensed.
+    Our focus is on sharing knowledge, promoting ethical enterprise, and creating informed networks that support responsible decision-making in the economy.
   </p>
 
-  <h2>Explore the Database</h2>
-  <div class="nav">
-    <a href="about_us.html">About Us</a>
-    <a href="directory.html">Browse Listings</a>
-    <a href="submit.html">Suggest a Business</a>
-    <a href="criteria.html">Assessment Criteria</a>
-  </div>
+  <h2>About Us</h2>
+  <p>
+    We categorise businesses based on broader umbrella sectors, such as:
+  </p>
+  <ul>
+    <li><strong>Consumer & Lifestyle</strong>: Fashion, Health & Wellness, Food & Beverage, Home & Furniture</li>
+    <li><strong>Infrastructure & Environment</strong>: Construction & Real Estate, Energy, Agriculture</li>
+    <li><strong>Mobility & Travel</strong>: Transport, Travel & Tourism, Automotive</li>
+    <li><strong>Finance & Governance</strong>: Finance & Banking, Government</li>
+    <li><strong>Education & Culture</strong>: Education, Entertainment, Events & Conferences</li>
+    <li><strong>Other</strong>: Pets, Sport</li>
+  </ul>
 
   <p>
-    Whether you're a consumer, student, business owner, or researcher, we welcome your participation in building a more accountable economy.
+    All data is maintained collaboratively through GitHub. Submissions are peer-reviewed, and all business practices listed are checked for credibility and transparency. The project is fully open-source and intended to foster collective educational benefit.
   </p>
 
   <div class="footer">
     &copy; 2025 Sustainability Database Project · <a href="https://github.com/hab3x/Sustainability_Database">View Source on GitHub</a>
   </div>
 
-  <!-- 🔍 JavaScript Search Logic -->
   <script>
     const pages = [
-      { title: "About Us", file: "about_us.html" },
-      { title: "Directory", file: "directory.html" },
-      { title: "Submit a Business", file: "submit.html" },
-      { title: "Assessment Criteria", file: "criteria.html" },
-      { title: "Fashion", file: "fashion.html" },
-      { title: "Finance", file: "finance.html" },
-      { title: "Technology", file: "technology.html" },
-      { title: "Food & Beverage", file: "food.html" },
-      { title: "Automotive", file: "automotive.html" },
-      { title: "Health & Wellness", file: "health.html" },
-      { title: "Education", file: "education.html" },
-      { title: "Construction & Real Estate", file: "construction.html" },
-      { title: "Energy", file: "energy.html" },
-      { title: "Entertainment", file: "entertainment.html" },
-      { title: "Agriculture", file: "agriculture.html" },
-      { title: "Pets", file: "pets.html" },
-      { title: "Sport", file: "sport.html" },
-      { title: "Event Management", file: "events.html" },
-      { title: "Travel & Tourism", file: "travel.html" },
-      { title: "Transport", file: "transport.html" }
+      { title: "About Us", file: "about_us.html" }
     ];
 
     const input = document.getElementById("search-input");
