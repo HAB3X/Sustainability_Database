@@ -1,11 +1,10 @@
-# Sustainability-Database
-
-
-
-
-Can I try typing?
-
-Marcus is cool
-
-
-Marcus is very special to me. I like him a lot.
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sustainability Database</title>
+</head>
+<body>
+  <h1>Welcome to Our Sustainability Database</h1>
+  <p>This website is hosted using GitHub Pages!</p>
+</body>
+</html>
