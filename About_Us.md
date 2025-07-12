@@ -8,8 +8,7 @@ Research and business profiles will be documented using GitHub Issues and Markdo
 
 All information will be peer-reviewed or supported by credible sources before inclusion.
 
-The website will be built using HTML, CSS, and JavaScript;  Hosted publicly via GitHub Pages;
-Open source and freely accessible
+The website will be built using HTML, CSS, and JavaScript; it will be hosted publicly via GitHub Pages and made open source for free public access.
 
 ### Defining Sustainability
 
