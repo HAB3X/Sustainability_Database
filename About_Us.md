@@ -1,10 +1,10 @@
-#About Us
+# About Us
 
-#Sustainable Business Directory: Australia & New Zealand
+# Sustainable Business Directory: Australia & New Zealand
 
 A free, open-source website listing sustainable businesses across Australia and New Zealand. Each listing includes a sustainability rating, business type, key practices, and indicators of greenwashing where applicable.
 
-###Defining Sustainability
+### Defining Sustainability
 
 Our sustainability criteria draw from circular economy principles and social responsibility standards:
 
