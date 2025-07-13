@@ -233,7 +233,7 @@
       document.body.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
     }
 
-    fetch('/data/ethical-threads.json')
+    fetch('ethical-threads.json')
       .then(res => res.json())
       .then(data => {
         const safe = (v, fallback = "N/A") => v || fallback;
