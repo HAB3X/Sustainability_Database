@@ -53,7 +53,7 @@ involvement:
 
 ## Company Overview
 
-**Ethical Threads** is a private fashion company based in Brisbane, QLD. Founded in 2014, it specializes in sustainable clothing made from organic and recycled fibers. The company’s mission is to create stylish, ethical garments that reduce harm to people and planet.
+**Ethical Threads** is a private fashion company based in Brisbane, QLD. Founded in 2014, it specialises in sustainable clothing made from organic and recycled fibres. The company’s mission is to create stylish, ethical garments that reduce harm to people and planet.
 
 It serves the ethical consumer segment through both retail and wholesale operations in Australia and New Zealand.
 
