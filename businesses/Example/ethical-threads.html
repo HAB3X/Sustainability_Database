@@ -201,7 +201,7 @@
   </h1>
 
   <div class="card">
-    <img id="logo" src="/images/ethical-threads-logo.png" alt="Ethical Threads Logo" class="logo"/>
+    <img id="logo" src="/images/ethical-threads-logo.png" alt="Ethical Threads Logo" class="logo" onerror="this.style.display='none'"/>
     <p><strong>Sector:</strong> <span id="sector"></span></p>
     <p><strong>Founded:</strong> <span id="founded"></span></p>
     <p><strong>Employees:</strong> <span id="employees"></span></p>
@@ -211,53 +211,16 @@
     <p><strong>Website:</strong> <a id="website" href="#" target="_blank"></a></p>
   </div>
 
-  <div class="card">
-    <h2>Overview</h2>
-    <p id="overview"></p>
-  </div>
-
-  <div class="card">
-    <h2>Key Practices</h2>
-    <ul id="practices"></ul>
-  </div>
-
-  <div class="card">
-    <h2>Tags</h2>
-    <div id="tags"></div>
-  </div>
-
-  <div class="card">
-    <h2>Certifications</h2>
-    <ul id="certifications"></ul>
-  </div>
-
-  <div class="card">
-    <h2>SDG Alignment</h2>
-    <ul id="sdgs"></ul>
-  </div>
-
-  <div class="card">
-    <h2>Diversity Report</h2>
-    <ul id="diversity"></ul>
-  </div>
-
-  <div class="card">
-    <h2>Governance</h2>
-    <p><strong>ISS Score:</strong> <span id="iss_score"></span></p>
-    <p id="governance_note"></p>
-  </div>
-
+  <div class="card"><h2>Overview</h2><p id="overview"></p></div>
+  <div class="card"><h2>Key Practices</h2><ul id="practices"></ul></div>
+  <div class="card"><h2>Tags</h2><div id="tags"></div></div>
+  <div class="card"><h2>Certifications</h2><ul id="certifications"></ul></div>
+  <div class="card"><h2>SDG Alignment</h2><ul id="sdgs"></ul></div>
+  <div class="card"><h2>Diversity Report</h2><ul id="diversity"></ul></div>
+  <div class="card"><h2>Governance</h2><p><strong>ISS Score:</strong> <span id="iss_score"></span></p><p id="governance_note"></p></div>
   <div class="card">
     <h2>Controversial Product Involvement</h2>
-    <table id="involvement-table">
-      <thead>
-        <tr>
-          <th>Product Area</th>
-          <th>Involvement</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
+    <table id="involvement-table"><thead><tr><th>Product Area</th><th>Involvement</th></tr></thead><tbody></tbody></table>
   </div>
 
   <div class="footer">
@@ -273,59 +236,65 @@
     fetch('/data/ethical-threads.json')
       .then(res => res.json())
       .then(data => {
-        document.getElementById("sector").textContent = data.sector;
-        document.getElementById("founded").textContent = data.founded;
-        document.getElementById("employees").textContent = data.employees;
-        document.getElementById("status").textContent = data.status;
-        document.getElementById("location").textContent = data.location;
-        document.getElementById("last_verified").textContent = data.last_verified;
-        document.getElementById("website").href = data.website;
-        document.getElementById("website").textContent = data.website.replace(/^https?:\/\//, '');
+        const safe = (v, fallback = "N/A") => v || fallback;
 
-        document.getElementById("overview").textContent = data.overview;
+        document.getElementById("sector").textContent = safe(data.sector);
+        document.getElementById("founded").textContent = safe(data.founded);
+        document.getElementById("employees").textContent = safe(data.employees);
+        document.getElementById("status").textContent = safe(data.status);
+        document.getElementById("location").textContent = safe(data.location);
+        document.getElementById("last_verified").textContent = safe(data.last_verified);
+        document.getElementById("website").href = safe(data.website, "#");
+        document.getElementById("website").textContent = safe(data.website, "#").replace(/^https?:\/\//, '');
+        document.getElementById("overview").textContent = safe(data.overview);
 
-        data.tags.forEach(tag => {
+        (data.tags || []).forEach(tag => {
           const span = document.createElement("span");
           span.className = "tag";
           span.textContent = tag;
           document.getElementById("tags").appendChild(span);
         });
 
-        data.practices.forEach(p => {
+        (data.practices || []).forEach(p => {
           const li = document.createElement("li");
           li.textContent = p;
           document.getElementById("practices").appendChild(li);
         });
 
-        data.certifications.forEach(cert => {
+        (data.certifications || []).forEach(cert => {
           const li = document.createElement("li");
           li.textContent = cert;
           document.getElementById("certifications").appendChild(li);
         });
 
-        data.sdgs.forEach(sdg => {
+        (data.sdgs || []).forEach(sdg => {
           const li = document.createElement("li");
           li.textContent = sdg;
           document.getElementById("sdgs").appendChild(li);
         });
 
-        Object.entries(data.diversity).forEach(([key, val]) => {
+        const diversity = data.diversity || {};
+        Object.entries(diversity).forEach(([key, val]) => {
           const li = document.createElement("li");
           li.textContent = `${key.replace(/_/g, " ")}: ${val}`;
           document.getElementById("diversity").appendChild(li);
         });
 
-        document.getElementById("iss_score").textContent = data.corporate_governance.iss_score;
-        document.getElementById("governance_note").textContent = data.corporate_governance.description;
+        if (data.corporate_governance) {
+          document.getElementById("iss_score").textContent = safe(data.corporate_governance.iss_score);
+          document.getElementById("governance_note").textContent = safe(data.corporate_governance.description);
+        }
 
         const tbody = document.querySelector("#involvement-table tbody");
-        Object.entries(data.involvement).forEach(([area, value]) => {
+        Object.entries(data.involvement || {}).forEach(([area, value]) => {
           const tr = document.createElement("tr");
           tr.innerHTML = `<td>${area}</td><td>${value}</td>`;
           tbody.appendChild(tr);
         });
+      })
+      .catch(err => {
+        console.error("Failed to load JSON data:", err);
       });
   </script>
 </body>
 </html>
-
