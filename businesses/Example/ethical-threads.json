@@ -6,16 +6,27 @@
   "location": "Brisbane, QLD",
   "last_verified": "2025-07-12",
   "website": "https://ethicalthreads.co",
-  "overview": "Ethical Threads is a private fashion company based in Brisbane, QLD. Founded in 2014...",
-  "tags": ["B-Corp", "Virgin materials used", "Fair Trade"],
+  "overview": "Ethical Threads is a private fashion company based in Brisbane, QLD. Founded in 2014, the company is committed to sustainable practices including use of recycled materials and fair trade sourcing across its supply chain.",
+  "tags": [
+    "B-Corp",
+    "Virgin materials used",
+    "Fair Trade"
+  ],
   "practices": [
     "Certified B-Corp and Fair Trade",
     "Uses recycled and organic materials",
     "Provides living wages across supply chain",
     "Publishes annual impact reports"
   ],
-  "certifications": ["B-Corp", "Fair Trade"],
-  "sdgs": ["SDG 8", "SDG 12", "SDG 13"],
+  "certifications": [
+    "B-Corp",
+    "Fair Trade"
+  ],
+  "sdgs": [
+    "SDG 8 – Decent Work & Economic Growth",
+    "SDG 12 – Responsible Consumption & Production",
+    "SDG 13 – Climate Action"
+  ],
   "diversity": {
     "gender_leadership": "57% women",
     "board_representation": "40% non-male",
@@ -23,7 +34,7 @@
   },
   "corporate_governance": {
     "iss_score": "2",
-    "description": "Scores courtesy of ISS. A decile rank of 1 indicates low governance risk."
+    "description": "Corporate governance scores courtesy of Institutional Shareholder Services (ISS). A decile rank of 1 indicates lower governance risk, while 10 indicates higher risk."
   },
   "involvement": {
     "Alcoholic Beverages": "No",
@@ -34,6 +45,7 @@
     "Fur & Specialty Leather": "No",
     "Controversial Weapons": "No",
     "Small Arms": "No",
+    "Catholic Values": "No conflict",
     "GMO": "Minimal",
     "Military Contracting": "None",
     "Pesticides": "Low",
