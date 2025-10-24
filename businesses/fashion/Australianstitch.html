@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Australian Stitch – Sustainability Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #121715;
+      --card: #1a1f1d;
+      --text: #e0f0e0;
+      --muted: #93b293;
+      --accent: #4ade80;
+      --accent-light: #273c2f;
+      --border: #2c352f;
+    }
+
+    [data-theme='light'] {
+      --bg: #f5fef5;
+      --card: #ffffff;
+      --text: #1a2e1a;
+      --muted: #607d60;
+      --accent: #3ca974;
+      --accent-light: #e0f7eb;
+      --border: #d2e3d2;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 2rem 1.25rem;
+      max-width: 880px;
+      margin-inline: auto;
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    h1, h2, h3 {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      justify-content: space-between;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.3rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin-top: 1.4rem;
+      margin-bottom: 0.5rem;
+      color: var(--muted);
+    }
+
+    p {
+      margin: 0.6rem 0 1rem;
+    }
+
+    ul {
+      margin: 0.6rem 0 1.2rem 1.2rem;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 0.4rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.2rem;
+      margin-top: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 20px;
+      font-size: 0.82rem;
+      padding: 0.3rem 0.75rem;
+      margin: 0.2rem 0.4rem 0.2rem 0;
+      text-decoration: none;
+    }
+
+    .footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+      border-top: 1px solid var(--border);
+      padding-top: 1.25rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img.logo {
+      max-width: 120px;
+      margin-bottom: 0.8rem;
+    }
+
+    .controls {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .controls button {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      padding: 0.4rem 0.8rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+
+    .controls button:hover {
+      background: #74fca0;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+      }
+
+      .controls {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body data-theme="dark">
+
+  <h1>
+    <span><i class="fas fa-shirt"></i> Australian Stitch</span>
+    <div class="controls">
+      <button onclick="toggleTheme()">🌓 Toggle Theme</button>
+      <button onclick="window.print()">🖨️ Print / PDF</button>
+    </div>
+  </h1>
+
+  <div class="card">
+    <img id="logo" src="/images/australian-stitch-logo.png" alt="Australian Stitch Logo" class="logo" onerror="this.style.display='none'"/>
+    <p><strong>Sector:</strong> Fashion & Apparel</p>
+    <p><strong>Founded:</strong> N/A</p>
+    <p><strong>Employees:</strong> N/A</p>
+    <p><strong>Status:</strong> N/A</p>
+    <p><strong>Location:</strong> Melbourne, Australia</p>
+    <p><strong>Last Verified:</strong> 2025-09-06</p>
+    <p><strong>Website:</strong> <a href="#" target="_blank">N/A</a></p>
+  </div>
+
+  <div class="card">
+    <h2>Overview</h2>
+    <p>Australian Stitch manufactures ethical and locally made clothing basics in Melbourne. The company emphasises fair working conditions, equal opportunities, and quality garments that last. They position themselves as an alternative to mass-produced fast fashion.</p>
+  </div>
+
+  <div class="card">
+    <h2>Key Practices</h2>
+    <ul>
+      <li>Claims to be ethically made, ensuring fair wages, reasonable working hours, equal opportunities, anti-discrimination, workers’ compensation, and health & safety compliance.</li>
+      <li>Supports local and ethical manufacturing.</li>
+      <li>Produces best-fitting, reasonably priced clothing manufactured locally in Melbourne.</li>
+      <li>Aims to provide quality garments that are not mass produced overseas and remain durable after multiple washes.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Tags</h2>
+    <div>
+      <span class="tag">Australian manufacturing</span>
+      <span class="tag">Local manufacturing</span>
+      <span class="tag">Clothing basics</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>SDG Alignment</h2>
+    <ul>
+      <li>SDG 8 – Decent Work and Economic Growth</li>
+      <li>SDG 12 – Responsible Consumption and Production</li>
+      <li>SDG 9 – Industry, Innovation and Infrastructure</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Concerns</h2>
+    <ul>
+      <li>Would benefit from publishing a sustainability or transparency report, though this is more common for larger corporations.</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Sustainability Database Project · <a href="https://github.com/hab3x/Sustainability_Database">View on GitHub</a>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      const current = document.body.getAttribute('data-theme');
+      document.body.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    }
+  </script>
+</body>
+</html>
