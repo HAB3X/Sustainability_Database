@@ -18,9 +18,7 @@
       --border: #2c352f;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -43,9 +41,7 @@
       gap: 0.6rem;
     }
 
-    h1 i {
-      color: var(--accent);
-    }
+    h1 i { color: var(--accent); }
 
     h2 {
       font-size: 1.5rem;
@@ -56,9 +52,7 @@
       color: var(--text);
     }
 
-    p {
-      margin-top: 1rem;
-    }
+    p { margin-top: 1rem; }
 
     ul {
       margin-top: 1rem;
@@ -66,9 +60,7 @@
       padding-left: 1.5rem;
     }
 
-    ul li {
-      margin: 0.4rem 0;
-    }
+    ul li { margin: 0.4rem 0; }
 
     a {
       color: var(--accent);
@@ -105,9 +97,7 @@
       padding-top: 1.5rem;
     }
 
-    #search-container {
-      margin-top: 2rem;
-    }
+    #search-container { margin-top: 2rem; }
 
     #search-input {
       width: 100%;
@@ -131,22 +121,12 @@
       padding-left: 0;
     }
 
-    #results li {
-      margin: 0.5rem 0;
-    }
+    #results li { margin: 0.5rem 0; }
 
     @media (max-width: 600px) {
-      h1 {
-        font-size: 1.8rem;
-      }
-
-      h2 {
-        font-size: 1.3rem;
-      }
-
-      .card {
-        padding: 1rem;
-      }
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.3rem; }
+      .card { padding: 1rem; }
     }
   </style>
 </head>
@@ -163,7 +143,6 @@
     <p>
       The <strong>Sustainability Database</strong> is a public, open-source platform dedicated to cataloguing sustainable businesses across Australia and New Zealand. It supports <strong>UN Sustainable Development Goal 4 (Quality Education)</strong> by making sustainability practices transparent, accessible, and free to use for consumers, students, educators, and researchers.
     </p>
-
     <p>
       Our aim is to build a knowledge base that supports ethical enterprise and encourages informed, responsible decision-making throughout the economy.
     </p>
@@ -173,20 +152,18 @@
     <h2>About Us</h2>
 
     <p>We organise businesses into broader umbrella sectors for simplicity and clarity:</p>
- <ul>
-  <li><strong>Goods & Products:</strong> Includes sectors producing tangible consumer items such as fashion, health and wellness products, food and beverages, and home furnishings.</li>
-  <li><strong>Services & Lifestyle:</strong> Covers service-based industries that shape daily life, including construction and real estate, renewable energy, and sustainable agriculture.</li>
-  <li><strong>Infrastructure & Industry:</strong> Encompasses large-scale and mobility-focused sectors such as transport, travel and tourism, and automotive manufacturing.</li>
-  <li><strong>Finance & Governance:</strong> Focuses on organisations involved in financial services, investment, and public administration across government and regulatory sectors.</li>
-</ul>
+    <ul>
+      <li><strong>Goods & Products:</strong> Includes sectors producing tangible consumer items such as fashion, health and wellness products, food and beverages, and home furnishings.</li>
+      <li><strong>Services & Lifestyle:</strong> Covers service-based industries that shape daily life, including construction and real estate, renewable energy, and sustainable agriculture.</li>
+      <li><strong>Infrastructure & Industry:</strong> Encompasses large-scale and mobility-focused sectors such as transport, travel and tourism, and automotive manufacturing.</li>
+      <li><strong>Finance & Governance:</strong> Focuses on organisations involved in financial services, investment, and public administration across government and regulatory sectors.</li>
+    </ul>
 
     <p>
       This site is collaboratively maintained through GitHub. Submissions are peer-reviewed, and businesses listed must demonstrate verifiable sustainable practices. The project is entirely open-source and prioritises public education and shared knowledge.
     </p>
 
-    <p>
-      <a href="about_us.html">Read more about us →</a>
-    </p>
+    <p><a href="about_us.html">Read more about us →</a></p>
   </div>
 
   <div class="footer">
@@ -194,40 +171,51 @@
     <a href="https://github.com/hab3x/Sustainability_Database">View Source on GitHub</a>
   </div>
 
-  <script>
-    const pages = [
-      { title: "About Us", file: "about_us.html" },
-      { title: "Australian Stitch", file: "Australianstitch.html" },
-      { title: "Ethical Threads", file: "businesses/Example/ethical-threads.html" }  <!-- ✅ working link -->
-    ];
+  <!-- Centralised Search Loader -->
+  <script src="search-config.js"></script>
 
+  <script>
+    // If using search-config.js, it defines SEARCH_PAGES globally
     const input = document.getElementById("search-input");
     const results = document.getElementById("results");
 
-    input.addEventListener("input", () => {
-      const query = input.value.toLowerCase();
-      results.innerHTML = "";
-
-      if (!query) return;
-
-      const filtered = pages.filter(page =>
-        page.title.toLowerCase().includes(query)
-      );
-
-      if (filtered.length === 0) {
-        const li = document.createElement("li");
-        li.textContent = "No results found.";
-        results.appendChild(li);
-        return;
+    async function loadPages() {
+      try {
+        // load shared JSON config if available
+        const res = await fetch("search-pages.json");
+        if (!res.ok) throw new Error("No JSON found");
+        return await res.json();
+      } catch {
+        // fallback to JS-defined global list
+        return (typeof SEARCH_PAGES !== "undefined") ? SEARCH_PAGES : [];
       }
+    }
 
-      filtered.forEach(page => {
-        const li = document.createElement("li");
-        const a = document.createElement("a");
-        a.href = page.file;
-        a.textContent = page.title;
-        li.appendChild(a);
-        results.appendChild(li);
+    loadPages().then(pages => {
+      input.addEventListener("input", () => {
+        const query = input.value.toLowerCase();
+        results.innerHTML = "";
+        if (!query) return;
+
+        const filtered = pages.filter(page =>
+          page.title.toLowerCase().includes(query)
+        );
+
+        if (filtered.length === 0) {
+          const li = document.createElement("li");
+          li.textContent = "No results found.";
+          results.appendChild(li);
+          return;
+        }
+
+        filtered.forEach(page => {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = page.file;
+          a.textContent = page.title;
+          li.appendChild(a);
+          results.appendChild(li);
+        });
       });
     });
   </script>
