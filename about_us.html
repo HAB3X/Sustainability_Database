@@ -283,49 +283,48 @@
     &copy; 2025 Sustainability Database Project
   </div>
 
-  <script>
-    const pages = [
-      { title: "About Us", file: "about_us.html" },
-      { title: "Fashion", file: "fashion.html" },
-      { title: "Finance & Banking", file: "finance.html" },
-      { title: "Technology", file: "technology.html" },
-      { title: "Food & Beverage", file: "food.html" },
-      { title: "Automotive", file: "automotive.html" },
-      { title: "Health & Wellness", file: "health.html" },
-      { title: "Education", file: "education.html" },
-      { title: "Construction & Real Estate", file: "construction.html" },
-      { title: "Energy & Utilities", file: "energy.html" },
-      { title: "Entertainment & Media", file: "entertainment.html" },
-      { title: "Agriculture & Farming", file: "agriculture.html" },
-      { title: "Pets & Animal Services", file: "pets.html" },
-      { title: "Sport & Recreation", file: "sport.html" },
-      { title: "Events & Conferences", file: "events.html" },
-      { title: "Travel & Tourism", file: "travel.html" },
-      { title: "Transport & Mobility", file: "transport.html" },
-      { title: "Consultancy & Certification", file: "consultancy.html" },
-      { title: "Government & NGOs", file: "government.html" }
-    ];
+  <!-- Centralised Search Loader -->
+  <script src="search-config.js"></script>
 
+  <script>
     const input = document.getElementById("search-input");
     const results = document.getElementById("results");
 
-    input.addEventListener("input", () => {
-      const query = input.value.toLowerCase();
-      results.innerHTML = "";
+    async function loadPages() {
+      try {
+        const res = await fetch("search-pages.json");
+        if (!res.ok) throw new Error("No JSON found");
+        return await res.json();
+      } catch {
+        return (typeof SEARCH_PAGES !== "undefined") ? SEARCH_PAGES : [];
+      }
+    }
 
-      if (!query) return;
+    loadPages().then(pages => {
+      input.addEventListener("input", () => {
+        const query = input.value.toLowerCase();
+        results.innerHTML = "";
+        if (!query) return;
 
-      const filtered = pages.filter(page =>
-        page.title.toLowerCase().includes(query)
-      );
+        const filtered = pages.filter(page =>
+          page.title.toLowerCase().includes(query)
+        );
 
-      filtered.forEach(page => {
-        const li = document.createElement("li");
-        const a = document.createElement("a");
-        a.href = page.file;
-        a.textContent = page.title;
-        li.appendChild(a);
-        results.appendChild(li);
+        if (filtered.length === 0) {
+          const li = document.createElement("li");
+          li.textContent = "No results found.";
+          results.appendChild(li);
+          return;
+        }
+
+        filtered.forEach(page => {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = page.file;
+          a.textContent = page.title;
+          li.appendChild(a);
+          results.appendChild(li);
+        });
       });
     });
   </script>
