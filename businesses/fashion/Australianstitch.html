@@ -16,7 +16,6 @@
       --accent-light: #273c2f;
       --border: #2c352f;
     }
-
     [data-theme='light'] {
       --bg: #f5fef5;
       --card: #ffffff;
@@ -26,7 +25,6 @@
       --accent-light: #e0f7eb;
       --border: #d2e3d2;
     }
-
     body {
       font-family: 'Inter', sans-serif;
       background: var(--bg);
@@ -38,12 +36,7 @@
       line-height: 1.6;
       transition: background 0.3s, color 0.3s;
     }
-
-    h1, h2, h3 {
-      font-weight: 600;
-      color: var(--text);
-    }
-
+    h1, h2, h3 { font-weight: 600; color: var(--text); }
     h1 {
       font-size: 1.9rem;
       border-bottom: 3px solid var(--accent);
@@ -51,10 +44,9 @@
       margin-bottom: 1.5rem;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
       justify-content: space-between;
+      gap: 0.5rem;
     }
-
     h2 {
       font-size: 1.4rem;
       margin-top: 2rem;
@@ -62,36 +54,18 @@
       border-bottom: 1px solid var(--border);
       padding-bottom: 0.3rem;
     }
-
-    h3 {
-      font-size: 1.1rem;
-      margin-top: 1.4rem;
-      margin-bottom: 0.5rem;
-      color: var(--muted);
-    }
-
-    p {
-      margin: 0.6rem 0 1rem;
-    }
-
-    ul {
-      margin: 0.6rem 0 1.2rem 1.2rem;
-      padding-left: 0;
-    }
-
-    ul li {
-      margin-bottom: 0.4rem;
-    }
-
+    h3 { font-size: 1.1rem; color: var(--muted); margin-top: 1.4rem; }
+    p { margin: 0.6rem 0 1rem; }
+    ul { margin: 0.6rem 0 1.2rem 1.2rem; }
+    ul li { margin-bottom: 0.4rem; }
     .card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 1.25rem 1.2rem;
       margin-top: 1.5rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
-
     .tag {
       display: inline-block;
       background: var(--accent-light);
@@ -100,74 +74,31 @@
       font-size: 0.82rem;
       padding: 0.3rem 0.75rem;
       margin: 0.2rem 0.4rem 0.2rem 0;
-      text-decoration: none;
     }
-
+    #search-container { margin-top: 1.5rem; }
+    #search-input {
+      width: 100%; padding: 0.75rem 1rem; font-size: 1rem;
+      border-radius: 8px; border: 1px solid var(--border);
+      background-color: #101412; color: var(--text);
+    }
+    #search-input:focus { outline: none; border-color: var(--accent); }
+    #results { list-style: none; margin-top: 0.8rem; padding-left: 0; }
+    #results li { margin: 0.5rem 0; }
     .footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: var(--muted);
-      text-align: center;
-      border-top: 1px solid var(--border);
-      padding-top: 1.25rem;
+      margin-top: 3rem; font-size: 0.9rem; color: var(--muted);
+      text-align: center; border-top: 1px solid var(--border); padding-top: 1.25rem;
     }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    img.logo {
-      max-width: 120px;
-      margin-bottom: 0.8rem;
-    }
-
     .controls {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
+      display: flex; gap: 1rem; align-items: center;
     }
-
     .controls button {
-      background: var(--accent);
-      color: #000;
-      border: none;
-      border-radius: 6px;
-      padding: 0.4rem 0.8rem;
-      cursor: pointer;
+      background: var(--accent); color: #000; border: none;
+      border-radius: 6px; padding: 0.4rem 0.8rem; cursor: pointer;
       font-size: 0.85rem;
-    }
-
-    .controls button:hover {
-      background: #74fca0;
-    }
-
-    @media (max-width: 600px) {
-      body {
-        padding: 1rem;
-      }
-
-      h1 {
-        font-size: 1.6rem;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.8rem;
-      }
-
-      .controls {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-      }
     }
   </style>
 </head>
 <body data-theme="dark">
-
   <h1>
     <span><i class="fas fa-shirt"></i> Australian Stitch</span>
     <div class="controls">
@@ -176,29 +107,37 @@
     </div>
   </h1>
 
-  <div class="card">
-    <img id="logo" src="/images/australian-stitch-logo.png" alt="Australian Stitch Logo" class="logo" onerror="this.style.display='none'"/>
-    <p><strong>Sector:</strong> Fashion & Apparel</p>
-    <p><strong>Founded:</strong> N/A</p>
-    <p><strong>Employees:</strong> N/A</p>
-    <p><strong>Status:</strong> N/A</p>
-    <p><strong>Location:</strong> Melbourne, Australia</p>
-    <p><strong>Last Verified:</strong> 2025-09-06</p>
-    <p><strong>Website:</strong> <a href="#" target="_blank">N/A</a></p>
+  <div id="search-container">
+    <input type="text" id="search-input" placeholder="Search pages or categories...">
+    <ul id="results"></ul>
   </div>
 
   <div class="card">
-    <h2>Overview</h2>
-    <p>Australian Stitch manufactures ethical and locally made clothing basics in Melbourne. The company emphasises fair working conditions, equal opportunities, and quality garments that last. They position themselves as an alternative to mass-produced fast fashion.</p>
+    <h2>Company Overview</h2>
+    <p><strong>Australian Stitch</strong> is a Melbourne-based clothing maker and retailer specialising in locally manufactured basics. The company produces tees, hoodies, jumpers, and accessories, operating a Fitzroy shopfront and manufacturing facility in Thornbury. It promotes sustainable and ethical production within the Australian textile industry.</p>
   </div>
 
   <div class="card">
-    <h2>Key Practices</h2>
+    <h2>Operations and Registration</h2>
     <ul>
-      <li>Claims to be ethically made, ensuring fair wages, reasonable working hours, equal opportunities, anti-discrimination, workers’ compensation, and health & safety compliance.</li>
-      <li>Supports local and ethical manufacturing.</li>
-      <li>Produces best-fitting, reasonably priced clothing manufactured locally in Melbourne.</li>
-      <li>Aims to provide quality garments that are not mass produced overseas and remain durable after multiple washes.</li>
+      <li><strong>Factory:</strong> Thornbury, Melbourne</li>
+      <li><strong>Store:</strong> 260 Brunswick Street, Fitzroy 3065 (VIC) — open 11:00 to 17:00 daily</li>
+      <li><strong>Contact:</strong> info@australianstitch.com.au</li>
+      <li><strong>Entity:</strong> Australian Stitch Pty Ltd</li>
+      <li><strong>ACN:</strong> 627 310 356</li>
+      <li><strong>Incorporation Date:</strong> 4 July 2018</li>
+      <li><strong>Status:</strong> Registered (ASIC public directory)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Sustainability and Key Practices</h2>
+    <ul>
+      <li>Local manufacturing with fair wages and safe working conditions.</li>
+      <li>Ethical sourcing and small-batch production to reduce waste.</li>
+      <li>Durable basics designed for longevity rather than fast-fashion trends.</li>
+      <li>Partnerships with local dye houses and material suppliers to support the regional rag trade.</li>
+      <li>Focus on transparency, community connection, and responsible consumption.</li>
     </ul>
   </div>
 
@@ -206,24 +145,22 @@
     <h2>Tags</h2>
     <div>
       <span class="tag">Australian manufacturing</span>
-      <span class="tag">Local manufacturing</span>
+      <span class="tag">Local production</span>
+      <span class="tag">Ethical fashion</span>
       <span class="tag">Clothing basics</span>
     </div>
   </div>
 
   <div class="card">
-    <h2>SDG Alignment</h2>
+    <h2>References</h2>
     <ul>
-      <li>SDG 8 – Decent Work and Economic Growth</li>
-      <li>SDG 12 – Responsible Consumption and Production</li>
-      <li>SDG 9 – Industry, Innovation and Infrastructure</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>Concerns</h2>
-    <ul>
-      <li>Would benefit from publishing a sustainability or transparency report, though this is more common for larger corporations.</li>
+      <li>Australian Stitch. (n.d.). <i>Collections.</i> <a href="https://australianstitch.com.au/collections" target="_blank">https://australianstitch.com.au/collections</a></li>
+      <li>Australian Stitch. (n.d.). <i>Classic tee.</i> <a href="https://australianstitch.com.au/products/classictshirt" target="_blank">https://australianstitch.com.au/products/classictshirt</a></li>
+      <li>Australian Stitch. (n.d.). <i>Heavyweight box tee.</i> <a href="https://australianstitch.com.au/products/boxterryt-shirt" target="_blank">https://australianstitch.com.au/products/boxterryt-shirt</a></li>
+      <li>Australian Stitch. (n.d.). <i>Contact.</i> <a href="https://australianstitch.com.au/pages/contact" target="_blank">https://australianstitch.com.au/pages/contact</a></li>
+      <li>Australian Stitch. (2019). <i>Welcome to Australian Stitch [Blog post].</i> <a href="https://australianstitch.com.au/blogs/news/welcome-to-australian-stitch" target="_blank">https://australianstitch.com.au/blogs/news/welcome-to-australian-stitch</a></li>
+      <li>Australia Company Directory. (2018). <i>Australian Stitch Pty Ltd.</i> <a href="https://australia-corp.com/co/australian-stitch-pty-ltd" target="_blank">https://australia-corp.com/co/australian-stitch-pty-ltd</a></li>
+      <li>News.com.au. (2025, June 26). <i>Nike takes collapsed Australian surf retailer SurfStitch to court.</i> <a href="https://www.news.com.au/finance/business/nike-takes-collapsed-australian-surf-retailer-surfstitch-to-court/news-story/5bab6d7f2d3660cf0eb4e1a94491a7d6" target="_blank">https://www.news.com.au/.../surfstitch-to-court</a></li>
     </ul>
   </div>
 
@@ -231,11 +168,53 @@
     &copy; 2025 Sustainability Database Project · <a href="https://github.com/hab3x/Sustainability_Database">View on GitHub</a>
   </div>
 
+  <script src="search-config.js"></script>
   <script>
     function toggleTheme() {
       const current = document.body.getAttribute('data-theme');
       document.body.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
     }
+
+    const input = document.getElementById("search-input");
+    const results = document.getElementById("results");
+
+    async function loadPages() {
+      try {
+        const res = await fetch("search-pages.json");
+        if (!res.ok) throw new Error("No JSON found");
+        return await res.json();
+      } catch {
+        return (typeof SEARCH_PAGES !== "undefined") ? SEARCH_PAGES : [];
+      }
+    }
+
+    loadPages().then(pages => {
+      input.addEventListener("input", () => {
+        const query = input.value.toLowerCase();
+        results.innerHTML = "";
+        if (!query) return;
+
+        const filtered = pages.filter(page =>
+          page.title.toLowerCase().includes(query)
+        );
+
+        if (filtered.length === 0) {
+          const li = document.createElement("li");
+          li.textContent = "No results found.";
+          results.appendChild(li);
+          return;
+        }
+
+        filtered.forEach(page => {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = page.file;
+          a.textContent = page.title;
+          li.appendChild(a);
+          results.appendChild(li);
+        });
+      });
+    });
   </script>
 </body>
 </html>
