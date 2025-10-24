@@ -1,0 +1,48 @@
+{
+  "slug": "australianstitch",
+  "name": "Australian Stitch",
+  "sector": "Fashion & Apparel",
+  "location": "Melbourne, Australia",
+  "status": "N/A",
+  "founded": "N/A",
+  "employees": "N/A",
+  "last_verified": "2025-09-06",
+  "website": "https://www.australianstitch.com.au",
+  "overview": "Australian Stitch is a Melbourne-based clothing manufacturer specialising in ethical, locally made basics. The company focuses on fair working conditions, quality craftsmanship, and local production to counter the impacts of mass-produced fast fashion.",
+  "tags": [
+    "Australian manufacturing",
+    "Local manufacturing",
+    "Clothing basics"
+  ],
+  "practices": [
+    "Claims to be ethically made, ensuring proper payment, fair contact hours, equal opportunities, anti-discrimination, workers' compensation, and workplace health & safety.",
+    "Supports local and ethical manufacturing across Melbourne.",
+    "Produces clothing that is not mass produced overseas and is designed to last beyond a few washes.",
+    "Aims to offer best-fitting, reasonably priced garments made responsibly in Australia."
+  ],
+  "certifications": [],
+  "sdgs": [
+    "SDG 8 – Decent Work and Economic Growth",
+    "SDG 12 – Responsible Consumption and Production",
+    "SDG 9 – Industry, Innovation and Infrastructure"
+  ],
+  "diversity": {
+    "workplace_equality": "Supports equal opportunity employment policies",
+    "gender_balance": "Not publicly reported",
+    "inclusion_policy": "Focus on anti-discrimination and fair pay"
+  },
+  "corporate_governance": {
+    "iss_score": "N/A",
+    "description": "Privately owned small business with a focus on transparent and ethical manufacturing. Governance policies are not formally disclosed."
+  },
+  "involvement": {
+    "Fur or Exotic Animal Materials": "None",
+    "Child Labour": "None",
+    "Forced Labour": "None",
+    "Environmental Harm": "Low risk – small-scale local manufacturing",
+    "Supply Chain Transparency": "Moderate – limited public reporting"
+  },
+  "concerns": [
+    "Would benefit from publishing a sustainability or transparency report, though this is typically expected of larger corporations."
+  ]
+}
