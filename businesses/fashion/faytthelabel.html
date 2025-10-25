@@ -133,6 +133,16 @@
     .controls button:hover {
       background: #74fca0;
     }
+
+    #search-container { margin-top: 1.5rem; }
+    #search-input {
+      width: 100%; padding: 0.75rem 1rem; font-size: 1rem;
+      border-radius: 8px; border: 1px solid var(--border);
+      background-color: var(--card); color: var(--text);
+    }
+    #search-input:focus { outline: none; border-color: var(--accent); }
+    #results { list-style: none; margin-top: 0.8rem; padding-left: 0; }
+    #results li { margin: 0.5rem 0; }
   </style>
 </head>
 <body data-theme="dark">
@@ -144,6 +154,11 @@
       <button onclick="window.print()">🖨️ Print / PDF</button>
     </div>
   </h1>
+
+  <div id="search-container">
+    <input type="text" id="search-input" placeholder="Search businesses, sectors, or topics...">
+    <ul id="results"></ul>
+  </div>
 
   <div class="card">
     <p><strong>Sector:</strong> Fashion & Apparel</p>
@@ -159,7 +174,7 @@
     <h2>Corporate Profile</h2>
     <ul>
       <li>Founded by <strong>Brittney Saunders</strong> in Newcastle, NSW.</li>
-      <li>Australian women’s fashion brand with inclusive sizing (6–26).</li>
+      <li>Australian women's fashion brand with inclusive sizing (6–26).</li>
       <li>Operates online and in physical stores nationwide.</li>
       <li>Described as a fast-growing, multi-million dollar business.</li>
     </ul>
@@ -177,7 +192,7 @@
   <div class="card">
     <h2>Sector & Offerings</h2>
     <ul>
-      <li>Sector: Women’s fashion and apparel.</li>
+      <li>Sector: Women's fashion and apparel.</li>
       <li>Range: Tops, dresses, denim, activewear, sets, sizes 6–26.</li>
       <li>Market position: Inclusive, body-positive, and community-oriented.</li>
       <li>Online-first model with strong retail expansion.</li>
@@ -189,7 +204,7 @@
     <ul>
       <li>Partnership with <strong>Thread Together</strong> – donates excess stock, samples, and seconds.</li>
       <li>Ethical sourcing: factories in Bali and China described as family-owned; zero tolerance for child labour or discrimination.</li>
-      <li>“Samples & Seconds” collection reduces waste by selling slightly imperfect garments.</li>
+      <li>"Samples & Seconds" collection reduces waste by selling slightly imperfect garments.</li>
       <li>Public statements commit to transparency in factory welfare and manufacturing.</li>
     </ul>
   </div>
@@ -238,7 +253,7 @@
       <li>FAYT The Label. (n.d.). <i>Our Ethics – Ethical Production.</i> <a href="https://faytthelabel.com/pages/ethical-production" target="_blank">https://faytthelabel.com/pages/ethical-production</a></li>
       <li>FAYT The Label. (n.d.). <i>FAYT x Thread Together.</i> <a href="https://faytthelabel.com/pages/fayt-x-thread-together" target="_blank">https://faytthelabel.com/pages/fayt-x-thread-together</a></li>
       <li>FAYT The Label. (n.d.). <i>Our Story & Stores.</i> <a href="https://faytthelabel.com/pages/fayt" target="_blank">https://faytthelabel.com/pages/fayt</a></li>
-      <li>Little Big Shop. (2024, April 16). <i>Brittney Saunders’ FAYT The Label and its size inclusivity.</i> <a href="https://littlebigshop.com.au/brittney-saunders-size-inclusivity/" target="_blank">https://littlebigshop.com.au/brittney-saunders-size-inclusivity/</a></li>
+      <li>Little Big Shop. (2024, April 16). <i>Brittney Saunders' FAYT The Label and its size inclusivity.</i> <a href="https://littlebigshop.com.au/brittney-saunders-size-inclusivity/" target="_blank">https://littlebigshop.com.au/brittney-saunders-size-inclusivity/</a></li>
       <li>Peppermint Magazine. (n.d.). <i>Curves Ahead! A Great Big List of Lovely Size-Inclusive Australian Labels.</i> <a href="https://peppermintmag.com/curves-ahead-a-great-big-list-of-lovely-size-inclusive-australian-labels/" target="_blank">https://peppermintmag.com/curves-ahead-a-great-big-list-of-lovely-size-inclusive-australian-labels/</a></li>
     </ul>
   </div>
@@ -247,11 +262,55 @@
     &copy; 2025 Sustainability Database Project · <a href="https://github.com/hab3x/Sustainability_Database">View on GitHub</a>
   </div>
 
+  <!-- Centralised Search Loader -->
+  <script src="../search-config.js"></script>
+
   <script>
     function toggleTheme() {
       const current = document.body.getAttribute('data-theme');
       document.body.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
     }
+
+    const input = document.getElementById("search-input");
+    const results = document.getElementById("results");
+
+    async function loadPages() {
+      try {
+        const res = await fetch("../search-pages.json");
+        if (!res.ok) throw new Error("No JSON found");
+        return await res.json();
+      } catch {
+        return (typeof SEARCH_PAGES !== "undefined") ? SEARCH_PAGES : [];
+      }
+    }
+
+    loadPages().then(pages => {
+      input.addEventListener("input", () => {
+        const query = input.value.toLowerCase();
+        results.innerHTML = "";
+        if (!query || query.length < 2) return;
+
+        const filtered = pages.filter(page =>
+          page.title.toLowerCase().includes(query)
+        );
+
+        if (filtered.length === 0) {
+          const li = document.createElement("li");
+          li.textContent = "No results found.";
+          results.appendChild(li);
+          return;
+        }
+
+        filtered.forEach(page => {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = page.file.startsWith('../') ? page.file : '../' + page.file;
+          a.textContent = page.title;
+          li.appendChild(a);
+          results.appendChild(li);
+        });
+      });
+    });
   </script>
 </body>
 </html>
