@@ -146,6 +146,16 @@
       background: #74fca0;
     }
 
+    #search-container { margin-top: 1.5rem; }
+    #search-input {
+      width: 100%; padding: 0.75rem 1rem; font-size: 1rem;
+      border-radius: 8px; border: 1px solid var(--border);
+      background-color: var(--card); color: var(--text);
+    }
+    #search-input:focus { outline: none; border-color: var(--accent); }
+    #results { list-style: none; margin-top: 0.8rem; padding-left: 0; }
+    #results li { margin: 0.5rem 0; }
+
   </style>
 </head>
 <body data-theme="dark">
@@ -157,6 +167,11 @@
       <button onclick="window.print()">🖨️ Print / PDF</button>
     </div>
   </h1>
+
+  <div id="search-container">
+    <input type="text" id="search-input" placeholder="Search businesses, sectors, or topics...">
+    <ul id="results"></ul>
+  </div>
 
   <div class="card">
     <img src="/images/espire-clothing-logo.png" alt="Espire Clothing Logo" class="logo" onerror="this.style.display='none'"/>
@@ -210,7 +225,7 @@
   <div class="card">
     <h2>Key Practices</h2>
     <ul>
-      <li>Circular “seed to store” framing with zero waste off-cut line (“The Bad Batch”).</li>
+      <li>Circular "seed to store" framing with zero waste off-cut line ("The Bad Batch").</li>
       <li>Traceability through references to Melbourne fabrics, Bendigo wool, Belgian linen, and Good Earth Cotton.</li>
       <li>On-shore manufacturing and partnerships with local suppliers.</li>
       <li>Product-level sustainability statements rather than formal reports.</li>
@@ -223,7 +238,7 @@
       <li>Belgian linen shirts: flax grown in Belgium using rainwater and sun-drying.</li>
       <li>White linen shirt: Belgian linen, fabrics woven and dyed in Melbourne, stitched in Bright and Mansfield.</li>
       <li>Crew neck: 100% Australian cotton from Good Earth Cotton, woven and dyed in Melbourne, stitched in Bright.</li>
-      <li>“Melbourne fabric” tag used across multiple products.</li>
+      <li>"Melbourne fabric" tag used across multiple products.</li>
     </ul>
   </div>
 
@@ -232,7 +247,7 @@
     <ul>
       <li>Shirts including Belgian linen line</li>
       <li>Customisable hoodies and trackwear</li>
-      <li>Zero waste “Bad Batch” products</li>
+      <li>Zero waste "Bad Batch" products</li>
     </ul>
   </div>
 
@@ -250,7 +265,7 @@
     <ul>
       <li>No quantitative KPIs or formal reporting.</li>
       <li>Traceability statements not independently verified.</li>
-      <li>“Circular” language used without measurable outcomes.</li>
+      <li>"Circular" language used without measurable outcomes.</li>
     </ul>
   </div>
 
@@ -270,11 +285,55 @@
     &copy; 2025 Sustainability Database Project · <a href="https://github.com/hab3x/Sustainability_Database">View on GitHub</a>
   </div>
 
+  <!-- Centralised Search Loader -->
+  <script src="../search-config.js"></script>
+
   <script>
     function toggleTheme() {
       const current = document.body.getAttribute('data-theme');
       document.body.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
     }
+
+    const input = document.getElementById("search-input");
+    const results = document.getElementById("results");
+
+    async function loadPages() {
+      try {
+        const res = await fetch("../search-pages.json");
+        if (!res.ok) throw new Error("No JSON found");
+        return await res.json();
+      } catch {
+        return (typeof SEARCH_PAGES !== "undefined") ? SEARCH_PAGES : [];
+      }
+    }
+
+    loadPages().then(pages => {
+      input.addEventListener("input", () => {
+        const query = input.value.toLowerCase();
+        results.innerHTML = "";
+        if (!query || query.length < 2) return;
+
+        const filtered = pages.filter(page =>
+          page.title.toLowerCase().includes(query)
+        );
+
+        if (filtered.length === 0) {
+          const li = document.createElement("li");
+          li.textContent = "No results found.";
+          results.appendChild(li);
+          return;
+        }
+
+        filtered.forEach(page => {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = page.file.startsWith('../') ? page.file : '../' + page.file;
+          a.textContent = page.title;
+          li.appendChild(a);
+          results.appendChild(li);
+        });
+      });
+    });
   </script>
 </body>
 </html>
