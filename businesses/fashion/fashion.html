@@ -105,7 +105,7 @@
       font-size: 1rem;
       border-radius: 8px;
       border: 1px solid var(--border);
-      background-color: #101412;
+      background-color: var(--card);
       color: var(--text);
       transition: border 0.3s;
     }
@@ -135,14 +135,14 @@
   <h1><i class="fas fa-tshirt"></i> Fashion Industry – Sustainability Overview</h1>
 
   <div id="search-container">
-    <input type="text" id="search-input" placeholder="Search fashion brands or sustainability topics...">
+    <input type="text" id="search-input" placeholder="Search businesses, sectors, or topics...">
     <ul id="results"></ul>
   </div>
 
   <div class="card">
     <h2>About the Fashion Industry</h2>
     <p>
-      The fashion industry covers the design, production, marketing, and sale of clothing, footwear, and accessories. It is one of the world’s largest industries by employment and economic output, but also among the most resource-intensive. The sector spans fast fashion, luxury design, local manufacturing, and emerging sustainable labels.
+      The fashion industry covers the design, production, marketing, and sale of clothing, footwear, and accessories. It is one of the world's largest industries by employment and economic output, but also among the most resource-intensive. The sector spans fast fashion, luxury design, local manufacturing, and emerging sustainable labels.
     </p>
     <p>
       Fashion intersects directly with global sustainability challenges. Its supply chains depend on raw materials such as cotton, wool, and synthetics, often linked to high water use, chemical pollution, and labour issues. Sustainable fashion therefore seeks to balance aesthetics and affordability with responsibility toward people, animals, and the planet.
@@ -192,15 +192,14 @@
   </div>
 
   <!-- Search System -->
-  <script src="/search-config.js"></script>
+  <script src="../search-config.js"></script>
   <script>
     const input = document.getElementById("search-input");
     const results = document.getElementById("results");
 
     async function loadPages() {
       try {
-        // ✅ Fixed path for GitHub Pages root
-        const res = await fetch("/search-pages.json");
+        const res = await fetch("../search-pages.json");
         if (!res.ok) throw new Error("No JSON found");
         return await res.json();
       } catch {
@@ -212,7 +211,7 @@
       input.addEventListener("input", () => {
         const query = input.value.toLowerCase();
         results.innerHTML = "";
-        if (!query) return;
+        if (!query || query.length < 2) return;
 
         const filtered = pages.filter(page =>
           page.title.toLowerCase().includes(query)
@@ -228,7 +227,7 @@
         filtered.forEach(page => {
           const li = document.createElement("li");
           const a = document.createElement("a");
-          a.href = page.file;
+          a.href = page.file.startsWith('../') ? page.file : '../' + page.file;
           a.textContent = page.title;
           li.appendChild(a);
           results.appendChild(li);
