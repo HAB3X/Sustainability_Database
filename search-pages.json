@@ -3,7 +3,6 @@
     "title": "About Us",
     "file": "about_us.html"
   },
-
   {
     "title": "Fashion Industry Overview",
     "file": "businesses/fashion/fashion.html"
@@ -20,12 +19,10 @@
     "title": "FAYT The Label",
     "file": "businesses/fashion/faytthelabel.html"
   },
-
   {
     "title": "Ethical Threads",
     "file": "businesses/Example/ethical-threads.html"
   },
-
   {
     "title": "Finance & Banking",
     "file": "finance.html"
