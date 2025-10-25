@@ -135,7 +135,7 @@
   <h1><i class="fas fa-seedling"></i> Welcome to the Sustainability Database</h1>
 
   <div id="search-container">
-    <input type="text" id="search-input" placeholder="Search pages or categories...">
+    <input type="text" id="search-input" placeholder="Search businesses, sectors, or topics...">
     <ul id="results"></ul>
   </div>
 
@@ -175,18 +175,15 @@
   <script src="search-config.js"></script>
 
   <script>
-    // If using search-config.js, it defines SEARCH_PAGES globally
     const input = document.getElementById("search-input");
     const results = document.getElementById("results");
 
     async function loadPages() {
       try {
-        // load shared JSON config if available
         const res = await fetch("search-pages.json");
         if (!res.ok) throw new Error("No JSON found");
         return await res.json();
       } catch {
-        // fallback to JS-defined global list
         return (typeof SEARCH_PAGES !== "undefined") ? SEARCH_PAGES : [];
       }
     }
@@ -195,7 +192,7 @@
       input.addEventListener("input", () => {
         const query = input.value.toLowerCase();
         results.innerHTML = "";
-        if (!query) return;
+        if (!query || query.length < 2) return;
 
         const filtered = pages.filter(page =>
           page.title.toLowerCase().includes(query)
