@@ -1,23 +1,50 @@
-const SEARCH_PAGES = [
-  { "title": "About Us", "file": "about_us.html" },
-
-  // Fashion section
-  { "title": "Fashion Industry Overview", "file": "businesses/fashion/fashion.html" },
-  { "title": "Australian Stitch", "file": "businesses/fashion/Australianstitch.html" },
-  { "title": "Espire Clothing", "file": "businesses/fashion/espireclothing.html" },
-  { "title": "FAYT The Label", "file": "businesses/fashion/faytthelabel.html" },
-
-  // Example section
-  { "title": "Ethical Threads", "file": "businesses/Example/ethical-threads.html" },
-
-  // Other sectors
-  { "title": "Finance & Banking", "file": "finance.html" },
-  { "title": "Food & Beverage", "file": "food.html" },
-  { "title": "Health & Wellness", "file": "health.html" },
-  { "title": "Energy & Utilities", "file": "energy.html" }
-];
-
-const SEARCH_SETTINGS = {
-  placeholder: "Search businesses, sectors, or topics...",
-  minChars: 2
-};
+{
+  "slug": "fashion",
+  "name": "Fashion Industry Overview",
+  "sector": "Fashion & Apparel",
+  "location": "Australia & New Zealand",
+  "status": "Active",
+  "last_verified": "2025-10-25",
+  "overview": "The fashion industry encompasses the design, production, marketing, and retail of clothing and accessories. It is one of the most dynamic and globally integrated industries, with a supply chain that connects raw material sourcing, textile manufacturing, garment production, and consumer distribution. Sustainability in fashion requires attention to every stage — from fibre sourcing and dyeing to packaging and post-consumer waste.",
+  "factors_for_sustainability": [
+    "Material sourcing and transparency — preference for organic, recycled, or certified fibres (e.g., GOTS, OEKO-TEX).",
+    "Fair labour and ethical manufacturing — ensuring safe conditions, fair pay, and no forced or child labour.",
+    "Water and chemical management — reducing dye runoff, wastewater, and toxic chemical use.",
+    "Waste reduction and circular design — designing for durability, repairability, and recycling.",
+    "Carbon and energy impact — using renewable energy and efficient transport in supply chains.",
+    "Packaging and logistics — minimising plastics and using biodegradable or recycled materials."
+  ],
+  "common_certifications": [
+    "Global Organic Textile Standard (GOTS)",
+    "OEKO-TEX Standard 100",
+    "Fairtrade Certified Cotton",
+    "B Corporation Certification",
+    "Carbon Neutral Certification (Climate Active, Australia)",
+    "Ethical Clothing Australia Accreditation"
+  ],
+  "sdgs": [
+    "SDG 8 – Decent Work and Economic Growth",
+    "SDG 12 – Responsible Consumption and Production",
+    "SDG 13 – Climate Action"
+  ],
+  "tags": [
+    "Sustainable fashion",
+    "Ethical manufacturing",
+    "Circular economy",
+    "Slow fashion",
+    "Local production"
+  ],
+  "concerns": [
+    "High textile waste and landfill contributions.",
+    "Fast fashion overproduction and short product lifecycles.",
+    "Lack of traceability in complex supply chains.",
+    "Microplastic pollution from synthetic fibres.",
+    "Limited recycling infrastructure for post-consumer textiles."
+  ],
+  "references": [
+    "Fashion Revolution. (2025). Fashion Transparency Index. https://www.fashionrevolution.org/",
+    "United Nations Environment Programme. (2023). Sustainability and circularity in the textile value chain. https://www.unep.org/",
+    "Ethical Clothing Australia. (n.d.). Ethical Accreditation Program. https://ethicalclothingaustralia.org.au/",
+    "Global Organic Textile Standard. (n.d.). GOTS standard. https://global-standard.org/"
+  ]
+}
