@@ -1,0 +1,62 @@
+{
+  "slug": "fashion",
+  "name": "Fashion Industry Overview",
+  "sector": "Fashion & Apparel",
+  "location": "Global industry focus, with examples from Australia and New Zealand",
+  "status": "Active",
+  "last_verified": "2025-10-25",
+  "website": "https://github.com/hab3x/Sustainability_Database",
+  "overview": "The fashion industry encompasses the design, manufacture, distribution, and marketing of clothing, footwear, and accessories. It is one of the largest global industries by employment and economic value, but also among the most environmentally and socially intensive. Sustainable fashion aims to balance creativity and consumer demand with fair labour, ethical sourcing, and environmental responsibility.",
+  "tags": [
+    "Sustainable materials",
+    "Ethical manufacturing",
+    "Circular fashion",
+    "Transparency",
+    "Fair trade",
+    "Slow fashion"
+  ],
+  "practices": [
+    "Encouraging responsible consumption and production through slow fashion movements.",
+    "Reducing waste via circular systems, repair, reuse, and recycling initiatives.",
+    "Supporting ethical labour and fair wages in global and local supply chains.",
+    "Adopting sustainable materials such as organic cotton, hemp, bamboo, and recycled fibres.",
+    "Implementing eco-friendly dyeing, printing, and finishing processes.",
+    "Increasing supply chain transparency and traceability."
+  ],
+  "certifications": [
+    "Global Organic Textile Standard (GOTS)",
+    "Fair Trade Certified",
+    "B Corp Certification",
+    "OEKO-TEX Standard 100",
+    "Carbon Neutral / Climate Active",
+    "Australian Made Campaign"
+  ],
+  "sdgs": [
+    "SDG 8 – Decent Work and Economic Growth",
+    "SDG 12 – Responsible Consumption and Production",
+    "SDG 13 – Climate Action"
+  ],
+  "diversity": {
+    "workplace_equality": "Promotes inclusive representation and fair treatment across the fashion workforce.",
+    "gender_balance": "High female representation across the value chain; leadership diversity varies by region.",
+    "inclusion_policy": "Emerging focus on body diversity, accessibility, and representation in branding and design."
+  },
+  "corporate_governance": {
+    "iss_score": "Varies by company",
+    "description": "Governance quality across the fashion sector varies widely. Sustainable brands increasingly publish ethical sourcing policies, modern slavery statements, and environmental performance reports."
+  },
+  "involvement": {
+    "Fur or Exotic Animal Materials": "Declining due to consumer awareness and policy restrictions.",
+    "Child Labour": "High-risk area in low-cost sourcing countries; verified ethical brands maintain strict supplier codes.",
+    "Forced Labour": "Addressed through due diligence frameworks and supply chain audits.",
+    "Environmental Harm": "Significant impact from production, dyeing, and overconsumption; mitigated through circularity and eco-certifications.",
+    "Supply Chain Transparency": "Improving through reporting and traceability technologies."
+  },
+  "concerns": [
+    "High resource use and pollution across production stages.",
+    "Complex global supply chains limit transparency and accountability.",
+    "Low garment prices often reflect underpaid labour.",
+    "Overproduction and fast fashion culture drive excessive waste.",
+    "Certification systems remain fragmented and vary in scope and enforcement."
+  ]
+}
