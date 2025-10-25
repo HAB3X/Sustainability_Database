@@ -1,3 +1,5 @@
+// search-config.js
+
 const SEARCH_PAGES = [
   { "title": "About Us", "file": "about_us.html" },
 
