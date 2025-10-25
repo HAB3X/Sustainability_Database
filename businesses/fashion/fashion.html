@@ -191,14 +191,16 @@
     <a href="https://github.com/hab3x/Sustainability_Database">View Source on GitHub</a>
   </div>
 
-  <script src="search-config.js"></script>
+  <!-- Search System -->
+  <script src="/search-config.js"></script>
   <script>
     const input = document.getElementById("search-input");
     const results = document.getElementById("results");
 
     async function loadPages() {
       try {
-        const res = await fetch("search-pages.json");
+        // ✅ Fixed path for GitHub Pages root
+        const res = await fetch("/search-pages.json");
         if (!res.ok) throw new Error("No JSON found");
         return await res.json();
       } catch {
