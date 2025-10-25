@@ -4,7 +4,7 @@
   "sector": "Fashion & Apparel",
   "location": "Newcastle, NSW, Australia",
   "status": "Active",
-  "founded": "2017 (approx.)",
+  "founded": "2017",
   "employees": "Not publicly specified",
   "last_verified": "2025-09-10",
   "website": "https://faytthelabel.com",
@@ -16,25 +16,25 @@
     "Inclusive sizing"
   ],
   "practices": [
-    "Partnership with Thread Together to donate excess stock, samples, and seconds.",
-    "Factories described as family-owned in Bali and China, with zero tolerance for child labour and poor working conditions.",
-    "Waste reduction via 'Samples & Seconds' collection that resells slightly imperfect garments.",
-    "Transparency in factory welfare, sourcing methods, and manufacturing ethics.",
-    "Commitment to responsible and inclusive fashion through size diversity."
+    "Partnership with Thread Together to donate excess stock, samples, and seconds",
+    "Factories described as family-owned in Bali and China, with zero tolerance for child labour and poor working conditions",
+    "Waste reduction via 'Samples & Seconds' collection that resells slightly imperfect garments",
+    "Transparency in factory welfare, sourcing methods, and manufacturing ethics",
+    "Commitment to responsible and inclusive fashion through size diversity"
   ],
   "certifications": [],
-  "sdgs": [
+  "sdg_alignment": [
     "SDG 8 – Decent Work and Economic Growth",
     "SDG 12 – Responsible Consumption and Production"
   ],
   "diversity": {
-    "workplace_equality": "Focus on inclusive sizing and diverse representation in marketing.",
-    "gender_balance": "Primarily female-oriented workforce; no official data published.",
-    "inclusion_policy": "Emphasis on body positivity and inclusivity through product range."
+    "workplace_equality": "Focus on inclusive sizing and diverse representation in marketing",
+    "gender_balance": "Primarily female-oriented workforce; no official data published",
+    "inclusion_policy": "Emphasis on body positivity and inclusivity through product range"
   },
   "corporate_governance": {
     "iss_score": "N/A",
-    "description": "Privately owned Australian fashion company founded by Brittney Saunders. Governance practices are not formally reported but the brand states a commitment to transparency and ethical sourcing."
+    "description": "Privately owned Australian fashion company founded by Brittney Saunders. Governance practices are not formally reported but the brand states a commitment to transparency and ethical sourcing"
   },
   "involvement": {
     "Fur or Exotic Animal Materials": "None reported",
@@ -44,9 +44,9 @@
     "Supply Chain Transparency": "Moderate – ethical sourcing statements without full public audits"
   },
   "concerns": [
-    "No formal sustainability report or quantitative KPIs available.",
-    "Ethical sourcing claims not independently verified by third parties.",
-    "Limited transparency on factory-level data or full supplier lists.",
-    "Workplace environmental practices (mailers, materials, recycling) not substantiated with verifiable evidence."
+    "No formal sustainability report or quantitative KPIs available",
+    "Ethical sourcing claims not independently verified by third parties",
+    "Limited transparency on factory-level data or full supplier lists",
+    "Workplace environmental practices (mailers, materials, recycling) not substantiated with verifiable evidence"
   ]
 }
