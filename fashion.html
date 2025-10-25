@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fashion Industry – Sustainability Overview</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #121715;
+      --card: #1a1f1d;
+      --text: #e0f0e0;
+      --muted: #93b293;
+      --accent: #4ade80;
+      --accent-dark: #166534;
+      --accent-light: #273c2f;
+      --border: #2c352f;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin-inline: auto;
+      line-height: 1.8;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    h1 i { color: var(--accent); }
+
+    h2 {
+      font-size: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.3rem;
+      color: var(--text);
+    }
+
+    p { margin-top: 1rem; }
+
+    ul {
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    ul li { margin: 0.4rem 0; }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: #90f3ad;
+      text-decoration: underline;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+    }
+
+    .footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+    }
+
+    #search-container { margin-top: 2rem; }
+
+    #search-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background-color: #101412;
+      color: var(--text);
+      transition: border 0.3s;
+    }
+
+    #search-input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    #results {
+      list-style: none;
+      margin-top: 0.8rem;
+      padding-left: 0;
+    }
+
+    #results li { margin: 0.5rem 0; }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.3rem; }
+      .card { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1><i class="fas fa-tshirt"></i> Fashion Industry – Sustainability Overview</h1>
+
+  <div id="search-container">
+    <input type="text" id="search-input" placeholder="Search fashion brands or sustainability topics...">
+    <ul id="results"></ul>
+  </div>
+
+  <div class="card">
+    <h2>About the Fashion Industry</h2>
+    <p>
+      The fashion industry covers the design, production, marketing, and sale of clothing, footwear, and accessories. It is one of the world’s largest industries by employment and economic output, but also among the most resource-intensive. The sector spans fast fashion, luxury design, local manufacturing, and emerging sustainable labels.
+    </p>
+    <p>
+      Fashion intersects directly with global sustainability challenges. Its supply chains depend on raw materials such as cotton, wool, and synthetics, often linked to high water use, chemical pollution, and labour issues. Sustainable fashion therefore seeks to balance aesthetics and affordability with responsibility toward people, animals, and the planet.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Key Sustainability Factors</h2>
+    <p>When assessing sustainability within the fashion sector, our database evaluates companies on factors such as:</p>
+    <ul>
+      <li>Transparency in sourcing and manufacturing processes.</li>
+      <li>Use of sustainable and recycled materials (organic cotton, hemp, Tencel, recycled polyester).</li>
+      <li>Fair labour practices, worker safety, and equitable wages.</li>
+      <li>Waste reduction through circular models such as repair, resale, and recycling.</li>
+      <li>Minimising environmental impact across dyeing, water use, and carbon footprint.</li>
+      <li>Longevity and quality of products to avoid disposable consumption patterns.</li>
+      <li>Animal welfare and avoidance of fur, exotic skins, or unethical materials.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Common Certifications & Sustainable Practices</h2>
+    <p>Recognised certifications and sustainability initiatives include:</p>
+    <ul>
+      <li><strong>Global Organic Textile Standard (GOTS):</strong> certifies organic fibres and ethical processing.</li>
+      <li><strong>Fair Trade Certified:</strong> ensures fair wages and working conditions.</li>
+      <li><strong>B Corp Certification:</strong> measures social and environmental performance across businesses.</li>
+      <li><strong>OEKO-TEX Standard 100:</strong> verifies textiles free from harmful substances.</li>
+      <li><strong>Carbon Neutral / Climate Active:</strong> recognises verified emissions measurement and offsetting.</li>
+      <li><strong>Australian Made Campaign:</strong> supports on-shore manufacturing and shorter supply chains.</li>
+    </ul>
+    <p>
+      Additional best practices include local production, closed-loop fabric systems, second-hand and vintage marketplaces, and education campaigns promoting responsible consumption.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Why Sustainable Fashion Matters</h2>
+    <p>
+      Globally, the fashion sector accounts for an estimated 8–10% of carbon emissions and 20% of wastewater. Transforming the industry is critical for meeting <strong>UN SDG 12 – Responsible Consumption and Production</strong> and <strong>SDG 8 – Decent Work and Economic Growth</strong>. Supporting ethical, transparent, and environmentally responsible brands helps reduce harm and create fairer systems from fibre to finished garment.
+    </p>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Sustainability Database Project ·
+    <a href="https://github.com/hab3x/Sustainability_Database">View Source on GitHub</a>
+  </div>
+
+  <script src="search-config.js"></script>
+  <script>
+    const input = document.getElementById("search-input");
+    const results = document.getElementById("results");
+
+    async function loadPages() {
+      try {
+        const res = await fetch("search-pages.json");
+        if (!res.ok) throw new Error("No JSON found");
+        return await res.json();
+      } catch {
+        return (typeof SEARCH_PAGES !== "undefined") ? SEARCH_PAGES : [];
+      }
+    }
+
+    loadPages().then(pages => {
+      input.addEventListener("input", () => {
+        const query = input.value.toLowerCase();
+        results.innerHTML = "";
+        if (!query) return;
+
+        const filtered = pages.filter(page =>
+          page.title.toLowerCase().includes(query)
+        );
+
+        if (filtered.length === 0) {
+          const li = document.createElement("li");
+          li.textContent = "No results found.";
+          results.appendChild(li);
+          return;
+        }
+
+        filtered.forEach(page => {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = page.file;
+          a.textContent = page.title;
+          li.appendChild(a);
+          results.appendChild(li);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
