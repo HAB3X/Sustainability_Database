@@ -33,55 +33,42 @@
     "type": "Private company"
   },
   "practices": [
-    "Locally manufactures all apparel in Melbourne using small-batch, ethical production methods.",
-    "Ensures fair wages, safe working conditions, and equal opportunity employment.",
-    "Focuses on durable, high-quality basics rather than fast-fashion turnover.",
-    "Supports regional suppliers including dye houses and fabric producers.",
-    "Encourages community awareness of sustainable clothing and responsible consumption."
+    "Locally manufactures all apparel in Melbourne using small-batch, ethical production methods",
+    "Ensures fair wages, safe working conditions, and equal opportunity employment",
+    "Focuses on durable, high-quality basics rather than fast-fashion turnover",
+    "Supports regional suppliers including dye houses and fabric producers",
+    "Encourages community awareness of sustainable clothing and responsible consumption"
   ],
-  "sdgs": [
+  "sdg_alignment": [
     "SDG 8 – Decent Work and Economic Growth",
     "SDG 12 – Responsible Consumption and Production",
     "SDG 9 – Industry, Innovation and Infrastructure"
   ],
   "certifications": [],
   "diversity": {
-    "workplace_equality": "Equal opportunity policies are supported internally.",
-    "gender_balance": "Not publicly reported.",
-    "inclusion_policy": "Commitment to fair pay and non-discriminatory practices."
+    "workplace_equality": "Equal opportunity policies are supported internally",
+    "gender_balance": "Not publicly reported",
+    "inclusion_policy": "Commitment to fair pay and non-discriminatory practices"
   },
   "corporate_governance": {
     "iss_score": "N/A",
-    "description": "Privately owned local business with transparent ethical values but no formal public governance disclosures."
+    "description": "Privately owned local business with transparent ethical values but no formal public governance disclosures"
   },
   "involvement": {
     "Fur or Exotic Animal Materials": "None",
     "Child Labour": "None",
     "Forced Labour": "None",
-    "Environmental Harm": "Low risk due to small-scale local operations.",
-    "Supply Chain Transparency": "Moderate – publicly states local manufacturing but lacks a formal report."
+    "Environmental Harm": "Low risk due to small-scale local operations",
+    "Supply Chain Transparency": "Moderate – publicly states local manufacturing but lacks a formal report"
   },
   "concerns": [
-    "Would benefit from publishing a sustainability or impact report to improve public transparency.",
-    "Limited external certifications despite strong local ethical claims."
+    "Would benefit from publishing a sustainability or impact report to improve public transparency",
+    "Limited external certifications despite strong local ethical claims"
   ],
   "related_entities": [
     {
       "name": "Ausstitch",
-      "note": "Separate retail site listing the same Fitzroy address; not confirmed as related."
-    },
-    {
-      "name": "SurfStitch",
-      "note": "Unrelated surfwear retailer that entered administration in 2025."
+      "note": "Separate retail site listing the same Fitzroy address; not confirmed as related"
     }
-  ],
-  "references": [
-    "Australian Stitch. (n.d.). Collections. https://australianstitch.com.au/collections",
-    "Australian Stitch. (n.d.). Classic tee. https://australianstitch.com.au/products/classictshirt",
-    "Australian Stitch. (n.d.). Heavyweight box tee. https://australianstitch.com.au/products/boxterryt-shirt",
-    "Australian Stitch. (n.d.). Contact. https://australianstitch.com.au/pages/contact",
-    "Australian Stitch. (2019). Welcome to Australian Stitch [Blog post]. https://australianstitch.com.au/blogs/news/welcome-to-australian-stitch",
-    "Australia Company Directory. (2018). Australian Stitch Pty Ltd. https://australia-corp.com/co/australian-stitch-pty-ltd",
-    "News.com.au. (2025, June 26). Nike takes collapsed Australian surf retailer SurfStitch to court. https://www.news.com.au/finance/business/nike-takes-collapsed-australian-surf-retailer-surfstitch-to-court/news-story/5bab6d7f2d3660cf0eb4e1a94491a7d6"
   ]
 }
