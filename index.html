@@ -1,223 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sustainability Database</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-  <style>
-    :root {
-      --bg: #121715;
-      --card: #1a1f1d;
-      --text: #e0f0e0;
-      --muted: #93b293;
-      --accent: #4ade80;
-      --accent-dark: #166534;
-      --accent-light: #273c2f;
-      --border: #2c352f;
-    }
+  <head>
+    <meta charset="utf-8" />
+    <title>Sustainability Database — Example</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+      /* minimal styling for visibility */
+      .no-results-row { display: none; font-style: italic; color: #666; }
+      .no-results { display: none; font-style: italic; color: #666; margin-top: 8px; }
+      table { border-collapse: collapse; width: 100%; }
+      th, td { text-align: left; padding: 8px; border: 1px solid #ddd; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Sustainability Projects</h1>
+      <!-- IMPORTANT: use id="search-input" on the central search field (required by js/search.js) -->
+      <form role="search" aria-label="Search projects">
+        <input id="search-input" type="search" placeholder="Search by name, category, location..." aria-label="Search projects" />
+      </form>
+    </header>
 
-    * { box-sizing: border-box; }
+    <main>
+      <!-- TABLE example: id must be data-table -->
+      <table id="data-table">
+        <thead>
+          <tr><th>Name</th><th>Category</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Community Garden</td>
+            <td>Food</td>
+            <td>Shared urban plots</td>
+          </tr>
+          <tr>
+            <td>Bike Share</td>
+            <td>Transport</td>
+            <td>Docking stations citywide</td>
+          </tr>
+          <tr class="no-results-row"><td colspan="3">No results found.</td></tr>
+        </tbody>
+      </table>
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      margin: 0;
-      padding: 2rem 1rem;
-      max-width: 900px;
-      margin-inline: auto;
-      line-height: 1.8;
-    }
+      <!-- ALTERNATIVE LIST example: keep for pages that render items as a list
+      <div id="data-list">
+        <div class="item">Community Garden — Food — Shared urban plots</div>
+        <div class="item">Bike Share — Transport — Docking stations</div>
+        <div class="no-results">No results found.</div>
+      </div>
+      -->
+    </main>
 
-    h1 {
-      font-size: 2.2rem;
-      border-bottom: 3px solid var(--accent);
-      padding-bottom: 0.5rem;
-      margin-bottom: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-
-    h1 i { color: var(--accent); }
-
-    h2 {
-      font-size: 1.5rem;
-      border-bottom: 1px solid var(--border);
-      margin-top: 2.5rem;
-      margin-bottom: 1rem;
-      padding-bottom: 0.3rem;
-      color: var(--text);
-    }
-
-    p { margin-top: 1rem; }
-
-    ul {
-      margin-top: 1rem;
-      margin-bottom: 1.5rem;
-      padding-left: 1.5rem;
-    }
-
-    ul li { margin: 0.4rem 0; }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    a:hover {
-      color: #90f3ad;
-      text-decoration: underline;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-top: 2rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-      transition: transform 0.2s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
-    }
-
-    .footer {
-      margin-top: 4rem;
-      font-size: 0.9rem;
-      color: var(--muted);
-      text-align: center;
-      border-top: 1px solid var(--border);
-      padding-top: 1.5rem;
-    }
-
-    #search-container { margin-top: 2rem; }
-
-    #search-input {
-      width: 100%;
-      padding: 0.75rem 1rem;
-      font-size: 1rem;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      background-color: #101412;
-      color: var(--text);
-      transition: border 0.3s;
-    }
-
-    #search-input:focus {
-      outline: none;
-      border-color: var(--accent);
-    }
-
-    #results {
-      list-style: none;
-      margin-top: 0.8rem;
-      padding-left: 0;
-    }
-
-    #results li { margin: 0.5rem 0; }
-
-    @media (max-width: 600px) {
-      h1 { font-size: 1.8rem; }
-      h2 { font-size: 1.3rem; }
-      .card { padding: 1rem; }
-    }
-  </style>
-</head>
-<body>
-
-  <h1><i class="fas fa-seedling"></i> Welcome to the Sustainability Database</h1>
-
-  <div id="search-container">
-    <input type="text" id="search-input" placeholder="Search pages or categories...">
-    <ul id="results"></ul>
-  </div>
-
-  <div class="card">
-    <p>
-      The <strong>Sustainability Database</strong> is a public, open-source platform dedicated to cataloguing sustainable businesses across Australia and New Zealand. It supports <strong>UN Sustainable Development Goal 4 (Quality Education)</strong> by making sustainability practices transparent, accessible, and free to use for consumers, students, educators, and researchers.
-    </p>
-    <p>
-      Our aim is to build a knowledge base that supports ethical enterprise and encourages informed, responsible decision-making throughout the economy.
-    </p>
-  </div>
-
-  <div class="card">
-    <h2>About Us</h2>
-
-    <p>We organise businesses into broader umbrella sectors for simplicity and clarity:</p>
-    <ul>
-      <li><strong>Goods & Products:</strong> Includes sectors producing tangible consumer items such as fashion, health and wellness products, food and beverages, and home furnishings.</li>
-      <li><strong>Services & Lifestyle:</strong> Covers service-based industries that shape daily life, including construction and real estate, renewable energy, and sustainable agriculture.</li>
-      <li><strong>Infrastructure & Industry:</strong> Encompasses large-scale and mobility-focused sectors such as transport, travel and tourism, and automotive manufacturing.</li>
-      <li><strong>Finance & Governance:</strong> Focuses on organisations involved in financial services, investment, and public administration across government and regulatory sectors.</li>
-    </ul>
-
-    <p>
-      This site is collaboratively maintained through GitHub. Submissions are peer-reviewed, and businesses listed must demonstrate verifiable sustainable practices. The project is entirely open-source and prioritises public education and shared knowledge.
-    </p>
-
-    <p><a href="about_us.html">Read more about us →</a></p>
-  </div>
-
-  <div class="footer">
-    &copy; 2025 Sustainability Database Project ·
-    <a href="https://github.com/hab3x/Sustainability_Database">View Source on GitHub</a>
-  </div>
-
-  <!-- Centralised Search Loader -->
-  <script src="search-config.js"></script>
-
-  <script>
-    // If using search-config.js, it defines SEARCH_PAGES globally
-    const input = document.getElementById("search-input");
-    const results = document.getElementById("results");
-
-    async function loadPages() {
-      try {
-        // load shared JSON config if available
-        const res = await fetch("search-pages.json");
-        if (!res.ok) throw new Error("No JSON found");
-        return await res.json();
-      } catch {
-        // fallback to JS-defined global list
-        return (typeof SEARCH_PAGES !== "undefined") ? SEARCH_PAGES : [];
-      }
-    }
-
-    loadPages().then(pages => {
-      input.addEventListener("input", () => {
-        const query = input.value.toLowerCase();
-        results.innerHTML = "";
-        if (!query) return;
-
-        const filtered = pages.filter(page =>
-          page.title.toLowerCase().includes(query)
-        );
-
-        if (filtered.length === 0) {
-          const li = document.createElement("li");
-          li.textContent = "No results found.";
-          results.appendChild(li);
-          return;
-        }
-
-        filtered.forEach(page => {
-          const li = document.createElement("li");
-          const a = document.createElement("a");
-          a.href = page.file;
-          a.textContent = page.title;
-          li.appendChild(a);
-          results.appendChild(li);
-        });
-      });
-    });
-  </script>
-</body>
+    <!-- Include the search script (relative path) -->
+    <script src="js/search.js"></script>
+  </body>
 </html>
