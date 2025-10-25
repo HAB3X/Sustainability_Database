@@ -5,13 +5,13 @@ const SEARCH_PAGES = [
   { title: "About Us", file: "about_us.html" },
 
   // Fashion industry pages
-  { title: "Fashion Industry Overview", file: "fashion/fashion.html" },
-  { title: "Australian Stitch", file: "fashion/Australianstitch.html" },
-  { title: "Espire Clothing", file: "fashion/espireclothing.html" },
-  { title: "FAYT The Label", file: "fashion/faytthelabel.html" },
+  { title: "Fashion Industry Overview", file: "businesses/fashion/fashion.html" },
+  { title: "Australian Stitch", file: "businesses/fashion/Australianstitch.html" },
+  { title: "Espire Clothing", file: "businesses/fashion/espireclothing.html" },
+  { title: "FAYT The Label", file: "businesses/fashion/faytthelabel.html" },
 
   // Example directory
-  { title: "Ethical Threads", file: "Example/ethical-threads.html" },
+  { title: "Ethical Threads", file: "businesses/Example/ethical-threads.html" },
 
   // Other sectors
   { title: "Finance & Banking", file: "finance.html" },
