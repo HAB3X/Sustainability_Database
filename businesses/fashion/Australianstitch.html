@@ -79,7 +79,7 @@
     #search-input {
       width: 100%; padding: 0.75rem 1rem; font-size: 1rem;
       border-radius: 8px; border: 1px solid var(--border);
-      background-color: #101412; color: var(--text);
+      background-color: var(--card); color: var(--text);
     }
     #search-input:focus { outline: none; border-color: var(--accent); }
     #results { list-style: none; margin-top: 0.8rem; padding-left: 0; }
@@ -96,6 +96,13 @@
       border-radius: 6px; padding: 0.4rem 0.8rem; cursor: pointer;
       font-size: 0.85rem;
     }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body data-theme="dark">
@@ -108,7 +115,7 @@
   </h1>
 
   <div id="search-container">
-    <input type="text" id="search-input" placeholder="Search pages or categories...">
+    <input type="text" id="search-input" placeholder="Search businesses, sectors, or topics...">
     <ul id="results"></ul>
   </div>
 
@@ -168,7 +175,9 @@
     &copy; 2025 Sustainability Database Project · <a href="https://github.com/hab3x/Sustainability_Database">View on GitHub</a>
   </div>
 
-  <script src="search-config.js"></script>
+  <!-- Centralised Search Loader -->
+  <script src="../search-config.js"></script>
+
   <script>
     function toggleTheme() {
       const current = document.body.getAttribute('data-theme');
@@ -180,7 +189,7 @@
 
     async function loadPages() {
       try {
-        const res = await fetch("search-pages.json");
+        const res = await fetch("../search-pages.json");
         if (!res.ok) throw new Error("No JSON found");
         return await res.json();
       } catch {
@@ -192,7 +201,7 @@
       input.addEventListener("input", () => {
         const query = input.value.toLowerCase();
         results.innerHTML = "";
-        if (!query) return;
+        if (!query || query.length < 2) return;
 
         const filtered = pages.filter(page =>
           page.title.toLowerCase().includes(query)
@@ -208,7 +217,7 @@
         filtered.forEach(page => {
           const li = document.createElement("li");
           const a = document.createElement("a");
-          a.href = page.file;
+          a.href = page.file.startsWith('../') ? page.file : '../' + page.file;
           a.textContent = page.title;
           li.appendChild(a);
           results.appendChild(li);
