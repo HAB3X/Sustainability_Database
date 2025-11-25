@@ -125,6 +125,8 @@
       display: flex;
       gap: 1rem;
       align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     .controls button {
@@ -157,6 +159,8 @@
   <h1>
     <span><i class="fas fa-box-open"></i> Amcor plc</span>
     <div class="controls">
+      <button onclick="window.location.href='../../index.html'">Home</button>
+      <button onclick="window.location.href='Infrastructure_&_Industry.html'">Infrastructure overview</button>
       <button onclick="toggleTheme()">🌓 Toggle Theme</button>
       <button onclick="window.print()">🖨️ Print / PDF</button>
     </div>
