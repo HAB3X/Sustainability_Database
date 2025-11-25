@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sustainability Database</title>
+  <title>Sustainability Database – Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
   <style>
@@ -13,7 +13,6 @@
       --text: #e0f0e0;
       --muted: #93b293;
       --accent: #4ade80;
-      --accent-dark: #166534;
       --accent-light: #273c2f;
       --border: #2c352f;
     }
@@ -26,16 +25,50 @@
       color: var(--text);
       margin: 0;
       padding: 2rem 1rem;
-      max-width: 900px;
+      max-width: 960px;
       margin-inline: auto;
       line-height: 1.8;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+    }
+
+    .nav-left i {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+      text-decoration: underline;
     }
 
     h1 {
       font-size: 2.2rem;
       border-bottom: 3px solid var(--accent);
       padding-bottom: 0.5rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
       display: flex;
       align-items: center;
       gap: 0.6rem;
@@ -46,7 +79,7 @@
     h2 {
       font-size: 1.5rem;
       border-bottom: 1px solid var(--border);
-      margin-top: 2.5rem;
+      margin-top: 2.2rem;
       margin-bottom: 1rem;
       padding-bottom: 0.3rem;
       color: var(--text);
@@ -54,42 +87,49 @@
 
     p { margin-top: 1rem; }
 
-    ul {
-      margin-top: 1rem;
-      margin-bottom: 1.5rem;
-      padding-left: 1.5rem;
-    }
-
-    ul li { margin: 0.4rem 0; }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    a:hover {
-      color: #90f3ad;
-      text-decoration: underline;
-    }
-
     .card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 1.5rem;
-      margin-top: 2rem;
+      margin-top: 1.8rem;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-      transition: transform 0.2s ease, box-shadow 0.3s ease;
     }
 
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+    .sectors {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .sector-card {
+      background: #151a18;
+      border-radius: 10px;
+      padding: 1rem;
+      border: 1px solid var(--border);
+    }
+
+    .sector-card h3 {
+      margin: 0 0 0.4rem;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .sector-card p {
+      margin: 0.4rem 0 0.8rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .sector-card a {
+      font-size: 0.95rem;
     }
 
     .footer {
-      margin-top: 4rem;
+      margin-top: 3rem;
       font-size: 0.9rem;
       color: var(--muted);
       text-align: center;
@@ -97,7 +137,7 @@
       padding-top: 1.5rem;
     }
 
-    #search-container { margin-top: 2rem; }
+    #search-container { margin-top: 1.2rem; }
 
     #search-input {
       width: 100%;
@@ -107,7 +147,6 @@
       border: 1px solid var(--border);
       background-color: #101412;
       color: var(--text);
-      transition: border 0.3s;
     }
 
     #search-input:focus {
@@ -123,14 +162,29 @@
 
     #results li { margin: 0.5rem 0; }
 
-    @media (max-width: 600px) {
-      h1 { font-size: 1.8rem; }
-      h2 { font-size: 1.3rem; }
-      .card { padding: 1rem; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
+
+  <header class="nav">
+    <div class="nav-left">
+      <i class="fas fa-seedling"></i>
+      <span>Sustainability Database</span>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about_us.html">About</a>
+      <a href="directory.html">Directory</a>
+    </nav>
+  </header>
 
   <h1><i class="fas fa-seedling"></i> Welcome to the Sustainability Database</h1>
 
@@ -141,39 +195,53 @@
 
   <div class="card">
     <p>
-      The <strong>Sustainability Database</strong> is a public, open-source platform dedicated to cataloguing sustainable businesses across Australia and New Zealand. It supports <strong>UN Sustainable Development Goal 4 (Quality Education)</strong> by making sustainability practices transparent, accessible, and free to use for consumers, students, educators, and researchers.
+      The <strong>Sustainability Database</strong> is a public, open-source project cataloguing businesses and sectors across Australia and New Zealand. Profiles focus on governance, environmental impact, labour practices, and evidence of greenwashing or harm.
     </p>
     <p>
-      Our aim is to build a knowledge base that supports ethical enterprise and encourages informed, responsible decision-making throughout the economy.
+      Each entry links to sources and provides a structured overview to support students, researchers, consumers, and anyone interested in sustainability and corporate conduct.
     </p>
   </div>
 
   <div class="card">
-    <h2>About Us</h2>
+    <h2>Explore by sector</h2>
+    <div class="sectors">
+      <div class="sector-card">
+        <h3><i class="fas fa-tshirt"></i> Fashion</h3>
+        <p>Clothing, apparel basics, and ethical manufacturing in the fashion supply chain.</p>
+        <a href="businesses/fashion/fashion.html">Go to Fashion overview →</a>
+      </div>
 
-    <p>We organise businesses into broader umbrella sectors for simplicity and clarity:</p>
-    <ul>
-      <li><strong>Goods & Products:</strong> Includes sectors producing tangible consumer items such as fashion, health and wellness products, food and beverages, and home furnishings.</li>
-      <li><strong>Services & Lifestyle:</strong> Covers service-based industries that shape daily life, including construction and real estate, renewable energy, and sustainable agriculture.</li>
-      <li><strong>Infrastructure & Industry:</strong> Encompasses large-scale and mobility-focused sectors such as transport, travel and tourism, and automotive manufacturing.</li>
-      <li><strong>Finance & Governance:</strong> Focuses on organisations involved in financial services, investment, and public administration across government and regulatory sectors.</li>
-    </ul>
+      <div class="sector-card">
+        <h3><i class="fas fa-industry"></i> Infrastructure & Industry</h3>
+        <p>Energy, utilities, industrial infrastructure, and large-scale physical assets.</p>
+        <a href="businesses/Infrastructure_&_Industry/Infrastructure_&_Industry.html">
+          Go to Infrastructure & Industry overview →
+        </a>
+      </div>
 
+      <div class="sector-card">
+        <h3><i class="fas fa-scale-balanced"></i> Finance</h3>
+        <p>Banks, asset managers, and other financial institutions shaping capital flows.</p>
+        <a href="businesses/finance/Finance.html">Go to Finance overview →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Learn more about the project</h2>
     <p>
-      This site is collaboratively maintained through GitHub. Submissions are peer-reviewed, and businesses listed must demonstrate verifiable sustainable practices. The project is entirely open-source and prioritises public education and shared knowledge.
+      The project is maintained via GitHub and designed for transparency and peer review.
+      Methodology, criteria, and submission processes are outlined on the About page.
     </p>
-
-    <p><a href="about_us.html">Read more about us →</a></p>
+    <p><a href="about_us.html">Read more on the About page →</a></p>
   </div>
 
   <div class="footer">
     &copy; 2025 Sustainability Database Project ·
-    <a href="https://github.com/hab3x/Sustainability_Database">View Source on GitHub</a>
+    <a href="https://github.com/hab3x/Sustainability_Database" target="_blank">View source on GitHub</a>
   </div>
 
-  <!-- Centralised Search Loader -->
   <script src="search-config.js"></script>
-
   <script>
     const input = document.getElementById("search-input");
     const results = document.getElementById("results");
