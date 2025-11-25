@@ -121,7 +121,7 @@
 
   <div class="card">
     <h2>Company Overview</h2>
-    <p><strong>Australian Stitch</strong> is a Melbourne-based clothing maker and retailer specialising in locally manufactured basics. The company produces tees, hoodies, jumpers, and accessories, operating a Fitzroy shopfront and manufacturing facility in Thornbury. It promotes sustainable and ethical production within the Australian textile industry.</p>
+    <p><strong>Australian Stitch</strong> is a Melbourne based clothing maker and retailer specialising in locally manufactured basics. The company produces tees, hoodies, jumpers, and accessories, operating a Fitzroy shopfront and manufacturing facility in Thornbury. It promotes sustainable and ethical production within the Australian textile industry.</p>
   </div>
 
   <div class="card">
@@ -141,8 +141,8 @@
     <h2>Sustainability and Key Practices</h2>
     <ul>
       <li>Local manufacturing with fair wages and safe working conditions.</li>
-      <li>Ethical sourcing and small-batch production to reduce waste.</li>
-      <li>Durable basics designed for longevity rather than fast-fashion trends.</li>
+      <li>Ethical sourcing and small batch production to reduce waste.</li>
+      <li>Durable basics designed for longevity rather than fast fashion trends.</li>
       <li>Partnerships with local dye houses and material suppliers to support the regional rag trade.</li>
       <li>Focus on transparency, community connection, and responsible consumption.</li>
     </ul>
@@ -187,6 +187,15 @@
     const input = document.getElementById("search-input");
     const results = document.getElementById("results");
 
+    // Use shared settings if available
+    const minChars = (typeof SEARCH_SETTINGS !== "undefined" && SEARCH_SETTINGS.minChars)
+      ? SEARCH_SETTINGS.minChars
+      : 2;
+
+    if (typeof SEARCH_SETTINGS !== "undefined" && SEARCH_SETTINGS.placeholder) {
+      input.placeholder = SEARCH_SETTINGS.placeholder;
+    }
+
     async function loadPages() {
       try {
         const res = await fetch("../search-pages.json");
@@ -197,31 +206,47 @@
       }
     }
 
+    function renderResults(query, pages) {
+      const q = query.trim().toLowerCase();
+      results.innerHTML = "";
+
+      if (!q || q.length < minChars) {
+        return;
+      }
+
+      const filtered = pages.filter(page =>
+        page.title.toLowerCase().includes(q)
+      );
+
+      if (filtered.length === 0) {
+        const li = document.createElement("li");
+        li.textContent = "No results found.";
+        results.appendChild(li);
+        return;
+      }
+
+      filtered.forEach(page => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = page.file.startsWith("../") ? page.file : "../" + page.file;
+        a.textContent = page.title;
+        li.appendChild(a);
+        results.appendChild(li);
+      });
+    }
+
     loadPages().then(pages => {
+      // Read query from route, for example ?q=something
+      const params = new URLSearchParams(window.location.search);
+      const initialQuery = params.get("q") || params.get("query") || "";
+
+      if (initialQuery) {
+        input.value = initialQuery;
+        renderResults(initialQuery, pages);
+      }
+
       input.addEventListener("input", () => {
-        const query = input.value.toLowerCase();
-        results.innerHTML = "";
-        if (!query || query.length < 2) return;
-
-        const filtered = pages.filter(page =>
-          page.title.toLowerCase().includes(query)
-        );
-
-        if (filtered.length === 0) {
-          const li = document.createElement("li");
-          li.textContent = "No results found.";
-          results.appendChild(li);
-          return;
-        }
-
-        filtered.forEach(page => {
-          const li = document.createElement("li");
-          const a = document.createElement("a");
-          a.href = page.file.startsWith('../') ? page.file : '../' + page.file;
-          a.textContent = page.title;
-          li.appendChild(a);
-          results.appendChild(li);
-        });
+        renderResults(input.value, pages);
       });
     });
   </script>
