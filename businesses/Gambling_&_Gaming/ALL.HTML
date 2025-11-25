@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aristocrat Leisure Limited – Sustainability profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #121715;
+      --card: #1a1f1d;
+      --text: #e0f0e0;
+      --muted: #93b293;
+      --accent: #4ade80;
+      --accent-light: #273c2f;
+      --border: #2c352f;
+    }
+
+    [data-theme='light'] {
+      --bg: #f5fef5;
+      --card: #ffffff;
+      --text: #1a2e1a;
+      --muted: #607d60;
+      --accent: #3ca974;
+      --accent-light: #e0f7eb;
+      --border: #d2e3d2;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 2rem 1.25rem;
+      max-width: 880px;
+      margin-inline: auto;
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    h1, h2, h3 {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.3rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin-top: 1.4rem;
+      margin-bottom: 0.5rem;
+      color: var(--muted);
+    }
+
+    p {
+      margin: 0.6rem 0 1rem;
+    }
+
+    ul {
+      margin: 0.6rem 0 1.2rem 1.2rem;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 0.4rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.2rem;
+      margin-top: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 20px;
+      font-size: 0.82rem;
+      padding: 0.3rem 0.75rem;
+      margin: 0.2rem 0.4rem 0.2rem 0;
+      text-decoration: none;
+    }
+
+    .footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: centre;
+      border-top: 1px solid var(--border);
+      padding-top: 1.25rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .controls {
+      display: flex;
+      gap: 1rem;
+      align-items: centre;
+    }
+
+    .controls button {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      padding: 0.4rem 0.8rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+
+    .controls button:hover {
+      background: #74fca0;
+    }
+
+    #search-container { margin-top: 1.5rem; }
+    #search-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background-color: var(--card);
+      color: var(--text);
+    }
+    #search-input:focus { outline: none; border-color: var(--accent); }
+    #results { list-style: none; margin-top: 0.8rem; padding-left: 0; }
+    #results li { margin: 0.5rem 0; }
+  </style>
+</head>
+<body data-theme="dark">
+
+  <h1>
+    <span><i class="fas fa-dice"></i> Aristocrat Leisure Limited</span>
+    <div class="controls">
+      <button onclick="toggleTheme()">🌓 Toggle theme</button>
+      <button onclick="window.print()">🖨️ Print or PDF</button>
+    </div>
+  </h1>
+
+  <div id="search-container">
+    <input type="text" id="search-input" placeholder="Search businesses, sectors, or topics...">
+    <ul id="results"></ul>
+  </div>
+
+  <div class="card">
+    <h2>At a glance</h2>
+    <ul>
+      <li><strong>Legal name:</strong> Aristocrat Leisure Limited</li>
+      <li><strong>ASX code:</strong> ALL</li>
+      <li><strong>Sector:</strong> Consumer cyclical</li>
+      <li><strong>Industry:</strong> Gambling and gaming technology</li>
+      <li><strong>Head office:</strong> Building A, Pinnacle Office Park, 85 Epping Road, North Ryde NSW 2113, Australia</li>
+      <li><strong>Website:</strong> <a href="https://www.aristocrat.com" target="_blank">aristocrat.com</a></li>
+      <li><strong>Phone:</strong> +61 2 9013 6000</li>
+      <li><strong>Global footprint:</strong> More than 7,400 employees in over 20 locations</li>
+      <li><strong>Founded:</strong> 1950 (gaming machine business developed from 1953)</li>
+      <li><strong>ISS governance quality score (1 November 2025):</strong> 5 (audit 6, board 5, shareholder rights 10, compensation 3)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Company overview</h2>
+    <p>Aristocrat Leisure Limited is a global gaming content and technology company with operations across land based gambling machines, social casino style mobile games and regulated real money online gambling. The group supplies electronic gaming machines, casino management systems, iLottery content and a large portfolio of digital games.</p>
+    <p>The company is one of the largest suppliers of poker machines in Australia and a major participant in casinos and gaming venues internationally. Through its digital businesses, Aristocrat publishes social casino apps and operates regulated online real money gaming platforms, extending gambling style products to mobile and online environments.</p>
+  </div>
+
+  <div class="card">
+    <h2>Business segments</h2>
+
+    <h3>Aristocrat Gaming</h3>
+    <ul>
+      <li>Designs, develops and manufactures electronic gaming machines for casinos, clubs and hotels.</li>
+      <li>Provides casino management systems and gaming platforms to land based operators.</li>
+      <li>Relies on gaming machine performance, venue placements and product refresh cycles.</li>
+    </ul>
+
+    <h3>Product Madness (social casino and mobile games)</h3>
+    <ul>
+      <li>Publishes free to play social casino games for mobile and online platforms.</li>
+      <li>Generates revenue through in app purchases and virtual currency rather than traditional wagering.</li>
+      <li>Uses behavioural design and live operations to drive player engagement and spending.</li>
+    </ul>
+
+    <h3>Aristocrat Interactive (real money online gaming)</h3>
+    <ul>
+      <li>Provides regulated real money online gambling solutions and content.</li>
+      <li>Includes iLottery content and online casino style games where permitted by law.</li>
+      <li>Operates in a tightly regulated environment with licencing obligations in multiple jurisdictions.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Corporate governance</h2>
+    <ul>
+      <li>ISS governance quality score of 5 as at 1 November 2025.</li>
+      <li>Pillar scores:
+        <ul>
+          <li>Audit: 6</li>
+          <li>Board: 5</li>
+          <li>Shareholder rights: 10</li>
+          <li>Compensation: 3</li>
+        </ul>
+      </li>
+      <li>The high shareholder rights score indicates weaker protection for minority shareholders relative to peers.</li>
+      <li>Audit and board scores suggest scope to improve independent oversight, risk governance and transparency.</li>
+      <li>Executive incentives are closely tied to growth in gaming revenue and digital expansion, which shapes risk and strategy.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>ESG and social impact</h2>
+
+    <h3>Environmental</h3>
+    <ul>
+      <li>Direct operational emissions are moderate compared with heavy industry but include manufacturing, offices and data hosting.</li>
+      <li>Digital gaming operations contribute to energy use through servers, networks and user devices.</li>
+      <li>Environmental impact is secondary to social impact when assessing this company.</li>
+    </ul>
+
+    <h3>Social</h3>
+    <ul>
+      <li>Core products are gambling machines and gambling like digital games, which are closely linked to problem gambling and financial harm.</li>
+      <li>Electronic gaming machines in venues and casinos are associated with addiction risk, particularly for vulnerable users.</li>
+      <li>Social casino games use in app purchases, virtual currency and variable reward designs that can encourage high spending without traditional gambling classification.</li>
+      <li>Online real money operations expose customers to 24/7 access, increasing potential harm where safeguards are not effective.</li>
+      <li>Regulators and public health advocates consider gambling harm a significant social cost, making the company’s social footprint a central sustainability concern.</li>
+    </ul>
+
+    <h3>Governance and conduct</h3>
+    <ul>
+      <li>Operates in jurisdictions with evolving regulation on gambling advertising, consumer protection and digital gaming mechanics.</li>
+      <li>Faces ongoing scrutiny from regulators, policymakers and civil society on responsible gambling and harm minimisation.</li>
+      <li>Global compliance obligations include anti money laundering, licencing and consumer protection regimes.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Regulatory and business risk</h2>
+    <ul>
+      <li><strong>Regulatory risk:</strong> changes to gambling laws, machine caps, advertising restrictions or digital game regulation can materially affect revenue.</li>
+      <li><strong>Policy and tax risk:</strong> governments may increase taxes or fees on gambling operators and suppliers.</li>
+      <li><strong>Litigation and enforcement risk:</strong> exposure to claims relating to gambling harm, consumer law, data use or misleading conduct.</li>
+      <li><strong>Reputational risk:</strong> high, due to association with gambling addiction and harm, particularly in markets such as Australia.</li>
+      <li><strong>Technology and market risk:</strong> competition from other gaming providers and shifts in player behaviour across land based and online channels.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Category and sector placement</h2>
+    <ul>
+      <li><strong>High level sector:</strong> Consumer cyclical.</li>
+      <li><strong>Sub sector:</strong> Gambling and gaming technology.</li>
+      <li>This profile sits alongside other gambling and gaming companies rather than fashion, finance or industrial infrastructure.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Tags</h2>
+    <div>
+      <span class="tag">Gambling</span>
+      <span class="tag">Electronic gaming machines</span>
+      <span class="tag">Social casino</span>
+      <span class="tag">Real money gaming</span>
+      <span class="tag">Digital gaming</span>
+      <span class="tag">High regulatory risk</span>
+      <span class="tag">Global gaming technology</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>References</h2>
+    <ul>
+      <li>Aristocrat Leisure Limited. (n.d.). <i>Corporate information and global operations.</i> Retrieved from <a href="https://www.aristocrat.com" target="_blank">https://www.aristocrat.com</a></li>
+      <li>ISS Governance. (2025). <i>Aristocrat Leisure Limited governance quality score.</i></li>
+      <li>Market and exchange disclosures for Aristocrat Leisure Limited (ASX: ALL).</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Sustainability Database Project ·
+    <a href="https://github.com/hab3x/Sustainability_Database" target="_blank">View on GitHub</a>
+  </div>
+
+  <!-- Centralised search loader: assuming this file lives at businesses/<category>/ALL.html -->
+  <script src="../../search-config.js"></script>
+
+  <script>
+    function toggleTheme() {
+      const current = document.body.getAttribute('data-theme');
+      document.body.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    }
+
+    const input = document.getElementById('search-input');
+    const results = document.getElementById('results');
+
+    const minChars = (typeof SEARCH_SETTINGS !== 'undefined' && SEARCH_SETTINGS.minChars)
+      ? SEARCH_SETTINGS.minChars
+      : 2;
+
+    if (typeof SEARCH_SETTINGS !== 'undefined' && SEARCH_SETTINGS.placeholder) {
+      input.placeholder = SEARCH_SETTINGS.placeholder;
+    }
+
+    const BASE_PATH = '../../';
+
+    function buildHref(file) {
+      if (/^https?:\/\//.test(file)) {
+        return file;
+      }
+      return BASE_PATH + file.replace(/^\//, '');
+    }
+
+    function loadPages() {
+      return (typeof SEARCH_PAGES !== 'undefined') ? SEARCH_PAGES : [];
+    }
+
+    function renderResults(query, pages) {
+      const q = query.trim().toLowerCase();
+      results.innerHTML = '';
+
+      if (!q || q.length < minChars) {
+        return;
+      }
+
+      const filtered = pages.filter(page =>
+        page.title.toLowerCase().includes(q)
+      );
+
+      if (filtered.length === 0) {
+        const li = document.createElement('li');
+        li.textContent = 'No results found.';
+        results.appendChild(li);
+        return;
+      }
+
+      filtered.forEach(page => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = buildHref(page.file);
+        a.textContent = page.title;
+        li.appendChild(a);
+        results.appendChild(li);
+      });
+    }
+
+    const pages = loadPages();
+
+    const params = new URLSearchParams(window.location.search);
+    const initialQuery = params.get('q') || params.get('query') || '';
+
+    if (initialQuery) {
+      input.value = initialQuery;
+      renderResults(initialQuery, pages);
+    }
+
+    input.addEventListener('input', () => {
+      renderResults(input.value, pages);
+    });
+  </script>
+</body>
+</html>
