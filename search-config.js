@@ -5,15 +5,16 @@ const SEARCH_PAGES = [
   { title: "About Us", file: "about_us.html" },
 
   // Fashion industry pages
-  { title: "Fashion", file: "businesses/fashion/fashion.html" },
+  { title: "Fashion Industry Overview", file: "businesses/fashion/fashion.html" },
   { title: "Australian Stitch", file: "businesses/fashion/Australianstitch.html" },
   { title: "Espire Clothing", file: "businesses/fashion/espireclothing.html" },
   { title: "FAYT The Label", file: "businesses/fashion/faytthelabel.html" },
 
   // Infrastructure & Industry
   { title: "AGL Energy Limited", file: "businesses/Infrastructure_and_Industry/AGL.html" },
-  businesses/Infrastructure & Industry/ALS.HTML
-  businesses/Infrastructure & Industry/AMC.HTML - Amcor plc (AMC.AX)
+  { title: "ALS Limited", file: "businesses/Infrastructure_and_Industry/ALS.html" },
+  { title: "Amcor plc", file: "businesses/Infrastructure_and_Industry/AMC.html" },
+  { title: "Ampol Limited", file: "businesses/Infrastructure_and_Industry/ALD.html" },
 
   // Example directory
   { title: "Ethical Threads", file: "businesses/Example/ethical-threads.html" }
