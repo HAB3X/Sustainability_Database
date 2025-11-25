@@ -12,6 +12,7 @@ const SEARCH_PAGES = [
 
   // Infrastructure & Industry
   { title: "AGL Energy Limited", file: "businesses/Infrastructure_and_Industry/AGL.html" },
+  businesses/Infrastructure & Industry/ALS.HTML
 
   // Example directory
   { title: "Ethical Threads", file: "businesses/Example/ethical-threads.html" }
