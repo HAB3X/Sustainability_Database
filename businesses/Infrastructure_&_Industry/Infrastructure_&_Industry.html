@@ -53,7 +53,7 @@
       padding-bottom: 0.5rem;
       margin-bottom: 1.5rem;
       display: flex;
-      align-items: centre;
+      align-items: center;
       justify-content: space-between;
       gap: 0.6rem;
     }
@@ -115,7 +115,7 @@
       margin-top: 4rem;
       font-size: 0.9rem;
       color: var(--muted);
-      text-align: centre;
+      text-align: center;
       border-top: 1px solid var(--border);
       padding-top: 1.5rem;
     }
@@ -123,7 +123,8 @@
     .controls {
       display: flex;
       gap: 1rem;
-      align-items: centre;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
     .controls button {
@@ -192,6 +193,8 @@
   <h1>
     <span><i class="fas fa-industry"></i> Infrastructure and industry – sustainability overview</span>
     <div class="controls">
+      <button onclick="window.location.href='../../index.html'">Home</button>
+      <button onclick="window.location.href='../../directory.html'">Directory</button>
       <button onclick="toggleTheme()">🌓 Toggle theme</button>
       <button onclick="window.print()">🖨️ Print or PDF</button>
     </div>
@@ -232,28 +235,26 @@
   </div>
 
   <div class="card">
-    <h2>Key sustainability factors we assess</h2>
-    <p>When reviewing infrastructure and industrial companies, the database considers factors such as:</p>
+    <h2>Companies in the infrastructure and industry section</h2>
+    <p>Current infrastructure and industry profiles in the directory are:</p>
     <ul>
-      <li><strong>Climate strategy and transition planning</strong> for high emissions activities including power generation, refining and heavy industrial production.</li>
-      <li><strong>Operational emissions</strong> and energy efficiency across plants, pipelines, refineries, laboratories and manufacturing sites.</li>
-      <li><strong>Resource use and pollution</strong> including air emissions, water use, waste, spills and contamination risks.</li>
-      <li><strong>Product and service impacts</strong> such as the downstream emissions from sold fuels or the lifecycle of packaging products.</li>
-      <li><strong>Health, safety and labour conditions</strong> in high risk environments like refineries, terminals and industrial laboratories.</li>
-      <li><strong>Governance quality</strong>, board oversight and disclosure of climate and environmental risks.</li>
-      <li><strong>Community and land impacts</strong> related to infrastructure corridors, heavy industry and major energy projects.</li>
+      <li><a href="AGL.html">AGL Energy Limited</a></li>
+      <li><a href="ALD.html">Ampol Limited</a></li>
+      <li><a href="ALS.html">ALS Limited</a></li>
+      <li><a href="AMC.html">Amcor plc</a></li>
+      <li><a href="APA.HTML">APA Group</a></li>
     </ul>
   </div>
 
   <div class="card">
-    <h2>Example companies in infrastructure and industry</h2>
+    <h2>Example company summaries</h2>
 
     <h3>AGL Energy Limited</h3>
     <p>
       AGL Energy Limited is a major Australian electricity and gas supplier with a mix of coal, gas, renewables and storage assets. The company is central to the electricity transition in the National Electricity Market and is assessed on closure plans for coal assets, investment in renewables, customer energy services and governance of climate risk.
     </p>
     <p>
-      <a href="../../businesses/Infrastructure_and_Industry/AGL.html">View AGL Energy Limited profile →</a>
+      <a href="AGL.html">View AGL Energy Limited profile →</a>
     </p>
 
     <h3>Ampol Limited (ALD)</h3>
@@ -261,7 +262,7 @@
       Ampol is a fuel refining and marketing business that owns the Lytton Refinery, a large distribution network and a national fuel and convenience retail chain. It is reviewed for its role in fuel security, operational emissions, strategy for electric vehicle charging and future fuels, and its approach to managing long term demand decline for petrol and diesel.
     </p>
     <p>
-      <a href="../../businesses/Infrastructure_and_Industry/ALD.html">View Ampol Limited profile →</a>
+      <a href="ALD.html">View Ampol Limited profile →</a>
     </p>
 
     <h3>ALS Limited</h3>
@@ -269,7 +270,7 @@
       ALS Limited is a global testing and inspection laboratory group headquartered in Brisbane. It provides analytical services for minerals, environmental samples, food and life sciences, and industrial assets. Assessment focuses on laboratory safety, data integrity, environmental performance of laboratory operations and the role ALS plays in enabling environmental regulation.
     </p>
     <p>
-      <a href="../../businesses/Infrastructure_and_Industry/ALS.html">View ALS Limited profile →</a>
+      <a href="ALS.html">View ALS Limited profile →</a>
     </p>
 
     <h3>Amcor plc (AMC)</h3>
@@ -277,7 +278,15 @@
       Amcor is a global packaging producer that manufactures flexible packaging, rigid containers, closures and speciality materials for food, beverage, medical and consumer products. The profile examines packaging design for recyclability, plastic and material use, circular economy commitments, climate targets and governance around product stewardship and waste.
     </p>
     <p>
-      <a href="../../businesses/Infrastructure_and_Industry/AMC.html">View Amcor plc profile →</a>
+      <a href="AMC.html">View Amcor plc profile →</a>
+    </p>
+
+    <h3>APA Group</h3>
+    <p>
+      APA Group is a major owner and operator of gas transmission pipelines, gas distribution networks, electricity transmission infrastructure and a growing portfolio of renewable and storage assets. Its assessment focuses on transition risk for long lived gas infrastructure, expansion into renewables, regulatory oversight and the balance between gas growth and climate commitments.
+    </p>
+    <p>
+      <a href="APA.HTML">View APA Group profile →</a>
     </p>
   </div>
 
@@ -298,7 +307,7 @@
     <a href="https://github.com/hab3x/Sustainability_Database" target="_blank">View source on GitHub</a>
   </div>
 
-  <!-- Centralised search loader: this page is in businesses/Infrastructure_and_Industry/ -->
+  <!-- Centralised search loader: this page is in businesses/Infrastructure_&_Industry/ -->
   <script src="../../search-config.js"></script>
 
   <script>
