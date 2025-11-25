@@ -1,1 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>APA Group – Sustainability profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #121715;
+      --card: #1a1f1d;
+      --text: #e0f0e0;
+      --muted: #93b293;
+      --accent: #4ade80;
+      --accent-light: #273c2f;
+      --border: #2c352f;
+    }
 
+    [data-theme='light'] {
+      --bg: #f5fef5;
+      --card: #ffffff;
+      --text: #1a2e1a;
+      --muted: #607d60;
+      --accent: #3ca974;
+      --accent-light: #e0f7eb;
+      --border: #d2e3d2;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 2rem 1.25rem;
+      max-width: 880px;
+      margin-inline: auto;
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    h1, h2, h3 {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.3rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin-top: 1.4rem;
+      margin-bottom: 0.5rem;
+      color: var(--muted);
+    }
+
+    p {
+      margin: 0.6rem 0 1rem;
+    }
+
+    ul {
+      margin: 0.6rem 0 1.2rem 1.2rem;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 0.4rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.2rem;
+      margin-top: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 20px;
+      font-size: 0.82rem;
+      padding: 0.3rem 0.75rem;
+      margin: 0.2rem 0.4rem 0.2rem 0;
+      text-decoration: none;
+    }
+
+    .footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+      border-top: 1px solid var(--border);
+      padding-top: 1.25rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .controls {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .controls button {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      padding: 0.4rem 0.8rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+
+    .controls button:hover {
+      background: #74fca0;
+    }
+
+    #search-container { margin-top: 1.5rem; }
+    #search-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background-color: var(--card);
+      color: var(--text);
+    }
+    #search-input:focus { outline: none; border-color: var(--accent); }
+    #results { list-style: none; margin-top: 0.8rem; padding-left: 0; }
+    #results li { margin: 0.5rem 0; }
+  </style>
+</head>
+<body data-theme="dark">
+
+  <h1>
+    <span><i class="fas fa-gas-pump"></i> APA Group</span>
+    <div class="controls">
+      <button onclick="toggleTheme()">🌓 Toggle theme</button>
+      <button onclick="window.print()">🖨️ Print or PDF</button>
+    </div>
+  </h1>
+
+  <div id="search-container">
+    <input type="text" id="search-input" placeholder="Search businesses, sectors, or topics...">
+    <ul id="results"></ul>
+  </div>
+
+  <div class="card">
+    <h2>At a glance</h2>
+    <ul>
+      <li><strong>Legal name:</strong> APA Group</li>
+      <li><strong>ASX code:</strong> APA</li>
+      <li><strong>Sector:</strong> Utilities</li>
+      <li><strong>Industry:</strong> Utilities – regulated gas</li>
+      <li><strong>Head office:</strong> Level 10, 121 Castlereagh Street, Sydney NSW 2000, Australia</li>
+      <li><strong>Website:</strong> <a href="https://www.apa.com.au" target="_blank">apa.com.au</a></li>
+      <li><strong>Phone:</strong> +61 2 9693 0000</li>
+      <li><strong>Operations:</strong> gas transmission, gas distribution, power generation, renewables and energy storage</li>
+      <li><strong>Key network scale:</strong> approximately 15,000 km of gas transmission pipelines, 29,500 km of gas mains and pipelines, 1.5 million gas consumer connections, and around 800 km of high voltage electricity transmission including 290 km of deep sea cable</li>
+      <li><strong>ISS governance quality score (1 November 2025):</strong> 2 (audit 1, board 4, shareholder rights 1, compensation 1)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Company overview</h2>
+    <p>APA Group is an energy infrastructure business that owns and operates critical gas and electricity networks across Australia. The company’s assets transport natural gas, provide gas storage and processing, support electricity transmission, and include a growing portfolio of renewable generation and battery energy storage projects.</p>
+    <p>APA connects gas basins, power stations, industrial users and residential customers through interconnected gas grids and electricity infrastructure. The group also invests in energy infrastructure and provides specialist asset management and operational services to both its own investments and third party owners.</p>
+  </div>
+
+  <div class="card">
+    <h2>Business segments</h2>
+
+    <h3>Energy infrastructure</h3>
+    <ul>
+      <li>Ownership and operation of gas transmission pipelines and interconnected gas grids.</li>
+      <li>Operation of gas mains, distribution networks and gas consumer connections.</li>
+      <li>Gas fired power generation assets supplying electricity to the grid and major customers.</li>
+      <li>Renewable energy assets, including solar and wind farms and battery energy storage systems.</li>
+      <li>Gas storage, processing and compression facilities supporting security of supply.</li>
+      <li>Electricity transmission assets, including high voltage lines and subsea cable.</li>
+    </ul>
+
+    <h3>Asset management</h3>
+    <ul>
+      <li>Provides asset management and operating services to APA’s own energy investments.</li>
+      <li>Offers operations, maintenance and technical services to third party infrastructure owners.</li>
+      <li>Focuses on safety, reliability and regulatory compliance across complex energy assets.</li>
+    </ul>
+
+    <h3>Energy investments</h3>
+    <ul>
+      <li>Holds interests in a portfolio of energy infrastructure ventures.</li>
+      <li>Invests alongside partners in pipelines, power generation and related assets.</li>
+      <li>Uses long term contracted cash flows to support stable earnings.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Infrastructure portfolio</h2>
+    <p>APA’s network and asset base includes:</p>
+    <ul>
+      <li>Approximately 15,000 kilometres of gas transmission pipelines forming major east and west coast networks.</li>
+      <li>Approximately 29,500 kilometres of gas mains and distribution pipelines.</li>
+      <li>Roughly 1.5 million gas consumer connections.</li>
+      <li>Approximately 800 kilometres of high voltage electricity transmission infrastructure.</li>
+      <li>Approximately 290 kilometres of deep sea electricity cable.</li>
+      <li>Gas fired power stations, solar farms, wind farms and battery energy storage systems.</li>
+    </ul>
+    <p>Together these assets link gas producers, electricity generators, industrial loads, regional communities and metropolitan centres, making APA a central participant in Australia’s energy system.</p>
+  </div>
+
+  <div class="card">
+    <h2>Operations and capabilities</h2>
+
+    <h3>Pipeline and project delivery</h3>
+    <ul>
+      <li>Delivers new pipelines and associated infrastructure using techniques such as horizontal directional drilling and open trench construction.</li>
+      <li>Develops and constructs renewables projects and supporting grid infrastructure.</li>
+      <li>Provides project management across design, construction, commissioning and handover.</li>
+    </ul>
+
+    <h3>Bundled energy solutions</h3>
+    <ul>
+      <li>Offers bundled energy systems that integrate gas transport, electricity supply, firming and storage.</li>
+      <li>Targets industrial and commercial customers seeking reliable and flexible energy packages.</li>
+      <li>Supports the integration of lower emissions technologies into existing energy systems.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Corporate governance</h2>
+    <ul>
+      <li>APA Group’s ISS governance quality score as at 1 November 2025 is 2.</li>
+      <li>Pillar scores:
+        <ul>
+          <li>Audit: 1</li>
+          <li>Board: 4</li>
+          <li>Shareholder rights: 1</li>
+          <li>Compensation: 1</li>
+        </ul>
+      </li>
+      <li>The overall score indicates strong performance on audit, shareholder rights and remuneration, with a moderate board score.</li>
+      <li>The board is responsible for overseeing risk management, safety, regulatory compliance and the strategic response to energy transition and climate policy.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Sustainability and ESG themes</h2>
+
+    <h3>Environmental</h3>
+    <ul>
+      <li>Owns and operates infrastructure that transports natural gas, a fossil fuel that plays a role in current energy systems but is subject to long term decarbonisation policy.</li>
+      <li>Invests in solar, wind and battery projects to support the shift towards lower emissions energy.</li>
+      <li>Manages environmental impacts associated with pipeline corridors, construction works and long linear infrastructure.</li>
+    </ul>
+
+    <h3>Social</h3>
+    <ul>
+      <li>Provides essential energy infrastructure that underpins homes, businesses and industry.</li>
+      <li>Focuses on safety performance for employees, contractors and communities near assets.</li>
+      <li>Engages with landholders, regional communities and other stakeholders affected by existing and new infrastructure.</li>
+    </ul>
+
+    <h3>Governance</h3>
+    <ul>
+      <li>Reports on governance and risk management through its annual and sustainability disclosures.</li>
+      <li>Faces scrutiny on how it balances gas infrastructure investment with long term climate goals.</li>
+      <li>Subject to Australian regulatory frameworks overseeing energy networks and corporate conduct.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Risks and considerations</h2>
+    <ul>
+      <li><strong>Transition risk:</strong> long lived gas infrastructure is exposed to policy and market changes as Australia decarbonises its energy system.</li>
+      <li><strong>Regulatory risk:</strong> revenue from regulated assets depends on regulated returns, access arrangements and regulatory determinations.</li>
+      <li><strong>Project and capital risk:</strong> new pipelines and renewables projects require significant capital expenditure and careful execution.</li>
+      <li><strong>Climate and environmental risk:</strong> physical climate risks and environmental approvals can affect operations and new developments.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Tags</h2>
+    <div>
+      <span class="tag">Gas transmission</span>
+      <span class="tag">Energy infrastructure</span>
+      <span class="tag">Regulated utilities</span>
+      <span class="tag">Electricity transmission</span>
+      <span class="tag">Renewable energy</span>
+      <span class="tag">Energy transition</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>References</h2>
+    <ul>
+      <li>APA Group. (n.d.). <i>Company information.</i> Retrieved from <a href="https://www.apa.com.au" target="_blank">https://www.apa.com.au</a></li>
+      <li>APA Group. (n.d.). <i>Our assets and infrastructure.</i></li>
+      <li>ISS Governance. (2025). <i>APA Group governance quality score.</i></li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Sustainability Database Project ·
+    <a href="https://github.com/hab3x/Sustainability_Database" target="_blank">View on GitHub</a>
+  </div>
+
+  <!-- Centralised search loader: this file lives at repo root -->
+  <script src="../../search-config.js"></script>
+
+  <script>
+    function toggleTheme() {
+      const current = document.body.getAttribute('data-theme');
+      document.body.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    }
+
+    const input = document.getElementById('search-input');
+    const results = document.getElementById('results');
+
+    const minChars = (typeof SEARCH_SETTINGS !== 'undefined' && SEARCH_SETTINGS.minChars)
+      ? SEARCH_SETTINGS.minChars
+      : 2;
+
+    if (typeof SEARCH_SETTINGS !== 'undefined' && SEARCH_SETTINGS.placeholder) {
+      input.placeholder = SEARCH_SETTINGS.placeholder;
+    }
+
+    const BASE_PATH = '../../';
+
+    function buildHref(file) {
+      if (/^https?:\/\//.test(file)) {
+        return file;
+      }
+      return BASE_PATH + file.replace(/^\//, '');
+    }
+
+    function loadPages() {
+      return (typeof SEARCH_PAGES !== 'undefined') ? SEARCH_PAGES : [];
+    }
+
+    function renderResults(query, pages) {
+      const q = query.trim().toLowerCase();
+      results.innerHTML = '';
+
+      if (!q || q.length < minChars) {
+        return;
+      }
+
+      const filtered = pages.filter(page =>
+        page.title.toLowerCase().includes(q)
+      );
+
+      if (filtered.length === 0) {
+        const li = document.createElement('li');
+        li.textContent = 'No results found.';
+        results.appendChild(li);
+        return;
+      }
+
+      filtered.forEach(page => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = buildHref(page.file);
+        a.textContent = page.title;
+        li.appendChild(a);
+        results.appendChild(li);
+      });
+    }
+
+    const pages = loadPages();
+
+    const params = new URLSearchParams(window.location.search);
+    const initialQuery = params.get('q') || params.get('query') || '';
+
+    if (initialQuery) {
+      input.value = initialQuery;
+      renderResults(initialQuery, pages);
+    }
+
+    input.addEventListener('input', () => {
+      renderResults(input.value, pages);
+    });
+  </script>
+</body>
+</html>
