@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amcor plc: Sustainability profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #121715;
+      --card: #1a1f1d;
+      --text: #e0f0e0;
+      --muted: #93b293;
+      --accent: #4ade80;
+      --accent-light: #273c2f;
+      --border: #2c352f;
+    }
+
+    [data-theme='light'] {
+      --bg: #f5fef5;
+      --card: #ffffff;
+      --text: #1a2e1a;
+      --muted: #607d60;
+      --accent: #3ca974;
+      --accent-light: #e0f7eb;
+      --border: #d2e3d2;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 2rem 1.25rem;
+      max-width: 880px;
+      margin-inline: auto;
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    h1, h2, h3 {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.3rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin-top: 1.4rem;
+      margin-bottom: 0.5rem;
+      color: var(--muted);
+    }
+
+    p {
+      margin: 0.6rem 0 1rem;
+    }
+
+    ul {
+      margin: 0.6rem 0 1.2rem 1.2rem;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 0.4rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.2rem;
+      margin-top: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 20px;
+      font-size: 0.82rem;
+      padding: 0.3rem 0.75rem;
+      margin: 0.2rem 0.4rem 0.2rem 0;
+      text-decoration: none;
+    }
+
+    .footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+      border-top: 1px solid var(--border);
+      padding-top: 1.25rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .controls {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .controls button {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      padding: 0.4rem 0.8rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+
+    .controls button:hover {
+      background: #74fca0;
+    }
+
+    #search-container { margin-top: 1.5rem; }
+    #search-input {
+      width: 100%; padding: 0.75rem 1rem; font-size: 1rem;
+      border-radius: 8px; border: 1px solid var(--border);
+      background-color: var(--card); color: var(--text);
+    }
+    #search-input:focus { outline: none; border-color: var(--accent); }
+    #results { list-style: none; margin-top: 0.8rem; padding-left: 0; }
+    #results li { margin: 0.5rem 0; }
+  </style>
+</head>
+<body data-theme="dark">
+
+  <h1>
+    <span><i class="fas fa-box-open"></i> Amcor plc</span>
+    <div class="controls">
+      <button onclick="toggleTheme()">🌓 Toggle Theme</button>
+      <button onclick="window.print()">🖨️ Print / PDF</button>
+    </div>
+  </h1>
+
+  <div id="search-container">
+    <input type="text" id="search-input" placeholder="Search businesses, sectors, or topics...">
+    <ul id="results"></ul>
+  </div>
+
+  <div class="card">
+    <h2>At a glance</h2>
+    <ul>
+      <li><strong>Business name:</strong> Amcor plc</li>
+      <li><strong>Tickers:</strong> AMC.AX (ASX), AMCR (NYSE)</li>
+      <li><strong>Sector:</strong> Consumer cyclical</li>
+      <li><strong>Industry:</strong> Packaging and containers</li>
+      <li><strong>Headquarters:</strong> Thurgauerstrasse 34, 8050 Zurich, Switzerland</li>
+      <li><strong>Domicile:</strong> Jersey, with operational headquarters in Switzerland</li>
+      <li><strong>Founded:</strong> Australian founded packaging company that expanded globally</li>
+      <li><strong>Employees:</strong> around 77 000</li>
+      <li><strong>Global footprint:</strong> more than 225 manufacturing sites in over 40 countries</li>
+      <li><strong>Main business lines:</strong> flexible packaging, rigid containers, speciality cartons, closures and packaging services</li>
+      <li><strong>Website:</strong> <a href="https://www.amcor.com" target="_blank">amcor.com</a></li>
+      <li><strong>Phone:</strong> +41 44 316 17 17</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Company overview</h2>
+    <p>Amcor plc is a global packaging company that designs, develops and produces packaging for food, beverages, pharmaceuticals, medical devices, home and personal care and a wide range of other consumer and industrial products. The company specialises in flexible packaging, rigid containers, closures, specialty cartons and high barrier materials for sensitive and sterile products.</p>
+    <p>Originating in Australia, Amcor has transformed into a multinational group domiciled in Jersey and based in Zurich, with shares listed in Australia and the United States. Its packaging is used by many of the largest fast moving consumer goods and healthcare companies in the world, which makes Amcor a central player in global supply chains and in debates about plastic, waste and sustainable packaging.</p>
+  </div>
+
+  <div class="card">
+    <h2>Business segments</h2>
+
+    <h3>Flexibles</h3>
+    <ul>
+      <li>Largest segment by revenue, producing films, pouches, sachets and laminates.</li>
+      <li>Supplies high barrier flexible packaging for food, beverage, pet food, medical and pharmaceutical products.</li>
+      <li>Develops recyclable mono material structures and reduced material formats.</li>
+    </ul>
+
+    <h3>Rigid packaging</h3>
+    <ul>
+      <li>Primarily polyethylene terephthalate containers for beverages and other liquids.</li>
+      <li>Focus on lightweight containers that reduce resin usage while maintaining performance.</li>
+      <li>Used for carbonated soft drinks, water, juices and some personal care products.</li>
+    </ul>
+
+    <h3>Speciality cartons and closures</h3>
+    <ul>
+      <li>Cartons for sensitive applications and specialist markets.</li>
+      <li>Closures and sealing systems, including tamper evident and child resistant solutions.</li>
+      <li>Medical and healthcare related packs that combine barriers, sterility and usability.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Global presence</h2>
+    <p>Amcor operates more than 225 manufacturing and packaging facilities across over 40 countries, spanning Europe, North America, Latin America, Asia Pacific and Africa. This network allows the company to supply major multinational customers in multiple regions and to respond to local regulatory requirements and product expectations.</p>
+    <p>The company’s scale and geographic spread give it significant influence over packaging formats and material choices across consumer goods and healthcare supply chains, while also exposing it to diverse regulatory frameworks dealing with waste, recycling and extended producer responsibility.</p>
+  </div>
+
+  <div class="card">
+    <h2>Sustainability and key practices</h2>
+
+    <h3>Packaging design and circularity</h3>
+    <ul>
+      <li>Public commitment that all Amcor packaging will be recyclable or reusable by 2025.</li>
+      <li>Investment in research and development to create recyclable flexible packaging that can meet food safety and shelf life requirements.</li>
+      <li>Lightweighting programmes for rigid containers to reduce resin usage and transport emissions.</li>
+      <li>Development of products that incorporate recycled content where technically and legally possible.</li>
+    </ul>
+
+    <h3>Climate and emissions</h3>
+    <ul>
+      <li>Long term ambition to reach net zero greenhouse gas emissions by 2050.</li>
+      <li>Targets to reduce operational emissions intensity and increase procurement of renewable electricity.</li>
+      <li>Energy efficiency projects across plants, including process improvements and equipment upgrades.</li>
+    </ul>
+
+    <h3>Waste and resource management</h3>
+    <ul>
+      <li>Internal programmes to reduce production scrap and increase material yield.</li>
+      <li>Participation in industry coalitions and initiatives focused on recycling systems and plastic waste reduction.</li>
+      <li>Support for local recycling and collection schemes in partnership with customers and industry groups.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Social and governance factors</h2>
+
+    <h3>People and labour</h3>
+    <ul>
+      <li>Workforce of about 77 000 employees across production, engineering, design and support functions.</li>
+      <li>Policies and codes that address health and safety, human rights, diversity and inclusion.</li>
+      <li>Publication of modern slavery statements and supplier expectations in relation to labour standards.</li>
+    </ul>
+
+    <h3>Governance and risk</h3>
+    <ul>
+      <li>Listed on both the Australian Securities Exchange and the New York Stock Exchange with global investor oversight.</li>
+      <li>Risk management processes cover raw material price volatility, supply chain continuity, regulatory change and reputational risk.</li>
+      <li>Board and executive leadership are responsible for overseeing sustainability strategy and climate related risks.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Sustainability concerns and gaps</h2>
+    <ul>
+      <li>Heavy reliance on plastic based packaging, including flexible materials that are difficult to recycle in many markets.</li>
+      <li>Progress toward fully recyclable or reusable packaging commitments varies by region and product line.</li>
+      <li>Global recycling infrastructure is uneven, which limits real world recyclability of some Amcor formats even where designs are technically recyclable.</li>
+      <li>Disclosure on Scope 3 emissions is less detailed than some stakeholders would prefer given the scale of downstream impacts.</li>
+      <li>Healthcare and medical packaging poses particular challenges for recyclability due to sterility and contamination requirements.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>ESG and SDG alignment</h2>
+
+    <h3>Relevant sustainable development goals</h3>
+    <ul>
+      <li><strong>SDG 9 – Industry, innovation and infrastructure:</strong> through packaging design innovation and manufacturing capabilities.</li>
+      <li><strong>SDG 12 – Responsible consumption and production:</strong> via recyclable packaging design, waste reduction and circularity projects.</li>
+      <li><strong>SDG 13 – Climate action:</strong> through decarbonisation targets and energy efficiency actions.</li>
+      <li><strong>SDG 3 – Good health and wellbeing:</strong> by supplying sterile and secure packaging for medical devices and pharmaceuticals.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Tags</h2>
+    <div>
+      <span class="tag">Global packaging company</span>
+      <span class="tag">Flexible packaging</span>
+      <span class="tag">PET containers</span>
+      <span class="tag">Recyclable materials</span>
+      <span class="tag">Circular economy initiatives</span>
+      <span class="tag">Medical and pharmaceutical packaging</span>
+      <span class="tag">Plastic waste and lifecycle impacts</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>References</h2>
+    <ul>
+      <li>Amcor. (2024). <i>Annual report.</i> Retrieved from <a href="https://www.amcor.com" target="_blank">https://www.amcor.com</a></li>
+      <li>Amcor. (2024). <i>Sustainability information.</i> Retrieved from <a href="https://www.amcor.com/sustainability" target="_blank">https://www.amcor.com/sustainability</a></li>
+      <li>Australian Securities Exchange. (2025). <i>Company profile: Amcor plc (AMC).</i> Retrieved from the ASX website.</li>
+      <li>United States Securities and Exchange Commission. (2025). <i>Form 20 F: Amcor plc.</i></li>
+      <li>Ellen MacArthur Foundation. (2024). <i>New Plastics Economy: Partners and participants.</i></li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Sustainability Database Project ·
+    <a href="https://github.com/hab3x/Sustainability_Database" target="_blank">View on GitHub</a>
+  </div>
+
+  <!-- Centralised search loader: adjust path if this file is in a different folder depth -->
+  <script src="../../search-config.js"></script>
+
+  <script>
+    function toggleTheme() {
+      const current = document.body.getAttribute('data-theme');
+      document.body.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    }
+
+    const input = document.getElementById("search-input");
+    const results = document.getElementById("results");
+
+    const minChars = (typeof SEARCH_SETTINGS !== "undefined" && SEARCH_SETTINGS.minChars)
+      ? SEARCH_SETTINGS.minChars
+      : 2;
+
+    if (typeof SEARCH_SETTINGS !== "undefined" && SEARCH_SETTINGS.placeholder) {
+      input.placeholder = SEARCH_SETTINGS.placeholder;
+    }
+
+    const BASE_PATH = "../../";
+
+    function buildHref(file) {
+      if (/^https?:\/\//.test(file)) {
+        return file;
+      }
+      return BASE_PATH + file.replace(/^\//, "");
+    }
+
+    function loadPages() {
+      return (typeof SEARCH_PAGES !== "undefined") ? SEARCH_PAGES : [];
+    }
+
+    function renderResults(query, pages) {
+      const q = query.trim().toLowerCase();
+      results.innerHTML = "";
+
+      if (!q || q.length < minChars) {
+        return;
+      }
+
+      const filtered = pages.filter(page =>
+        page.title.toLowerCase().includes(q)
+      );
+
+      if (filtered.length === 0) {
+        const li = document.createElement("li");
+        li.textContent = "No results found.";
+        results.appendChild(li);
+        return;
+      }
+
+      filtered.forEach(page => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = buildHref(page.file);
+        a.textContent = page.title;
+        li.appendChild(a);
+        results.appendChild(li);
+      });
+    }
+
+    const pages = loadPages();
+
+    const params = new URLSearchParams(window.location.search);
+    const initialQuery = params.get("q") || params.get("query") || "";
+
+    if (initialQuery) {
+      input.value = initialQuery;
+      renderResults(initialQuery, pages);
+    }
+
+    input.addEventListener("input", () => {
+      renderResults(input.value, pages);
+    });
+  </script>
+</body>
+</html>
