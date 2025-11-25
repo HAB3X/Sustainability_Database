@@ -115,7 +115,7 @@
       margin-top: 4rem;
       font-size: 0.9rem;
       color: var(--muted);
-      text-align: centre;
+      text-align: center;
       border-top: 1px solid var(--border);
       padding-top: 1.5rem;
     }
@@ -123,7 +123,7 @@
     .controls {
       display: flex;
       gap: 1rem;
-      align-items: centre;
+      align-items: center;
     }
 
     .controls button {
@@ -138,6 +138,12 @@
 
     .controls button:hover {
       background: #74fca0;
+    }
+
+    .breadcrumbs {
+      margin-top: 0.25rem;
+      font-size: 0.9rem;
+      color: var(--muted);
     }
 
     #search-container { margin-top: 2rem; }
@@ -176,12 +182,18 @@
 <body data-theme="dark">
 
   <h1>
-    <span><i class="fas fa-tshirt"></i> Fashion Industry – Sustainability overview</span>
+    <span><i class="fas fa-tshirt"></i> fashion industry – sustainability overview</span>
     <div class="controls">
-      <button onclick="toggleTheme()">🌓 Toggle Theme</button>
-      <button onclick="window.print()">🖨️ Print / PDF</button>
+      <button onclick="toggleTheme()">🌓 toggle theme</button>
+      <button onclick="window.print()">🖨️ print / pdf</button>
     </div>
   </h1>
+
+  <div class="breadcrumbs">
+    <a href="../../index.html">home</a> ·
+    <a href="../../directory.html">directory</a> ·
+    <span>fashion overview</span>
+  </div>
 
   <div id="search-container">
     <input type="text" id="search-input" placeholder="Search businesses, sectors, or topics...">
@@ -189,7 +201,7 @@
   </div>
 
   <div class="card">
-    <h2>About the fashion industry</h2>
+    <h2>about the fashion industry</h2>
     <p>
       The fashion industry covers the design, production, marketing, and sale of clothing, footwear, and accessories. It is one of the world's largest industries by employment and economic output, but also among the most resource intensive. The sector spans fast fashion, luxury design, local manufacturing, and emerging sustainable labels.
     </p>
@@ -199,11 +211,11 @@
   </div>
 
   <div class="card">
-    <h2>Key sustainability factors</h2>
+    <h2>key sustainability factors</h2>
     <p>When assessing sustainability within the fashion sector, this database evaluates companies on factors such as:</p>
     <ul>
       <li>Transparency in sourcing and manufacturing processes.</li>
-      <li>Use of sustainable and recycled materials (for example organic cotton, hemp, Tencel, recycled polyester).</li>
+      <li>Use of sustainable and recycled materials (for example organic cotton, hemp, tencel, recycled polyester).</li>
       <li>Fair labour practices, worker safety, and equitable wages.</li>
       <li>Waste reduction through circular models such as repair, resale, and recycling.</li>
       <li>Minimising environmental impact across dyeing, water use, and carbon footprint.</li>
@@ -213,15 +225,15 @@
   </div>
 
   <div class="card">
-    <h2>Common certifications and sustainable practices</h2>
+    <h2>common certifications and sustainable practices</h2>
     <p>Recognised certifications and sustainability initiatives include:</p>
     <ul>
-      <li><strong>Global Organic Textile Standard (GOTS):</strong> certifies organic fibres and ethical processing.</li>
-      <li><strong>Fair Trade Certified:</strong> ensures fair wages and working conditions.</li>
-      <li><strong>B Corp Certification:</strong> measures social and environmental performance across businesses.</li>
-      <li><strong>OEKO TEX Standard 100:</strong> verifies textiles free from harmful substances.</li>
-      <li><strong>Carbon neutral / Climate Active:</strong> recognises verified emissions measurement and offsetting.</li>
-      <li><strong>Australian Made Campaign:</strong> supports on shore manufacturing and shorter supply chains.</li>
+      <li><strong>global organic textile standard (gots):</strong> certifies organic fibres and ethical processing.</li>
+      <li><strong>fair trade certified:</strong> ensures fair wages and working conditions.</li>
+      <li><strong>b corp certification:</strong> measures social and environmental performance across businesses.</li>
+      <li><strong>oeko tex standard 100:</strong> verifies textiles free from harmful substances.</li>
+      <li><strong>carbon neutral / climate active:</strong> recognises verified emissions measurement and offsetting.</li>
+      <li><strong>australian made campaign:</strong> supports on shore manufacturing and shorter supply chains.</li>
     </ul>
     <p>
       Additional best practices include local production, closed loop fabric systems, second hand and vintage marketplaces, and education campaigns promoting responsible consumption.
@@ -229,15 +241,24 @@
   </div>
 
   <div class="card">
-    <h2>Why sustainable fashion matters</h2>
+    <h2>why sustainable fashion matters</h2>
     <p>
       Globally, the fashion sector accounts for an estimated 8–10% of carbon emissions and 20% of wastewater. Transforming the industry is critical for meeting <strong>UN SDG 12 – Responsible Consumption and Production</strong> and <strong>SDG 8 – Decent Work and Economic Growth</strong>. Supporting ethical, transparent, and environmentally responsible brands helps reduce harm and create fairer systems from fibre to finished garment.
     </p>
   </div>
 
+  <div class="card">
+    <h2>fashion businesses in this database</h2>
+    <ul>
+      <li><a href="australianstitch.html">australian stitch</a></li>
+      <li><a href="espireclothing.html">espire clothing</a></li>
+      <li><a href="faytthelabel.html">fayt the label</a></li>
+    </ul>
+  </div>
+
   <div class="footer">
-    &copy; 2025 Sustainability Database Project ·
-    <a href="https://github.com/hab3x/Sustainability_Database">View source on GitHub</a>
+    &copy; 2025 sustainability database project ·
+    <a href="https://github.com/hab3x/sustainability_database">view source on github</a>
   </div>
 
   <!-- Centralised search loader: from businesses/fashion/ back to repo root -->
