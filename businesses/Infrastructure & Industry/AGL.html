@@ -1,1 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AGL Energy Limited: Sustainability profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #121715;
+      --card: #1a1f1d;
+      --text: #e0f0e0;
+      --muted: #93b293;
+      --accent: #4ade80;
+      --accent-light: #273c2f;
+      --border: #2c352f;
+    }
 
+    [data-theme='light'] {
+      --bg: #f5fef5;
+      --card: #ffffff;
+      --text: #1a2e1a;
+      --muted: #607d60;
+      --accent: #3ca974;
+      --accent-light: #e0f7eb;
+      --border: #d2e3d2;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 2rem 1.25rem;
+      max-width: 880px;
+      margin-inline: auto;
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    h1, h2, h3 {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: centre;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.3rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin-top: 1.4rem;
+      margin-bottom: 0.5rem;
+      color: var(--muted);
+    }
+
+    p {
+      margin: 0.6rem 0 1rem;
+    }
+
+    ul {
+      margin: 0.6rem 0 1.2rem 1.2rem;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 0.4rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.2rem;
+      margin-top: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 20px;
+      font-size: 0.82rem;
+      padding: 0.3rem 0.75rem;
+      margin: 0.2rem 0.4rem 0.2rem 0;
+      text-decoration: none;
+    }
+
+    .footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: centre;
+      border-top: 1px solid var(--border);
+      padding-top: 1.25rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .controls {
+      display: flex;
+      gap: 1rem;
+      align-items: centre;
+    }
+
+    .controls button {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      padding: 0.4rem 0.8rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+
+    .controls button:hover {
+      background: #74fca0;
+    }
+
+    #search-container { margin-top: 1.5rem; }
+    #search-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background-color: var(--card);
+      color: var(--text);
+    }
+    #search-input:focus { outline: none; border-color: var(--accent); }
+    #results { list-style: none; margin-top: 0.8rem; padding-left: 0; }
+    #results li { margin: 0.5rem 0; }
+  </style>
+</head>
+<body data-theme="dark">
+
+  <h1>
+    <span><i class="fas fa-bolt"></i> AGL Energy Limited</span>
+    <div class="controls">
+      <button onclick="toggleTheme()">🌓 Toggle Theme</button>
+      <button onclick="window.print()">🖨️ Print / PDF</button>
+    </div>
+  </h1>
+
+  <div id="search-container">
+    <input type="text" id="search-input" placeholder="Search businesses, sectors, or topics...">
+    <ul id="results"></ul>
+  </div>
+
+  <div class="card">
+    <h2>At a glance</h2>
+    <ul>
+      <li><strong>Business name:</strong> AGL Energy Limited</li>
+      <li><strong>Ticker:</strong> AGL.AX</li>
+      <li><strong>Sector:</strong> Utilities</li>
+      <li><strong>Industry:</strong> Independent power producers and energy retailers</li>
+      <li><strong>Head office:</strong> Level 24, 200 George Street, Sydney NSW 2000, Australia</li>
+      <li><strong>Phone:</strong> +61 2 9921 2999</li>
+      <li><strong>Website:</strong> <a href="https://www.agl.com.au" target="_blank">agl.com.au</a></li>
+      <li><strong>Main customers:</strong> Residential, small and large business, wholesale and industrial, energy and telecommunications customers</li>
+      <li><strong>Key segments:</strong> Customer Markets, Integrated Energy, Investments</li>
+      <li><strong>Founded:</strong> Origins in 1837, one of Australia’s oldest energy businesses</li>
+      <li><strong>Governance indicator:</strong> ISS governance quality score 2 as at 1 November 2025 (audit 6, board 3, shareholder rights 7, compensation 1)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Company overview</h2>
+    <p>AGL Energy Limited is a large integrated energy company supplying electricity, gas and other essential services across Australia. Through its Customer Markets segment it retails electricity and gas, broadband, mobile and voice services, and offers solar and energy efficiency products. It also runs contact centres and customer support operations.</p>
+    <p>The Integrated Energy segment manages a substantial generation portfolio that includes coal and gas fired power stations, renewable assets such as wind, hydro and solar, and an emerging fleet of grid scale batteries and gas storage. AGL presents itself as an essential services provider that aims to support customers as they decarbonise and electrify the way they live, work and move.</p>
+  </div>
+
+  <div class="card">
+    <h2>Operations and business structure</h2>
+    <ul>
+      <li><strong>Customer Markets:</strong> Retail electricity and gas, broadband, mobile and voice services, solar and energy efficiency products, marketing and customer contact operations.</li>
+      <li><strong>Integrated Energy:</strong> Operation of power generation assets across coal, gas, renewables and batteries, along with gas storage, production and energy trading activities.</li>
+      <li><strong>Investments:</strong> Holdings and partnerships in energy related ventures and development projects.</li>
+    </ul>
+    <p>The generation portfolio includes large coal fired power stations at Bayswater in New South Wales and Loy Yang A in Victoria, along with gas peaking plants, hydro schemes, contracted wind and solar farms and grid scale batteries. A high proportion of AGL’s current operational emissions come from coal combustion at these coal assets.</p>
+  </div>
+
+  <div class="card">
+    <h2>Climate strategy and transition commitments</h2>
+    <p>AGL’s Climate Transition Action Plan sets out its pathway for reducing emissions and retiring coal assets while investing in new renewable and storage capacity.</p>
+    <ul>
+      <li>Closure of Liddell Power Station in New South Wales completed in April 2023.</li>
+      <li>Planned closure of Bayswater Power Station between 2030 and 2033, no later than the 2033–34 financial year.</li>
+      <li>Planned closure of Loy Yang A Power Station by the end of the 2034–35 financial year.</li>
+      <li>Target to reduce annual scope 1 and 2 emissions by at least 52 per cent by the 2034–35 financial year relative to a 2018–19 baseline.</li>
+      <li>Intention to reach net zero scope 1 and 2 emissions once coal generation has fully exited the portfolio.</li>
+      <li>Planned investment of up to 20 billion Australian dollars in renewable energy and battery projects, with a goal of up to 12 gigawatts of new solar, wind and storage by 2035.</li>
+    </ul>
+    <p>The 2025 Climate Transition Action Plan received majority shareholder support but with a significant minority vote against, reflecting ongoing investor concern about the pace and ambition of the transition.</p>
+  </div>
+
+  <div class="card">
+    <h2>Products, services and customers</h2>
+    <ul>
+      <li>Electricity and gas retail services for residential, small business and large industrial users.</li>
+      <li>Telecommunications services including broadband, mobile and voice.</li>
+      <li>Solar and energy efficiency products and services, including rooftop solar and smart metering.</li>
+      <li>Electric vehicle plans, home charging solutions and subscription offerings.</li>
+      <li>Moving house services to manage connection and transfer of energy and telecom services.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Sustainability and key practices</h2>
+    <h3>Decarbonisation and portfolio shift</h3>
+    <ul>
+      <li>Climate Transition Action Plan linking coal closure dates with emissions reduction targets and new renewable and storage investment.</li>
+      <li>Development of large scale renewable projects and grid scale batteries, supported by long term offtake agreements with wind and solar developers.</li>
+      <li>Reallocation of capital away from some legacy renewable equity holdings while maintaining contracted renewable supply.</li>
+    </ul>
+
+    <h3>Carbon neutral and customer offerings</h3>
+    <ul>
+      <li>Climate Active certified carbon neutral gas product with a published disclosure statement covering emissions boundaries and offsets.</li>
+      <li>Customer programmes that promote electrification, efficiency and lower emissions technologies in homes and businesses.</li>
+    </ul>
+
+    <h3>Customer and social initiatives</h3>
+    <ul>
+      <li>Support for customers experiencing vulnerability through hardship arrangements and tailored payment support.</li>
+      <li>Focus on keeping essential energy services accessible while the system transitions to lower emissions technologies.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>ESG focus areas</h2>
+
+    <h3>Sustainable development goals</h3>
+    <ul>
+      <li><strong>SDG 7 – Affordable and clean energy:</strong> provision of essential energy alongside investment in renewables and storage.</li>
+      <li><strong>SDG 8 – Decent work and economic growth:</strong> large employer managing workforce change as coal assets retire and new projects arise.</li>
+      <li><strong>SDG 9 – Industry, innovation and infrastructure:</strong> construction of new generation, storage and grid firming infrastructure and digital platforms.</li>
+      <li><strong>SDG 12 – Responsible consumption and production:</strong> carbon neutral gas products and initiatives encouraging efficient and lower impact energy use.</li>
+      <li><strong>SDG 13 – Climate action:</strong> formal climate plan with coal closure dates and emissions targets, subject to ongoing stakeholder scrutiny.</li>
+    </ul>
+
+    <h3>Governance and transparency</h3>
+    <ul>
+      <li>Publishes annual reports and climate related disclosures aligned with the recommendations of the Task Force on Climate related Financial Disclosures.</li>
+      <li>Subject to close review by investors, civil society and regulators regarding climate strategy and marketing claims.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Risk and involvement assessment</h2>
+    <ul>
+      <li><strong>Fossil fuel dependence:</strong> remains one of Australia’s largest corporate emitters because of coal generation, with most operational emissions arising from Bayswater and Loy Yang A.</li>
+      <li><strong>Transition and stranded asset risk:</strong> financial outcomes are sensitive to coal closure timing, policy settings, technology costs and delivery of new projects.</li>
+      <li><strong>Climate and greenwashing scrutiny:</strong> operates in a regulatory context where authorities are increasingly active on misleading environmental claims across the energy sector.</li>
+      <li><strong>Workforce and community impacts:</strong> job reductions linked to the transition programme present social risks, particularly for regional communities that host generation assets.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Key concerns and improvement opportunities</h2>
+    <ul>
+      <li>Significant minority opposition to successive climate transition plans suggests investor concern about alignment with one point five degree pathways and the speed of coal exit.</li>
+      <li>Emissions reductions depend heavily on timely closure of coal plants and successful delivery of planned renewable and storage capacity.</li>
+      <li>Use of offsets and framing of carbon neutral products need clear explanation, with stronger emphasis on absolute emissions reduction to maintain trust.</li>
+      <li>Further detail on workforce transition, retraining and regional economic diversification would strengthen the social dimension of the transition plan.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Tags</h2>
+    <div>
+      <span class="tag">Integrated energy utility</span>
+      <span class="tag">Coal and gas generation</span>
+      <span class="tag">Renewable energy transition</span>
+      <span class="tag">Climate transition action plan</span>
+      <span class="tag">Carbon neutral gas product</span>
+      <span class="tag">Large corporate emitter</span>
+      <span class="tag">Australian utilities</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>References</h2>
+    <ul>
+      <li>AGL Energy Limited. (2024). <i>Annual report 2024.</i> Retrieved from <a href="https://www.agl.com.au" target="_blank">https://www.agl.com.au</a></li>
+      <li>AGL Energy Limited. (2025). <i>Climate Transition Action Plan.</i> Retrieved from <a href="https://www.agl.com.au" target="_blank">https://www.agl.com.au</a></li>
+      <li>AGL Energy Limited. (2023). <i>TCFD report.</i> Retrieved from <a href="https://www.agl.com.au" target="_blank">https://www.agl.com.au</a></li>
+      <li>Climate Active. (2024). <i>Public disclosure statement: AGL carbon neutral gas.</i> Retrieved from <a href="https://www.climateactive.org.au" target="_blank">https://www.climateactive.org.au</a></li>
+      <li>Clean Energy Regulator. (2024). <i>Corporate Emissions Reduction Transparency report: AGL Energy Limited.</i> Retrieved from <a href="https://www.cleanenergyregulator.gov.au" target="_blank">https://www.cleanenergyregulator.gov.au</a></li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Sustainability Database Project · <a href="https://github.com/hab3x/Sustainability_Database" target="_blank">View on GitHub</a>
+  </div>
+
+  <!-- Centralised search loader: adjust path if this file is in a different folder depth -->
+  <script src="../../search-config.js"></script>
+
+  <script>
+    function toggleTheme() {
+      const current = document.body.getAttribute('data-theme');
+      document.body.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    }
+
+    const input = document.getElementById("search-input");
+    const results = document.getElementById("results");
+
+    const minChars = (typeof SEARCH_SETTINGS !== "undefined" && SEARCH_SETTINGS.minChars)
+      ? SEARCH_SETTINGS.minChars
+      : 2;
+
+    if (typeof SEARCH_SETTINGS !== "undefined" && SEARCH_SETTINGS.placeholder) {
+      input.placeholder = SEARCH_SETTINGS.placeholder;
+    }
+
+    const BASE_PATH = "../../";
+
+    function buildHref(file) {
+      if (/^https?:\/\//.test(file)) {
+        return file;
+      }
+      return BASE_PATH + file.replace(/^\//, "");
+    }
+
+    function loadPages() {
+      return (typeof SEARCH_PAGES !== "undefined") ? SEARCH_PAGES : [];
+    }
+
+    function renderResults(query, pages) {
+      const q = query.trim().toLowerCase();
+      results.innerHTML = "";
+
+      if (!q || q.length < minChars) {
+        return;
+      }
+
+      const filtered = pages.filter(page =>
+        page.title.toLowerCase().includes(q)
+      );
+
+      if (filtered.length === 0) {
+        const li = document.createElement("li");
+        li.textContent = "No results found.";
+        results.appendChild(li);
+        return;
+      }
+
+      filtered.forEach(page => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = buildHref(page.file);
+        a.textContent = page.title;
+        li.appendChild(a);
+        results.appendChild(li);
+      });
+    }
+
+    const pages = loadPages();
+
+    const params = new URLSearchParams(window.location.search);
+    const initialQuery = params.get("q") || params.get("query") || "";
+
+    if (initialQuery) {
+      input.value = initialQuery;
+      renderResults(initialQuery, pages);
+    }
+
+    input.addEventListener("input", () => {
+      renderResults(input.value, pages);
+    });
+  </script>
+</body>
+</html>
