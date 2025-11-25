@@ -28,7 +28,6 @@
       line-height: 1.8;
     }
 
-    /* Navigation */
     .nav {
       display: flex;
       justify-content: space-between;
@@ -45,27 +44,18 @@
 
     .nav-left i { color: var(--accent); }
 
-    .nav-links {
-      display: flex;
-      gap: 1rem;
-      font-size: 0.95rem;
-    }
-
     .nav-links a {
+      margin-left: 1rem;
       color: var(--muted);
       text-decoration: none;
     }
 
-    .nav-links a:hover {
-      color: var(--accent);
-      text-decoration: underline;
-    }
+    .nav-links a:hover { color: var(--accent); }
 
     h1 {
       font-size: 2rem;
       border-bottom: 3px solid var(--accent);
       padding-bottom: 0.5rem;
-      margin-bottom: 1.5rem;
     }
 
     h2 {
@@ -82,46 +72,32 @@
       margin-top: 2rem;
     }
 
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Directory list layout */
     .dir-list {
       list-style: none;
       padding-left: 0;
       margin-top: 1rem;
     }
 
-    .dir-list li {
-      margin: 0.5rem 0;
-    }
+    .dir-list li { margin: 0.5rem 0; }
 
-    /* Search bar */
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
     #search-container { margin-top: 1.5rem; }
-
     #search-input {
       width: 100%;
       padding: 0.75rem 1rem;
-      font-size: 1rem;
       border-radius: 8px;
       border: 1px solid var(--border);
       background: #101412;
       color: var(--text);
     }
-    #results { list-style: none; padding-left: 0; margin-top: 1rem; }
-    #results li { margin: 0.5rem 0; }
 
     .footer {
       margin-top: 3rem;
-      border-top: 1px solid var(--border);
       padding-top: 1.5rem;
       text-align: center;
+      border-top: 1px solid var(--border);
       color: var(--muted);
       font-size: 0.9rem;
     }
@@ -130,130 +106,120 @@
 
 <body>
 
-  <!-- Navigation -->
+  <!-- NAVIGATION -->
   <header class="nav">
     <div class="nav-left">
       <i class="fas fa-list"></i>
       <span>Directory</span>
     </div>
     <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about_us.html">About</a>
-      <a href="directory.html">Directory</a>
+      <a href="index.html">home</a>
+      <a href="about_us.html">about</a>
+      <a href="directory.html">directory</a>
     </nav>
   </header>
 
-  <h1><i class="fas fa-folder-open"></i> Complete Directory</h1>
+  <h1><i class="fas fa-folder-open"></i> complete directory</h1>
 
-  <!-- Search -->
+  <!-- SEARCH -->
   <div id="search-container">
     <input type="text" id="search-input" placeholder="Search businesses, sectors, or topics...">
     <ul id="results"></ul>
   </div>
 
-  <!-- DIRECTORY CONTENT -->
+  <!-- GENERAL PAGES -->
   <div class="card">
-    <h2>General Pages</h2>
+    <h2>general pages</h2>
     <ul class="dir-list">
-      <li><a href="about_us.html">About Us</a></li>
-      <li><a href="directory.html">Directory</a></li>
-      <li><a href="index.html">Home Page</a></li>
+      <li><a href="index.html">home page</a></li>
+      <li><a href="about_us.html">about us</a></li>
+      <li><a href="directory.html">directory</a></li>
     </ul>
   </div>
 
+  <!-- FASHION -->
   <div class="card">
-    <h2>Fashion</h2>
+    <h2>fashion</h2>
     <ul class="dir-list">
-      <li><a href="businesses/fashion/fashion.html">Fashion Overview</a></li>
-      <li><a href="businesses/fashion/Australianstitch.html">Australian Stitch</a></li>
-      <li><a href="businesses/fashion/espireclothing.html">Espire Clothing</a></li>
-      <li><a href="businesses/fashion/faytthelabel.html">FAYT The Label</a></li>
+      <li><a href="businesses/fashion/fashion.html">fashion overview</a></li>
+      <li><a href="businesses/fashion/australianstitch.html">australian stitch</a></li>
+      <li><a href="businesses/fashion/espireclothing.html">espire clothing</a></li>
+      <li><a href="businesses/fashion/faytthelabel.html">fayt the label</a></li>
     </ul>
   </div>
 
+  <!-- INFRASTRUCTURE & INDUSTRY -->
   <div class="card">
-    <h2>Infrastructure & Industry</h2>
+    <h2>infrastructure & industry</h2>
     <ul class="dir-list">
-      <li><a href="businesses/Infrastructure_&_Industry/Infrastructure_&_Industry.html">Infrastructure & Industry Overview</a></li>
-      <li><a href="businesses/Infrastructure_&_Industry/AGL.html">AGL Energy Limited</a></li>
-      <li><a href="businesses/Infrastructure_&_Industry/ALS.html">ALS Limited</a></li>
-      <li><a href="businesses/Infrastructure_&_Industry/AMC.html">Amcor plc</a></li>
-      <li><a href="businesses/Infrastructure_&_Industry/ALD.html">Ampol Limited</a></li>
-      <li><a href="businesses/Infrastructure_&_Industry/APA.HTML">APA Group</a></li>
+      <li><a href="businesses/infrastructure_and_industry/infrastructure_and_industry.html">infrastructure overview</a></li>
+      <li><a href="businesses/infrastructure_and_industry/agl.html">agl energy limited</a></li>
+      <li><a href="businesses/infrastructure_and_industry/als.html">als limited</a></li>
+      <li><a href="businesses/infrastructure_and_industry/amc.html">amcor plc</a></li>
+      <li><a href="businesses/infrastructure_and_industry/ald.html">ampol limited</a></li>
+      <li><a href="businesses/infrastructure_and_industry/apa.html">apa group</a></li>
     </ul>
   </div>
 
+  <!-- FINANCE -->
   <div class="card">
-    <h2>Finance & Banking</h2>
+    <h2>finance & banking</h2>
     <ul class="dir-list">
-      <li><a href="businesses/finance/Finance.html">Finance Overview</a></li>
-      <li><a href="businesses/finance/ANZ.html">ANZ Group Holdings Limited</a></li>
-      <li><a href="businesses/finance/ARG.HTML">Argo Investments Limited</a></li>
+      <li><a href="businesses/finance/finance.html">finance overview</a></li>
+      <li><a href="businesses/finance/anz.html">anz group holdings limited</a></li>
+      <li><a href="businesses/finance/arg.html">argo investments limited</a></li>
     </ul>
   </div>
 
+  <!-- GAMBLING & GAMING -->
   <div class="card">
-    <h2>Gambling & Gaming</h2>
+    <h2>gambling & gaming</h2>
     <ul class="dir-list">
-      <li><a href="businesses/Gambling_&_Gaming/ALL.HTML">Aristocrat Leisure Limited</a></li>
+      <li><a href="businesses/gambling_and_gaming/gambling_and_gaming.html">gambling overview</a></li>
+      <li><a href="businesses/gambling_and_gaming/all.html">aristocrat leisure limited</a></li>
     </ul>
   </div>
 
+  <!-- EXAMPLE -->
   <div class="card">
-    <h2>Example Pages</h2>
+    <h2>example pages</h2>
     <ul class="dir-list">
-      <li><a href="businesses/Example/ethical-threads.html">Ethical Threads</a></li>
+      <li><a href="businesses/example/ethical-threads.html">ethical threads</a></li>
     </ul>
   </div>
 
+  <!-- FOOTER -->
   <div class="footer">
-    &copy; 2025 Sustainability Database Project
+    &copy; 2025 sustainability database project
   </div>
 
-  <!-- Search system -->
+  <!-- SEARCH ENGINE -->
   <script src="search-config.js"></script>
   <script>
     const input = document.getElementById("search-input");
     const results = document.getElementById("results");
     const minChars = SEARCH_SETTINGS.minChars;
 
-    async function loadPages() {
-      try {
-        const res = await fetch("search-pages.json");
-        return await res.json();
-      } catch {
-        return SEARCH_PAGES;
-      }
-    }
-
     function renderResults(query, pages) {
       const q = query.toLowerCase().trim();
       results.innerHTML = "";
-
       if (q.length < minChars) return;
 
-      const filtered = pages.filter(page => page.title.toLowerCase().includes(q));
+      const filtered = pages.filter(p => p.title.toLowerCase().includes(q));
 
       if (filtered.length === 0) {
-        const li = document.createElement("li");
-        li.textContent = "No results found.";
-        results.appendChild(li);
+        results.innerHTML = "<li>No results found.</li>";
         return;
       }
 
       filtered.forEach(page => {
         const li = document.createElement("li");
-        const a = document.createElement("a");
-        a.href = page.file;
-        a.textContent = page.title;
-        li.appendChild(a);
+        li.innerHTML = `<a href="${page.file}">${page.title}</a>`;
         results.appendChild(li);
       });
     }
 
-    loadPages().then(pages => {
-      input.addEventListener("input", () => renderResults(input.value, pages));
-    });
+    input.addEventListener("input", () => renderResults(input.value, SEARCH_PAGES));
   </script>
 
 </body>
