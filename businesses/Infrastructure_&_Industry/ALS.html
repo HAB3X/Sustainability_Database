@@ -50,7 +50,7 @@
       padding-bottom: 0.4rem;
       margin-bottom: 1.5rem;
       display: flex;
-      align-items: centre;
+      align-items: center;
       justify-content: space-between;
       gap: 0.5rem;
     }
@@ -107,7 +107,7 @@
       margin-top: 3rem;
       font-size: 0.9rem;
       color: var(--muted);
-      text-align: centre;
+      text-align: center;
       border-top: 1px solid var(--border);
       padding-top: 1.25rem;
     }
@@ -124,7 +124,9 @@
     .controls {
       display: flex;
       gap: 1rem;
-      align-items: centre;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     .controls button {
@@ -143,9 +145,13 @@
 
     #search-container { margin-top: 1.5rem; }
     #search-input {
-      width: 100%; padding: 0.75rem 1rem; font-size: 1rem;
-      border-radius: 8px; border: 1px solid var(--border);
-      background-color: var(--card); color: var(--text);
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background-color: var(--card);
+      color: var(--text);
     }
     #search-input:focus { outline: none; border-color: var(--accent); }
     #results { list-style: none; margin-top: 0.8rem; padding-left: 0; }
@@ -157,6 +163,8 @@
   <h1>
     <span><i class="fas fa-vial"></i> ALS Limited</span>
     <div class="controls">
+      <button onclick="window.location.href='../../index.html'">Home</button>
+      <button onclick="window.location.href='Infrastructure_&_Industry.html'">Infrastructure overview</button>
       <button onclick="toggleTheme()">🌓 Toggle Theme</button>
       <button onclick="window.print()">🖨️ Print / PDF</button>
     </div>
@@ -238,7 +246,7 @@
     <ul>
       <li>Provides testing that underpins environmental regulation, including analysis of soil, sediment and groundwater contamination.</li>
       <li>Supports monitoring of drinking water safety, wastewater discharge and broader aquatic ecosystem health.</li>
-      <li>Conducts specialised testing for emerging contaminants such as per and polyfluoroalkyl substances and microplastics.</li>
+      <li>Conducts specialised testing for emerging contaminants such as per- and polyfluoroalkyl substances and microplastics.</li>
     </ul>
 
     <h3>Corporate environmental footprint</h3>
@@ -330,7 +338,7 @@
     &copy; 2025 Sustainability Database Project · <a href="https://github.com/hab3x/Sustainability_Database" target="_blank">View on GitHub</a>
   </div>
 
-  <!-- Centralised search loader: adjust path if this file is stored in a different folder depth -->
+  <!-- Centralised search loader -->
   <script src="../../search-config.js"></script>
 
   <script>
