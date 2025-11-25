@@ -1,7 +1,15 @@
 [
   {
+    "title": "Home",
+    "file": "index.html"
+  },
+  {
     "title": "About Us",
     "file": "about_us.html"
+  },
+  {
+    "title": "Directory",
+    "file": "directory.html"
   },
   {
     "title": "Fashion",
@@ -9,7 +17,7 @@
   },
   {
     "title": "Australian Stitch",
-    "file": "businesses/fashion/Australianstitch.html"
+    "file": "businesses/fashion/australianstitch.html"
   },
   {
     "title": "Espire Clothing",
@@ -21,46 +29,50 @@
   },
   {
     "title": "Infrastructure & Industry",
-    "file": "businesses/Infrastructure_&_Industry/Infrastructure_&_Industry.html"
+    "file": "businesses/infrastructure_&_industry/infrastructure_&_industry.html"
   },
   {
     "title": "AGL Energy Limited",
-    "file": "businesses/Infrastructure_&_Industry/AGL.html"
+    "file": "businesses/infrastructure_&_industry/agl.html"
   },
   {
     "title": "ALS Limited",
-    "file": "businesses/Infrastructure_&_Industry/ALS.html"
+    "file": "businesses/infrastructure_&_industry/als.html"
   },
   {
     "title": "Amcor plc",
-    "file": "businesses/Infrastructure_&_Industry/AMC.html"
+    "file": "businesses/infrastructure_&_industry/amc.html"
   },
   {
     "title": "Ampol Limited",
-    "file": "businesses/Infrastructure_&_Industry/ALD.html"
+    "file": "businesses/infrastructure_&_industry/ald.html"
   },
   {
     "title": "APA Group",
-    "file": "businesses/Infrastructure_&_Industry/APA.HTML"
+    "file": "businesses/infrastructure_&_industry/apa.html"
   },
   {
     "title": "Finance",
-    "file": "businesses/finance/Finance.html"
+    "file": "businesses/finance/finance.html"
   },
   {
     "title": "ANZ Group Holdings Limited",
-    "file": "businesses/finance/ANZ.html"
+    "file": "businesses/finance/anz.html"
   },
   {
     "title": "Argo Investments Limited",
-    "file": "businesses/finance/ARG.HTML"
+    "file": "businesses/finance/arg.html"
+  },
+  {
+    "title": "Gambling & Gaming",
+    "file": "businesses/gambling_&_gaming/gambling_&_gaming.html"
   },
   {
     "title": "Aristocrat Leisure Limited",
-    "file": "businesses/Gambling_&_Gaming/ALL.HTML"
+    "file": "businesses/gambling_&_gaming/all.html"
   },
   {
     "title": "Ethical Threads",
-    "file": "businesses/Example/ethical-threads.html"
+    "file": "businesses/example/ethical-threads.html"
   }
 ]
