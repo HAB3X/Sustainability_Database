@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ALS Limited: Sustainability profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #121715;
+      --card: #1a1f1d;
+      --text: #e0f0e0;
+      --muted: #93b293;
+      --accent: #4ade80;
+      --accent-light: #273c2f;
+      --border: #2c352f;
+    }
+
+    [data-theme='light'] {
+      --bg: #f5fef5;
+      --card: #ffffff;
+      --text: #1a2e1a;
+      --muted: #607d60;
+      --accent: #3ca974;
+      --accent-light: #e0f7eb;
+      --border: #d2e3d2;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 2rem 1.25rem;
+      max-width: 880px;
+      margin-inline: auto;
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    h1, h2, h3 {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: centre;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+      margin-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.3rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin-top: 1.4rem;
+      margin-bottom: 0.5rem;
+      color: var(--muted);
+    }
+
+    p {
+      margin: 0.6rem 0 1rem;
+    }
+
+    ul {
+      margin: 0.6rem 0 1.2rem 1.2rem;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 0.4rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.2rem;
+      margin-top: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 20px;
+      font-size: 0.82rem;
+      padding: 0.3rem 0.75rem;
+      margin: 0.2rem 0.4rem 0.2rem 0;
+      text-decoration: none;
+    }
+
+    .footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: centre;
+      border-top: 1px solid var(--border);
+      padding-top: 1.25rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .controls {
+      display: flex;
+      gap: 1rem;
+      align-items: centre;
+    }
+
+    .controls button {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      padding: 0.4rem 0.8rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+
+    .controls button:hover {
+      background: #74fca0;
+    }
+
+    #search-container { margin-top: 1.5rem; }
+    #search-input {
+      width: 100%; padding: 0.75rem 1rem; font-size: 1rem;
+      border-radius: 8px; border: 1px solid var(--border);
+      background-color: var(--card); color: var(--text);
+    }
+    #search-input:focus { outline: none; border-color: var(--accent); }
+    #results { list-style: none; margin-top: 0.8rem; padding-left: 0; }
+    #results li { margin: 0.5rem 0; }
+  </style>
+</head>
+<body data-theme="dark">
+
+  <h1>
+    <span><i class="fas fa-vial"></i> ALS Limited</span>
+    <div class="controls">
+      <button onclick="toggleTheme()">🌓 Toggle Theme</button>
+      <button onclick="window.print()">🖨️ Print / PDF</button>
+    </div>
+  </h1>
+
+  <div id="search-container">
+    <input type="text" id="search-input" placeholder="Search businesses, sectors, or topics...">
+    <ul id="results"></ul>
+  </div>
+
+  <div class="card">
+    <h2>At a glance</h2>
+    <ul>
+      <li><strong>Business name:</strong> ALS Limited</li>
+      <li><strong>Ticker:</strong> ALQ.AX</li>
+      <li><strong>Sector:</strong> Testing, inspection and certification</li>
+      <li><strong>Industry:</strong> Scientific and technical laboratory services</li>
+      <li><strong>Headquarters:</strong> Brisbane, Queensland, Australia</li>
+      <li><strong>Founded:</strong> 1863</li>
+      <li><strong>Chief executive officer:</strong> Malcolm Deane, appointed May 2023</li>
+      <li><strong>Employees:</strong> around 19 000 globally in 2023</li>
+      <li><strong>Global footprint:</strong> more than 350 sites across about 70 countries on six continents</li>
+      <li><strong>Core divisions:</strong> Minerals, Life Sciences, Energy, Industrial</li>
+      <li><strong>Website:</strong> <a href="https://www.alsglobal.com" target="_blank">alsglobal.com</a></li>
+      <li><strong>Phone:</strong> +61 7 3367 7900</li>
+      <li><strong>Recognition:</strong> Inducted into the Queensland Business Leaders Hall of Fame in 2012</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Company overview</h2>
+    <p>ALS Limited is a global testing laboratories company headquartered in Brisbane. It provides analytical testing, inspection, certification and verification services for clients in mining, environmental monitoring, water quality, food safety, pharmaceuticals, energy, manufacturing and public health. Its laboratories are used by governments, large corporations and regulators to ensure compliance, safety and scientific integrity.</p>
+    <p>The company traces its origins to 1863 and has grown from a local Brisbane enterprise into a global scientific services organisation through organic expansion and acquisitions. ALS positions itself as a provider of independent and reliable analytical data that supports evidence based decision making in regulated and technical industries.</p>
+  </div>
+
+  <div class="card">
+    <h2>Divisions and operations</h2>
+
+    <h3>Minerals</h3>
+    <ul>
+      <li>Geochemistry, metallurgy and mineral processing services for exploration and production.</li>
+      <li>Mine site laboratory services, inspection, sampling and commodities certification.</li>
+      <li>Serves global mining and exploration clients across major resource regions.</li>
+    </ul>
+
+    <h3>Life Sciences</h3>
+    <ul>
+      <li>Environmental testing for soil, water, air and waste.</li>
+      <li>Food and beverage testing, microbiology and quality assurance.</li>
+      <li>Pharmaceutical and drinking water compliance analysis in selected markets.</li>
+      <li>Human health diagnostics and related testing in some regions.</li>
+    </ul>
+
+    <h3>Energy</h3>
+    <ul>
+      <li>Testing and analysis of oil, gas and coal quality.</li>
+      <li>Fuel and lubricant condition monitoring for engines and industrial equipment.</li>
+      <li>Services that support asset reliability in energy and heavy industry.</li>
+    </ul>
+
+    <h3>Industrial</h3>
+    <ul>
+      <li>Asset care, inspection and engineering services.</li>
+      <li>Non destructive testing and condition monitoring.</li>
+      <li>Support for manufacturing, infrastructure, defence and aerospace clients.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Global presence</h2>
+    <p>ALS operates a broad network of laboratories and offices with more than 350 locations across around 70 countries. It has significant operations in Australia and New Zealand, North America, Latin America, Europe, the Middle East and Asia. This footprint allows ALS to provide local laboratory support while maintaining global quality systems and data standards.</p>
+    <p>The company often enters new markets by acquiring local laboratories, integrating them into the ALS network and aligning them with group quality, safety and compliance frameworks.</p>
+  </div>
+
+  <div class="card">
+    <h2>Sustainability and key practices</h2>
+
+    <h3>Environmental testing and public interest role</h3>
+    <ul>
+      <li>Provides testing that underpins environmental regulation, including analysis of soil, sediment and groundwater contamination.</li>
+      <li>Supports monitoring of drinking water safety, wastewater discharge and broader aquatic ecosystem health.</li>
+      <li>Conducts specialised testing for emerging contaminants such as per and polyfluoroalkyl substances and microplastics.</li>
+    </ul>
+
+    <h3>Corporate environmental footprint</h3>
+    <ul>
+      <li>Reports environmental and energy metrics in its annual and sustainability disclosures.</li>
+      <li>Runs programmes to improve laboratory energy efficiency and reduce resource use where feasible.</li>
+      <li>Pursues digitalisation and automation to reduce paper based processes and improve sample throughput.</li>
+    </ul>
+
+    <h3>Ethics, data integrity and quality</h3>
+    <ul>
+      <li>Implements strict protocols for chain of custody, sample handling and data reporting.</li>
+      <li>Many laboratories are accredited to recognised standards such as ISO or NATA where applicable.</li>
+      <li>Emphasises independence and objectivity in analytical results as part of its value proposition.</li>
+    </ul>
+
+    <h3>People and safety</h3>
+    <ul>
+      <li>Employs thousands of laboratory professionals, technicians and engineers across the globe.</li>
+      <li>Operates in environments that require strong safety practices due to chemical, biological and physical hazards.</li>
+      <li>Invests in training and career development to maintain technical competence and retain skilled staff.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>ESG focus areas</h2>
+
+    <h3>Sustainable development goals</h3>
+    <ul>
+      <li><strong>SDG 3 – Good health and wellbeing:</strong> supports food safety, pharmaceutical quality and environmental health testing.</li>
+      <li><strong>SDG 6 – Clean water and sanitation:</strong> plays a role in monitoring drinking water quality and wastewater impacts.</li>
+      <li><strong>SDG 9 – Industry, innovation and infrastructure:</strong> invests in laboratory technology and analytical innovation.</li>
+      <li><strong>SDG 12 – Responsible consumption and production:</strong> provides independent verification and quality control for products and processes.</li>
+      <li><strong>SDG 13 – Climate action:</strong> supports climate and emissions related measurements and environmental forensics.</li>
+    </ul>
+
+    <h3>Governance and transparency</h3>
+    <ul>
+      <li>Listed on the Australian Securities Exchange with typical large company governance structures.</li>
+      <li>Publishes modern slavery statements and ESG information for investors and stakeholders.</li>
+      <li>Subject to regulation and accreditation requirements in many jurisdictions where it operates.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Risk and involvement assessment</h2>
+    <ul>
+      <li><strong>Data integrity risk:</strong> laboratory results must remain accurate and independent; any systemic failure would pose significant reputational risk.</li>
+      <li><strong>Chemical and environmental risk:</strong> operations involve hazardous substances and waste that must be managed safely and compliantly.</li>
+      <li><strong>Reputational risk:</strong> as an environmental and quality testing provider, ALS relies on trust in its scientific standards.</li>
+      <li><strong>Climate and regulatory exposure:</strong> demand for environmental and compliance testing is sensitive to climate policy, regulatory frameworks and public expectations.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Key concerns and improvement opportunities</h2>
+    <ul>
+      <li>Greater detail on the company’s own carbon footprint and reduction plans would help stakeholders assess long term alignment with climate objectives.</li>
+      <li>Laboratory operations inherently rely on chemicals, consumables and energy; continuous improvement in these areas is important to reduce impacts.</li>
+      <li>Rapid growth through acquisitions increases the need for strong integration, consistent safety culture and harmonised quality systems across all sites.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Tags</h2>
+    <div>
+      <span class="tag">Testing laboratories</span>
+      <span class="tag">Environmental testing</span>
+      <span class="tag">Certification and verification</span>
+      <span class="tag">Life sciences</span>
+      <span class="tag">Minerals testing</span>
+      <span class="tag">Energy sector services</span>
+      <span class="tag">Global laboratory network</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>References</h2>
+    <ul>
+      <li>ALS Limited. (2024). <i>Annual report.</i> Retrieved from <a href="https://www.alsglobal.com" target="_blank">https://www.alsglobal.com</a></li>
+      <li>ALS Limited. (2024). <i>Sustainability and ESG information.</i> Retrieved from <a href="https://www.alsglobal.com" target="_blank">https://www.alsglobal.com</a></li>
+      <li>Queensland Business Leaders Hall of Fame. (2012). <i>ALS Limited profile.</i> Retrieved from the State Library of Queensland website.</li>
+      <li>ASX. (2025). <i>Company information: ALS Limited.</i> Retrieved from the Australian Securities Exchange website.</li>
+      <li>Commonwealth of Australia. (2024). <i>Modern slavery statements: ALS Limited.</i> Retrieved from the Australian modern slavery register.</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Sustainability Database Project · <a href="https://github.com/hab3x/Sustainability_Database" target="_blank">View on GitHub</a>
+  </div>
+
+  <!-- Centralised search loader: adjust path if this file is stored in a different folder depth -->
+  <script src="../../search-config.js"></script>
+
+  <script>
+    function toggleTheme() {
+      const current = document.body.getAttribute('data-theme');
+      document.body.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    }
+
+    const input = document.getElementById("search-input");
+    const results = document.getElementById("results");
+
+    const minChars = (typeof SEARCH_SETTINGS !== "undefined" && SEARCH_SETTINGS.minChars)
+      ? SEARCH_SETTINGS.minChars
+      : 2;
+
+    if (typeof SEARCH_SETTINGS !== "undefined" && SEARCH_SETTINGS.placeholder) {
+      input.placeholder = SEARCH_SETTINGS.placeholder;
+    }
+
+    const BASE_PATH = "../../";
+
+    function buildHref(file) {
+      if (/^https?:\/\//.test(file)) {
+        return file;
+      }
+      return BASE_PATH + file.replace(/^\//, "");
+    }
+
+    function loadPages() {
+      return (typeof SEARCH_PAGES !== "undefined") ? SEARCH_PAGES : [];
+    }
+
+    function renderResults(query, pages) {
+      const q = query.trim().toLowerCase();
+      results.innerHTML = "";
+
+      if (!q || q.length < minChars) {
+        return;
+      }
+
+      const filtered = pages.filter(page =>
+        page.title.toLowerCase().includes(q)
+      );
+
+      if (filtered.length === 0) {
+        const li = document.createElement("li");
+        li.textContent = "No results found.";
+        results.appendChild(li);
+        return;
+      }
+
+      filtered.forEach(page => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = buildHref(page.file);
+        a.textContent = page.title;
+        li.appendChild(a);
+        results.appendChild(li);
+      });
+    }
+
+    const pages = loadPages();
+
+    const params = new URLSearchParams(window.location.search);
+    const initialQuery = params.get("q") || params.get("query") || "";
+
+    if (initialQuery) {
+      input.value = initialQuery;
+      renderResults(initialQuery, pages);
+    }
+
+    input.addEventListener("input", () => {
+      renderResults(input.value, pages);
+    });
+  </script>
+</body>
+</html>
