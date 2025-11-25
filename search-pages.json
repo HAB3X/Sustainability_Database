@@ -4,7 +4,7 @@
     "file": "about_us.html"
   },
   {
-    "title": "Fashion Industry Overview",
+    "title": "Fashion",
     "file": "businesses/fashion/fashion.html"
   },
   {
@@ -28,15 +28,11 @@
     "file": "finance.html"
   },
   {
-    "title": "Food & Beverage",
-    "file": "food.html"
+    "title": "AGL Energy Limited",
+    "file": "businesses/Infrastructure_and_Industry/AGL.html"
   },
   {
-    "title": "Health & Wellness",
-    "file": "health.html"
-  },
-  {
-    "title": "Energy & Utilities",
+    "title": "Infrastructure & Industry",
     "file": "energy.html"
   }
 ]
