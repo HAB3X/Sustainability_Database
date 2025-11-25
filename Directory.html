@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Directory – Sustainability Database</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sustainability Database – Directory</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
   <style>
     :root {
       --bg: #121715;
@@ -17,19 +17,18 @@
       --border: #2c352f;
     }
 
-    * { box-sizing: border-box; }
-
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
       background: var(--bg);
       color: var(--text);
       margin: 0;
       padding: 2rem 1rem;
-      max-width: 960px;
+      max-width: 900px;
       margin-inline: auto;
       line-height: 1.8;
     }
 
+    /* Navigation */
     .nav {
       display: flex;
       justify-content: space-between;
@@ -44,9 +43,7 @@
       font-weight: 600;
     }
 
-    .nav-left i {
-      color: var(--accent);
-    }
+    .nav-left i { color: var(--accent); }
 
     .nav-links {
       display: flex;
@@ -65,71 +62,24 @@
     }
 
     h1 {
-      font-size: 2.1rem;
+      font-size: 2rem;
       border-bottom: 3px solid var(--accent);
       padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
+      margin-bottom: 1.5rem;
     }
 
-    h1 i { color: var(--accent); }
+    h2 {
+      margin-top: 2.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.3rem;
+    }
 
     .card {
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 12px;
       padding: 1.5rem;
-      margin-top: 1.8rem;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    }
-
-    #search-container {
-      margin-top: 1.2rem;
-    }
-
-    #search-input {
-      width: 100%;
-      padding: 0.75rem 1rem;
-      font-size: 1rem;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      background-color: #101412;
-      color: var(--text);
-    }
-
-    #search-input:focus {
-      outline: none;
-      border-color: var(--accent);
-    }
-
-    #results {
-      list-style: none;
-      margin-top: 0.8rem;
-      padding-left: 0;
-    }
-
-    #results li { margin: 0.5rem 0; }
-
-    .directory-list {
-      list-style: none;
-      padding-left: 0;
-      margin-top: 1rem;
-    }
-
-    .directory-list li {
-      padding: 0.4rem 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      display: flex;
-      justify-content: space-between;
-      gap: 0.5rem;
-      font-size: 0.97rem;
-    }
-
-    .directory-list span.path {
-      color: var(--muted);
-      font-size: 0.8rem;
+      border-radius: 12px;
+      margin-top: 2rem;
     }
 
     a {
@@ -141,22 +91,50 @@
       text-decoration: underline;
     }
 
+    /* Directory list layout */
+    .dir-list {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 1rem;
+    }
+
+    .dir-list li {
+      margin: 0.5rem 0;
+    }
+
+    /* Search bar */
+    #search-container { margin-top: 1.5rem; }
+
+    #search-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #101412;
+      color: var(--text);
+    }
+    #results { list-style: none; padding-left: 0; margin-top: 1rem; }
+    #results li { margin: 0.5rem 0; }
+
     .footer {
       margin-top: 3rem;
-      font-size: 0.9rem;
-      color: var(--muted);
-      text-align: center;
       border-top: 1px solid var(--border);
       padding-top: 1.5rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
     }
   </style>
 </head>
+
 <body>
 
+  <!-- Navigation -->
   <header class="nav">
     <div class="nav-left">
       <i class="fas fa-list"></i>
-      <span>Sustainability Database</span>
+      <span>Directory</span>
     </div>
     <nav class="nav-links">
       <a href="index.html">Home</a>
@@ -165,19 +143,66 @@
     </nav>
   </header>
 
-  <h1><i class="fas fa-list"></i> Directory</h1>
+  <h1><i class="fas fa-folder-open"></i> Complete Directory</h1>
 
+  <!-- Search -->
   <div id="search-container">
     <input type="text" id="search-input" placeholder="Search businesses, sectors, or topics...">
     <ul id="results"></ul>
   </div>
 
+  <!-- DIRECTORY CONTENT -->
   <div class="card">
-    <p>
-      This directory lists all current pages in the Sustainability Database. Click any entry to open its profile or overview page.
-    </p>
-    <ul id="directory-list" class="directory-list">
-      <!-- Filled by JavaScript -->
+    <h2>General Pages</h2>
+    <ul class="dir-list">
+      <li><a href="about_us.html">About Us</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="index.html">Home Page</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Fashion</h2>
+    <ul class="dir-list">
+      <li><a href="businesses/fashion/fashion.html">Fashion Overview</a></li>
+      <li><a href="businesses/fashion/Australianstitch.html">Australian Stitch</a></li>
+      <li><a href="businesses/fashion/espireclothing.html">Espire Clothing</a></li>
+      <li><a href="businesses/fashion/faytthelabel.html">FAYT The Label</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Infrastructure & Industry</h2>
+    <ul class="dir-list">
+      <li><a href="businesses/Infrastructure_&_Industry/Infrastructure_&_Industry.html">Infrastructure & Industry Overview</a></li>
+      <li><a href="businesses/Infrastructure_&_Industry/AGL.html">AGL Energy Limited</a></li>
+      <li><a href="businesses/Infrastructure_&_Industry/ALS.html">ALS Limited</a></li>
+      <li><a href="businesses/Infrastructure_&_Industry/AMC.html">Amcor plc</a></li>
+      <li><a href="businesses/Infrastructure_&_Industry/ALD.html">Ampol Limited</a></li>
+      <li><a href="businesses/Infrastructure_&_Industry/APA.HTML">APA Group</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Finance & Banking</h2>
+    <ul class="dir-list">
+      <li><a href="businesses/finance/Finance.html">Finance Overview</a></li>
+      <li><a href="businesses/finance/ANZ.html">ANZ Group Holdings Limited</a></li>
+      <li><a href="businesses/finance/ARG.HTML">Argo Investments Limited</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Gambling & Gaming</h2>
+    <ul class="dir-list">
+      <li><a href="businesses/Gambling_&_Gaming/ALL.HTML">Aristocrat Leisure Limited</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Example Pages</h2>
+    <ul class="dir-list">
+      <li><a href="businesses/Example/ethical-threads.html">Ethical Threads</a></li>
     </ul>
   </div>
 
@@ -185,86 +210,51 @@
     &copy; 2025 Sustainability Database Project
   </div>
 
+  <!-- Search system -->
   <script src="search-config.js"></script>
   <script>
     const input = document.getElementById("search-input");
     const results = document.getElementById("results");
-    const directoryList = document.getElementById("directory-list");
-
-    // Fallback list – exactly what you posted
-    const FALLBACK_PAGES = [
-      { "title": "About Us", "file": "about_us.html" },
-      { "title": "Fashion", "file": "businesses/fashion/fashion.html" },
-      { "title": "Australian Stitch", "file": "businesses/fashion/Australianstitch.html" },
-      { "title": "Espire Clothing", "file": "businesses/fashion/espireclothing.html" },
-      { "title": "FAYT The Label", "file": "businesses/fashion/faytthelabel.html" },
-      { "title": "Infrastructure & Industry", "file": "businesses/Infrastructure_&_Industry/Infrastructure_&_Industry.html" },
-      { "title": "AGL Energy Limited", "file": "businesses/Infrastructure_&_Industry/AGL.html" },
-      { "title": "ALS Limited", "file": "businesses/Infrastructure_&_Industry/ALS.html" },
-      { "title": "Amcor plc", "file": "businesses/Infrastructure_&_Industry/AMC.html" },
-      { "title": "Ampol Limited", "file": "businesses/Infrastructure_&_Industry/ALD.html" },
-      { "title": "APA Group", "file": "businesses/Infrastructure_&_Industry/APA.HTML" },
-      { "title": "Finance", "file": "businesses/finance/Finance.html" },
-      { "title": "ANZ Group Holdings Limited", "file": "businesses/finance/ANZ.html" },
-      { "title": "Argo Investments Limited", "file": "businesses/finance/ARG.HTML" },
-      { "title": "Aristocrat Leisure Limited", "file": "businesses/Gambling_&_Gaming/ALL.HTML" },
-      { "title": "Ethical Threads", "file": "businesses/Example/ethical-threads.html" }
-    ];
+    const minChars = SEARCH_SETTINGS.minChars;
 
     async function loadPages() {
       try {
         const res = await fetch("search-pages.json");
-        if (!res.ok) throw new Error("Missing JSON");
         return await res.json();
       } catch {
-        // Fallback to the hardcoded list
-        return FALLBACK_PAGES;
+        return SEARCH_PAGES;
       }
     }
 
-    function renderDirectory(pages) {
-      directoryList.innerHTML = "";
-      pages.forEach(page => {
+    function renderResults(query, pages) {
+      const q = query.toLowerCase().trim();
+      results.innerHTML = "";
+
+      if (q.length < minChars) return;
+
+      const filtered = pages.filter(page => page.title.toLowerCase().includes(q));
+
+      if (filtered.length === 0) {
         const li = document.createElement("li");
+        li.textContent = "No results found.";
+        results.appendChild(li);
+        return;
+      }
 
-        const link = document.createElement("a");
-        link.href = page.file;
-        link.textContent = page.title;
-
-        const path = document.createElement("span");
-        path.className = "path";
-        path.textContent = page.file;
-
-        li.appendChild(link);
-        li.appendChild(path);
-        directoryList.appendChild(li);
+      filtered.forEach(page => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = page.file;
+        a.textContent = page.title;
+        li.appendChild(a);
+        results.appendChild(li);
       });
     }
 
     loadPages().then(pages => {
-      // Render full directory list
-      renderDirectory(pages);
-
-      // Search box behaviour
-      input.addEventListener("input", () => {
-        const q = input.value.toLowerCase();
-        results.innerHTML = "";
-        if (q.length < 2) return;
-
-        const matches = pages.filter(p => p.title.toLowerCase().includes(q));
-
-        if (matches.length === 0) {
-          results.innerHTML = "<li>No results found.</li>";
-          return;
-        }
-
-        matches.forEach(p => {
-          const li = document.createElement("li");
-          li.innerHTML = `<a href="${p.file}">${p.title}</a>`;
-          results.appendChild(li);
-        });
-      });
+      input.addEventListener("input", () => renderResults(input.value, pages));
     });
   </script>
+
 </body>
 </html>
