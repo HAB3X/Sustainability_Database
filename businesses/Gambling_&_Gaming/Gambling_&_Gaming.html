@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gambling and Gaming – Sustainability overview</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --bg: #121715;
+      --card: #1a1f1d;
+      --text: #e0f0e0;
+      --muted: #93b293;
+      --accent: #4ade80;
+      --accent-light: #273c2f;
+      --border: #2c352f;
+    }
+
+    [data-theme="light"] {
+      --bg: #f5fef5;
+      --card: #ffffff;
+      --text: #1a2e1a;
+      --muted: #607d60;
+      --accent: #3ca974;
+      --accent-light: #e0f7eb;
+      --border: #d2e3d2;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin-inline: auto;
+      line-height: 1.8;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    h1, h2, h3 { font-weight: 600; }
+
+    h1 {
+      font-size: 2.1rem;
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    h1 i { color: var(--accent); }
+
+    h2 {
+      font-size: 1.45rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.3rem;
+      margin-top: 2.4rem;
+    }
+
+    p { margin-top: 1rem; }
+
+    ul { padding-left: 1.4rem; }
+
+    li { margin: 0.4rem 0; }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      border-radius: 12px;
+      margin-top: 2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .controls {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .controls button {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.85rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #search-container { margin-top: 1.4rem; }
+
+    #search-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+    }
+
+    #results {
+      list-style: none;
+      margin-top: 0.8rem;
+      padding-left: 0;
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      padding: 0.3rem 0.75rem;
+      border-radius: 20px;
+      margin: 0.2rem 0.4rem 0.2rem 0;
+      font-size: 0.8rem;
+    }
+
+    .footer {
+      margin-top: 4rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+    }
+  </style>
+</head>
+
+<body data-theme="dark">
+
+  <h1>
+    <span><i class="fas fa-dice"></i> Gambling and Gaming – Sustainability overview</span>
+    <div class="controls">
+      <button onclick="window.location.href='../../index.html'">Home</button>
+      <button onclick="window.location.href='../../directory.html'">Directory</button>
+      <button onclick="toggleTheme()">🌓 Theme</button>
+      <button onclick="window.print()">🖨️ Print</button>
+    </div>
+  </h1>
+
+  <div id="search-container">
+    <input type="text" id="search-input" placeholder="Search businesses, sectors, or topics...">
+    <ul id="results"></ul>
+  </div>
+
+
+  <div class="card">
+    <h2>About this sector</h2>
+    <p>
+      The gambling and gaming sector includes listed companies involved in real-money gambling, gaming technology, mobile games, casino systems, and platforms that generate revenue through wagering and game-based entertainment.
+    </p>
+    <p>
+      These companies often have complex social impacts, including consumer harm, addiction risk, digital spending behaviours, and regulatory scrutiny. Sustainability assessments prioritise governance, consumer protections, ethical technology use, and transparency.
+    </p>
+
+    <div>
+      <span class="tag">Gambling</span>
+      <span class="tag">Gaming technology</span>
+      <span class="tag">Mobile games</span>
+      <span class="tag">Regulated wagering</span>
+      <span class="tag">Digital platforms</span>
+    </div>
+  </div>
+
+
+  <div class="card">
+    <h2>What this section covers</h2>
+    <ul>
+      <li>Real-money gambling platforms and machine manufacturers.</li>
+      <li>Gaming technology creators and casino system developers.</li>
+      <li>Free-to-play mobile publishers with microtransaction-driven models.</li>
+      <li>Online gaming platforms with behavioural risk considerations.</li>
+      <li>Companies with high governance and regulatory exposure.</li>
+    </ul>
+  </div>
+
+
+  <div class="card">
+    <h2>Companies in this sector</h2>
+    <ul>
+      <li><a href="ALL.html">Aristocrat Leisure Limited (ALL)</a></li>
+    </ul>
+  </div>
+
+
+  <div class="card">
+    <h2>Example company profile</h2>
+
+    <h3>Aristocrat Leisure Limited (ALL)</h3>
+    <p>
+      Aristocrat is a global gaming and technology company producing gaming machines, mobile free-to-play titles,
+      and regulated online wagering platforms. It operates across land-based casinos, mobile gaming, and digital gambling ecosystems.
+    </p>
+    <p>
+      <a href="ALL.html">View the full Aristocrat profile →</a>
+    </p>
+  </div>
+
+
+  <div class="footer">
+    &copy; 2025 Sustainability Database Project ·
+    <a href="https://github.com/hab3x/Sustainability_Database" target="_blank">GitHub</a>
+  </div>
+
+
+  <script src="../../search-config.js"></script>
+
+  <script>
+    function toggleTheme() {
+      const current = document.body.getAttribute("data-theme");
+      document.body.setAttribute("data-theme", current === "dark" ? "light" : "dark");
+    }
+
+    const input = document.getElementById("search-input");
+    const results = document.getElementById("results");
+    const minChars = SEARCH_SETTINGS?.minChars || 2;
+
+    function buildHref(file) {
+      if (/^https?:\/\//.test(file)) return file;
+      return "../../" + file.replace(/^\//, "");
+    }
+
+    function loadPages() {
+      return SEARCH_PAGES || [];
+    }
+
+    function renderResults(query, pages) {
+      results.innerHTML = "";
+      const q = query.trim().toLowerCase();
+      if (!q || q.length < minChars) return;
+
+      const filtered = pages.filter(p => p.title.toLowerCase().includes(q));
+      if (filtered.length === 0) {
+        const li = document.createElement("li");
+        li.textContent = "No results found.";
+        results.appendChild(li);
+        return;
+      }
+
+      filtered.forEach(p => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = buildHref(p.file);
+        a.textContent = p.title;
+        li.appendChild(a);
+        results.appendChild(li);
+      });
+    }
+
+    const pages = loadPages();
+    input.addEventListener("input", () => renderResults(input.value, pages));
+  </script>
+
+</body>
+</html>
