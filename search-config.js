@@ -16,10 +16,15 @@ const SEARCH_PAGES = [
   { title: "ALS Limited", file: "businesses/Infrastructure_&_Industry/ALS.html" },
   { title: "Amcor plc", file: "businesses/Infrastructure_&_Industry/AMC.html" },
   { title: "Ampol Limited", file: "businesses/Infrastructure_&_Industry/ALD.html" },
+  { title: "APA Group", file: "businesses/Infrastructure_&_Industry/APA.HTML" },
 
   // Finance
   { title: "Finance", file: "businesses/finance/Finance.html" },
   { title: "ANZ Group Holdings Limited", file: "businesses/finance/ANZ.html" },
+  { title: "Argo Investments Limited", file: "businesses/finance/ARG.HTML" },
+
+  // Gambling and gaming
+  { title: "Aristocrat Leisure Limited", file: "businesses/Gambling_&_Gaming/ALL.HTML" },
 
   // Example directory
   { title: "Ethical Threads", file: "businesses/Example/ethical-threads.html" }
