@@ -13,11 +13,14 @@
       --text: #e0f0e0;
       --muted: #93b293;
       --accent: #4ade80;
+      --accent-dark: #166534;
       --accent-light: #273c2f;
       --border: #2c352f;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -25,11 +28,12 @@
       color: var(--text);
       margin: 0;
       padding: 2rem 1rem;
-      max-width: 960px;
+      max-width: 900px;
       margin-inline: auto;
       line-height: 1.8;
     }
 
+    /* Shared navigation */
     .nav {
       display: flex;
       justify-content: space-between;
@@ -68,68 +72,67 @@
       font-size: 2.2rem;
       border-bottom: 3px solid var(--accent);
       padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       display: flex;
       align-items: center;
       gap: 0.6rem;
     }
 
-    h1 i { color: var(--accent); }
+    h1 i {
+      color: var(--accent);
+    }
 
     h2 {
       font-size: 1.5rem;
       border-bottom: 1px solid var(--border);
-      margin-top: 2.2rem;
+      margin-top: 2.5rem;
       margin-bottom: 1rem;
       padding-bottom: 0.3rem;
       color: var(--text);
     }
 
-    p { margin-top: 1rem; }
+    p {
+      margin-top: 1rem;
+    }
+
+    ul {
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    ul li {
+      margin: 0.4rem 0;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: #90f3ad;
+      text-decoration: underline;
+    }
 
     .card {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 1.5rem;
-      margin-top: 1.8rem;
+      margin-top: 2rem;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
     }
 
-    .sectors {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .sector-card {
-      background: #151a18;
-      border-radius: 10px;
-      padding: 1rem;
-      border: 1px solid var(--border);
-    }
-
-    .sector-card h3 {
-      margin: 0 0 0.4rem;
-      font-size: 1.1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .sector-card p {
-      margin: 0.4rem 0 0.8rem;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-
-    .sector-card a {
-      font-size: 0.95rem;
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
     }
 
     .footer {
-      margin-top: 3rem;
+      margin-top: 4rem;
       font-size: 0.9rem;
       color: var(--muted);
       text-align: center;
@@ -137,7 +140,10 @@
       padding-top: 1.5rem;
     }
 
-    #search-container { margin-top: 1.2rem; }
+    /* Search */
+    #search-container {
+      margin-top: 1.5rem;
+    }
 
     #search-input {
       width: 100%;
@@ -147,6 +153,7 @@
       border: 1px solid var(--border);
       background-color: #101412;
       color: var(--text);
+      transition: border 0.3s;
     }
 
     #search-input:focus {
@@ -160,15 +167,22 @@
       padding-left: 0;
     }
 
-    #results li { margin: 0.5rem 0; }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
+    #results li {
+      margin: 0.5rem 0;
     }
 
-    a:hover {
-      text-decoration: underline;
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      .card {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
@@ -186,7 +200,7 @@
     </nav>
   </header>
 
-  <h1><i class="fas fa-seedling"></i> Welcome to the Sustainability Database</h1>
+  <h1><i class="fas fa-seedling"></i> Sustainability Database</h1>
 
   <div id="search-container">
     <input type="text" id="search-input" placeholder="Search businesses, sectors, or topics...">
@@ -195,92 +209,93 @@
 
   <div class="card">
     <p>
-      The <strong>Sustainability Database</strong> is a public, open-source project cataloguing businesses and sectors across Australia and New Zealand. Profiles focus on governance, environmental impact, labour practices, and evidence of greenwashing or harm.
+      The <strong>Sustainability Database</strong> is a public, open source project that maps businesses across Australia and New Zealand through a sustainability lens. It is intended for consumers, students, educators, and researchers who want evidence based insight into how companies operate.
     </p>
     <p>
-      Each entry links to sources and provides a structured overview to support students, researchers, consumers, and anyone interested in sustainability and corporate conduct.
+      Each profile brings together location, sector, key practices, and governance information, along with clear notes on risks and possible greenwashing. The focus is on factual, referenced information that can be checked and challenged.
+    </p>
+    <p>
+      The project is maintained on GitHub and published through GitHub Pages so that the data, methods, and sources remain transparent.
+    </p>
+    <p>
+      You can learn more about the methodology on the <a href="about_us.html">About page</a> or browse all current listings through the <a href="directory.html">Directory</a>.
     </p>
   </div>
 
   <div class="card">
-    <h2>Explore by sector</h2>
-    <div class="sectors">
-      <div class="sector-card">
-        <h3><i class="fas fa-tshirt"></i> Fashion</h3>
-        <p>Clothing, apparel basics, and ethical manufacturing in the fashion supply chain.</p>
-        <a href="businesses/fashion/fashion.html">Go to Fashion overview →</a>
-      </div>
-
-      <div class="sector-card">
-        <h3><i class="fas fa-industry"></i> Infrastructure & Industry</h3>
-        <p>Energy, utilities, industrial infrastructure, and large-scale physical assets.</p>
-        <a href="businesses/Infrastructure_&_Industry/Infrastructure_&_Industry.html">
-          Go to Infrastructure & Industry overview →
-        </a>
-      </div>
-
-      <div class="sector-card">
-        <h3><i class="fas fa-scale-balanced"></i> Finance</h3>
-        <p>Banks, asset managers, and other financial institutions shaping capital flows.</p>
-        <a href="businesses/finance/Finance.html">Go to Finance overview →</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <h2>Learn more about the project</h2>
-    <p>
-      The project is maintained via GitHub and designed for transparency and peer review.
-      Methodology, criteria, and submission processes are outlined on the About page.
-    </p>
-    <p><a href="about_us.html">Read more on the About page →</a></p>
+    <h2>How to use this site</h2>
+    <ul>
+      <li>Use the search box above to look for specific businesses, sectors, or topics.</li>
+      <li>Visit sector overview pages such as fashion, infrastructure and industry, or finance to see grouped profiles.</li>
+      <li>Open individual company pages for detailed information, references, and flagged concerns.</li>
+      <li>Navigate to the <a href="directory.html">Directory</a> for a complete list of all pages currently available.</li>
+    </ul>
   </div>
 
   <div class="footer">
     &copy; 2025 Sustainability Database Project ·
-    <a href="https://github.com/hab3x/Sustainability_Database" target="_blank">View source on GitHub</a>
+    <a href="https://github.com/hab3x/Sustainability_Database">View source on GitHub</a>
   </div>
 
+  <!-- Centralised Search Loader -->
   <script src="search-config.js"></script>
   <script>
     const input = document.getElementById("search-input");
     const results = document.getElementById("results");
 
+    // Use shared settings if available
+    const minChars = (typeof SEARCH_SETTINGS !== "undefined" && SEARCH_SETTINGS.minChars)
+      ? SEARCH_SETTINGS.minChars
+      : 2;
+
+    if (typeof SEARCH_SETTINGS !== "undefined" && SEARCH_SETTINGS.placeholder) {
+      input.placeholder = SEARCH_SETTINGS.placeholder;
+    }
+
     async function loadPages() {
       try {
         const res = await fetch("search-pages.json");
-        if (!res.ok) throw new Error("No JSON found");
+        if (!res.ok) {
+          throw new Error("No JSON found");
+        }
         return await res.json();
       } catch {
         return (typeof SEARCH_PAGES !== "undefined") ? SEARCH_PAGES : [];
       }
     }
 
+    function renderResults(query, pages) {
+      const q = query.trim().toLowerCase();
+      results.innerHTML = "";
+
+      if (!q || q.length < minChars) {
+        return;
+      }
+
+      const filtered = pages.filter(page =>
+        page.title.toLowerCase().includes(q)
+      );
+
+      if (filtered.length === 0) {
+        const li = document.createElement("li");
+        li.textContent = "No results found.";
+        results.appendChild(li);
+        return;
+      }
+
+      filtered.forEach(page => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = page.file;
+        a.textContent = page.title;
+        li.appendChild(a);
+        results.appendChild(li);
+      });
+    }
+
     loadPages().then(pages => {
       input.addEventListener("input", () => {
-        const query = input.value.toLowerCase();
-        results.innerHTML = "";
-        if (!query || query.length < 2) return;
-
-        const filtered = pages.filter(page =>
-          page.title.toLowerCase().includes(query)
-        );
-
-        if (filtered.length === 0) {
-          const li = document.createElement("li");
-          li.textContent = "No results found.";
-          results.appendChild(li);
-          return;
-        }
-
-        filtered.forEach(page => {
-          const li = document.createElement("li");
-          const a = document.createElement("a");
-          a.href = page.file;
-          a.textContent = page.title;
-          li.appendChild(a);
-          results.appendChild(li);
-        });
+        renderResults(input.value, pages);
       });
     });
   </script>
