@@ -26,8 +26,8 @@ const SEARCH_PAGES = [
   { title: "Argo Investments Limited", file: "businesses/finance/arg.html" },
 
   // Gambling & Gaming
-  { title: "Gambling & Gaming", file: "businesses/gambling_&_gaming/gambling_&_gaming.html" },
-  { title: "Aristocrat Leisure Limited", file: "businesses/gambling_&_gaming/all.html" },
+  { title: "Gambling & Gaming", file: "businesses/Gambling_&_Gaming/gambling_&_gaming.html" },
+  { title: "Aristocrat Leisure Limited", file: "businesses/Gambling_&_Gaming/all.html" },
 
   // Example
   { title: "Ethical Threads", file: "businesses/example/ethical-threads.html" }
