@@ -50,7 +50,7 @@
       padding-bottom: 0.4rem;
       margin-bottom: 1.5rem;
       display: flex;
-      align-items: centre;
+      align-items: center;
       justify-content: space-between;
       gap: 0.5rem;
     }
@@ -107,7 +107,7 @@
       margin-top: 3rem;
       font-size: 0.9rem;
       color: var(--muted);
-      text-align: centre;
+      text-align: center;
       border-top: 1px solid var(--border);
       padding-top: 1.25rem;
     }
@@ -124,7 +124,9 @@
     .controls {
       display: flex;
       gap: 1rem;
-      align-items: centre;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     .controls button {
@@ -161,6 +163,8 @@
   <h1>
     <span><i class="fas fa-bolt"></i> AGL Energy Limited</span>
     <div class="controls">
+      <button onclick="window.location.href='../../index.html'">Home</button>
+      <button onclick="window.location.href='Infrastructure_&_Industry.html'">Infrastructure overview</button>
       <button onclick="toggleTheme()">🌓 Toggle Theme</button>
       <button onclick="window.print()">🖨️ Print / PDF</button>
     </div>
