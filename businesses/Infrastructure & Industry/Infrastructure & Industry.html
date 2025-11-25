@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Infrastructure and industry – Sustainability overview</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #121715;
+      --card: #1a1f1d;
+      --text: #e0f0e0;
+      --muted: #93b293;
+      --accent: #4ade80;
+      --accent-dark: #166534;
+      --accent-light: #273c2f;
+      --border: #2c352f;
+    }
+
+    [data-theme="light"] {
+      --bg: #f5fef5;
+      --card: #ffffff;
+      --text: #1a2e1a;
+      --muted: #607d60;
+      --accent: #3ca974;
+      --accent-light: #e0f7eb;
+      --border: #d2e3d2;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin-inline: auto;
+      line-height: 1.8;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    h1, h2, h3 {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    h1 {
+      font-size: 2.1rem;
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: centre;
+      justify-content: space-between;
+      gap: 0.6rem;
+    }
+
+    h1 i { color: var(--accent); }
+
+    h2 {
+      font-size: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      margin-top: 2.4rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.3rem;
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      margin-top: 1.4rem;
+      margin-bottom: 0.6rem;
+      color: var(--muted);
+    }
+
+    p { margin-top: 1rem; }
+
+    ul {
+      margin-top: 0.8rem;
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    ul li { margin: 0.4rem 0; }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: #90f3ad;
+      text-decoration: underline;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+    }
+
+    .footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: centre;
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+    }
+
+    .controls {
+      display: flex;
+      gap: 1rem;
+      align-items: centre;
+    }
+
+    .controls button {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      padding: 0.4rem 0.8rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+
+    .controls button:hover {
+      background: #74fca0;
+    }
+
+    #search-container { margin-top: 1.5rem; }
+
+    #search-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background-color: var(--card);
+      color: var(--text);
+      transition: border 0.3s;
+    }
+
+    #search-input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    #results {
+      list-style: none;
+      margin-top: 0.8rem;
+      padding-left: 0;
+    }
+
+    #results li { margin: 0.5rem 0; }
+
+    .tag-list {
+      margin-top: 0.6rem;
+    }
+
+    .tag {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 999px;
+      padding: 0.25rem 0.7rem;
+      font-size: 0.8rem;
+      margin: 0.15rem 0.4rem 0.15rem 0;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.35rem; }
+      .card { padding: 1.1rem; }
+    }
+  </style>
+</head>
+<body data-theme="dark">
+
+  <h1>
+    <span><i class="fas fa-industry"></i> Infrastructure and industry – sustainability overview</span>
+    <div class="controls">
+      <button onclick="toggleTheme()">🌓 Toggle theme</button>
+      <button onclick="window.print()">🖨️ Print or PDF</button>
+    </div>
+  </h1>
+
+  <div id="search-container">
+    <input type="text" id="search-input" placeholder="Search businesses, sectors, or topics...">
+    <ul id="results"></ul>
+  </div>
+
+  <div class="card">
+    <h2>About the infrastructure and industry sector</h2>
+    <p>
+      The infrastructure and industry section of this database covers listed companies that provide essential services, heavy industrial capacity and technical capabilities that support the wider economy. These businesses often operate capital intensive assets, complex supply chains and long lived infrastructure with significant environmental and social impacts.
+    </p>
+    <p>
+      This sector includes utilities and energy suppliers, fuel refining and distribution, industrial laboratories and testing services, and large scale packaging and materials producers. Their operations are central to transport, energy security, manufacturing, construction and environmental monitoring, which places them at the centre of climate transition planning and regulatory scrutiny.
+    </p>
+    <div class="tag-list">
+      <span class="tag">Energy infrastructure</span>
+      <span class="tag">Utilities</span>
+      <span class="tag">Testing laboratories</span>
+      <span class="tag">Industrial packaging</span>
+      <span class="tag">Transport fuels</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>What this section covers</h2>
+    <p>Infrastructure and industry entries in the database focus on companies that:</p>
+    <ul>
+      <li>Operate critical energy and utility networks such as electricity generation, gas, and large scale fuel supply.</li>
+      <li>Run refineries, terminals, pipelines and other facilities that store and move resources at national scale.</li>
+      <li>Provide scientific testing, inspection, certification and laboratory services that underpin regulation and safety.</li>
+      <li>Produce industrial packaging and materials that are used across food, beverage, medical and consumer sectors.</li>
+      <li>Have significant climate, pollution, occupational safety and community impact profiles.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Key sustainability factors we assess</h2>
+    <p>When reviewing infrastructure and industrial companies, the database considers factors such as:</p>
+    <ul>
+      <li><strong>Climate strategy and transition planning</strong> for high emissions activities including power generation, refining and heavy industrial production.</li>
+      <li><strong>Operational emissions</strong> and energy efficiency across plants, pipelines, refineries, laboratories and manufacturing sites.</li>
+      <li><strong>Resource use and pollution</strong> including air emissions, water use, waste, spills and contamination risks.</li>
+      <li><strong>Product and service impacts</strong> such as the downstream emissions from sold fuels or the lifecycle of packaging products.</li>
+      <li><strong>Health, safety and labour conditions</strong> in high risk environments like refineries, terminals and industrial laboratories.</li>
+      <li><strong>Governance quality</strong>, board oversight and disclosure of climate and environmental risks.</li>
+      <li><strong>Community and land impacts</strong> related to infrastructure corridors, heavy industry and major energy projects.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Example companies in infrastructure and industry</h2>
+
+    <h3>AGL Energy Limited</h3>
+    <p>
+      AGL Energy Limited is a major Australian electricity and gas supplier with a mix of coal, gas, renewables and storage assets. The company is central to the electricity transition in the National Electricity Market and is assessed on closure plans for coal assets, investment in renewables, customer energy services and governance of climate risk.
+    </p>
+    <p>
+      <a href="../../businesses/Infrastructure_and_Industry/AGL.html">View AGL Energy Limited profile →</a>
+    </p>
+
+    <h3>Ampol Limited (ALD)</h3>
+    <p>
+      Ampol is a fuel refining and marketing business that owns the Lytton Refinery, a large distribution network and a national fuel and convenience retail chain. It is reviewed for its role in fuel security, operational emissions, strategy for electric vehicle charging and future fuels, and its approach to managing long term demand decline for petrol and diesel.
+    </p>
+    <p>
+      <a href="../../businesses/Infrastructure_and_Industry/ALD.html">View Ampol Limited profile →</a>
+    </p>
+
+    <h3>ALS Limited</h3>
+    <p>
+      ALS Limited is a global testing and inspection laboratory group headquartered in Brisbane. It provides analytical services for minerals, environmental samples, food and life sciences, and industrial assets. Assessment focuses on laboratory safety, data integrity, environmental performance of laboratory operations and the role ALS plays in enabling environmental regulation.
+    </p>
+    <p>
+      <a href="../../businesses/Infrastructure_and_Industry/ALS.html">View ALS Limited profile →</a>
+    </p>
+
+    <h3>Amcor plc (AMC)</h3>
+    <p>
+      Amcor is a global packaging producer that manufactures flexible packaging, rigid containers, closures and speciality materials for food, beverage, medical and consumer products. The profile examines packaging design for recyclability, plastic and material use, circular economy commitments, climate targets and governance around product stewardship and waste.
+    </p>
+    <p>
+      <a href="../../businesses/Infrastructure_and_Industry/AMC.html">View Amcor plc profile →</a>
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Links to sustainable development goals</h2>
+    <p>The infrastructure and industry sector is closely linked to several United Nations sustainable development goals, including:</p>
+    <ul>
+      <li><strong>SDG 7 – Affordable and clean energy</strong> through the generation and distribution of energy and alternative fuels.</li>
+      <li><strong>SDG 9 – Industry, innovation and infrastructure</strong> via investment in critical networks, laboratories and industrial assets.</li>
+      <li><strong>SDG 12 – Responsible consumption and production</strong> by improving resource efficiency, reducing waste and managing product impacts.</li>
+      <li><strong>SDG 13 – Climate action</strong> through decarbonisation plans, closure of high emissions assets and investment in low carbon technologies.</li>
+      <li><strong>SDG 6 – Clean water and sanitation</strong> where operators manage water quality, contamination and wastewater discharges.</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Sustainability Database Project ·
+    <a href="https://github.com/hab3x/Sustainability_Database" target="_blank">View source on GitHub</a>
+  </div>
+
+  <!-- Centralised search loader: this page is in businesses/Infrastructure_and_Industry/ -->
+  <script src="../../search-config.js"></script>
+
+  <script>
+    function toggleTheme() {
+      const current = document.body.getAttribute("data-theme");
+      document.body.setAttribute("data-theme", current === "dark" ? "light" : "dark");
+    }
+
+    const input = document.getElementById("search-input");
+    const results = document.getElementById("results");
+
+    const minChars = (typeof SEARCH_SETTINGS !== "undefined" && SEARCH_SETTINGS.minChars)
+      ? SEARCH_SETTINGS.minChars
+      : 2;
+
+    if (typeof SEARCH_SETTINGS !== "undefined" && SEARCH_SETTINGS.placeholder) {
+      input.placeholder = SEARCH_SETTINGS.placeholder;
+    }
+
+    const BASE_PATH = "../../";
+
+    function buildHref(file) {
+      if (/^https?:\/\//.test(file)) {
+        return file;
+      }
+      return BASE_PATH + file.replace(/^\//, "");
+    }
+
+    function loadPages() {
+      return (typeof SEARCH_PAGES !== "undefined") ? SEARCH_PAGES : [];
+    }
+
+    function renderResults(query, pages) {
+      const q = query.trim().toLowerCase();
+      results.innerHTML = "";
+
+      if (!q || q.length < minChars) {
+        return;
+      }
+
+      const filtered = pages.filter(page =>
+        page.title.toLowerCase().includes(q)
+      );
+
+      if (filtered.length === 0) {
+        const li = document.createElement("li");
+        li.textContent = "No results found.";
+        results.appendChild(li);
+        return;
+      }
+
+      filtered.forEach(page => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = buildHref(page.file);
+        a.textContent = page.title;
+        li.appendChild(a);
+        results.appendChild(li);
+      });
+    }
+
+    const pages = loadPages();
+
+    const params = new URLSearchParams(window.location.search);
+    const initialQuery = params.get("q") || params.get("query") || "";
+
+    if (initialQuery) {
+      input.value = initialQuery;
+      renderResults(initialQuery, pages);
+    }
+
+    input.addEventListener("input", () => {
+      renderResults(input.value, pages);
+    });
+  </script>
+</body>
+</html>
