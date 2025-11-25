@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Finance and banking – sustainability overview</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #121715;
+      --card: #1a1f1d;
+      --text: #e0f0e0;
+      --muted: #93b293;
+      --accent: #4ade80;
+      --accent-light: #273c2f;
+      --border: #2c352f;
+    }
+
+    [data-theme="light"] {
+      --bg: #f5fef5;
+      --card: #ffffff;
+      --text: #1a2e1a;
+      --muted: #607d60;
+      --accent: #3ca974;
+      --accent-light: #e0f7eb;
+      --border: #d2e3d2;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 2rem 1rem;
+      max-width: 900px;
+      margin-inline: auto;
+      line-height: 1.8;
+    }
+
+    h1 {
+      font-size: 2.1rem;
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 0.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: centre;
+      gap: 0.5rem;
+    }
+
+    .controls {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .controls button {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 1.4rem;
+      border-radius: 12px;
+      margin-top: 2rem;
+    }
+
+    .footer {
+      margin-top: 4rem;
+      color: var(--muted);
+      text-align: centre;
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body data-theme="dark">
+
+  <h1>
+    <span><i class="fas fa-landmark"></i> Finance and banking – sustainability overview</span>
+    <div class="controls">
+      <button onclick="window.location.href='../../index.html'">Home</button>
+      <button onclick="toggleTheme()">🌓</button>
+      <button onclick="window.print()">🖨️</button>
+    </div>
+  </h1>
+
+  <div class="card">
+    <h2>Finance sector companies</h2>
+    <p>All finance-related company profiles available in the database:</p>
+
+    <ul>
+      <li><a href="anz.html">ANZ Group Holdings Limited (anz)</a></li>
+      <li><a href="arg.html">Argo Investments Limited (arg)</a></li>
+      <li><a href="finance.html">Finance sector overview</a></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>About the finance and banking sector</h2>
+    <p>
+      The finance and banking sector includes retail and business banking, insurance, asset management,
+      superannuation, investment banking and payment services. These institutions manage savings, provide credit,
+      allocate capital and underwrite risk across the economy.
+    </p>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Sustainability Database Project ·
+    <a href="https://github.com/hab3x/sustainability_database" target="_blank">GitHub</a>
+  </div>
+
+  <script src="../../search-config.js"></script>
+
+  <script>
+    function toggleTheme() {
+      const mode = document.body.getAttribute("data-theme");
+      document.body.setAttribute("data-theme", mode === "dark" ? "light" : "dark");
+    }
+  </script>
+
+</body>
+</html>
