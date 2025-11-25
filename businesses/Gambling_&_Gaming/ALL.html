@@ -53,6 +53,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 0.5rem;
+      flex-wrap: wrap;
     }
 
     h2 {
@@ -107,7 +108,7 @@
       margin-top: 3rem;
       font-size: 0.9rem;
       color: var(--muted);
-      text-align: centre;
+      text-align: center;
       border-top: 1px solid var(--border);
       padding-top: 1.25rem;
     }
@@ -123,8 +124,9 @@
 
     .controls {
       display: flex;
-      gap: 1rem;
-      align-items: centre;
+      gap: 0.6rem;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
     .controls button {
@@ -154,6 +156,10 @@
     #search-input:focus { outline: none; border-color: var(--accent); }
     #results { list-style: none; margin-top: 0.8rem; padding-left: 0; }
     #results li { margin: 0.5rem 0; }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.7rem; }
+    }
   </style>
 </head>
 <body data-theme="dark">
@@ -161,7 +167,9 @@
   <h1>
     <span><i class="fas fa-dice"></i> Aristocrat Leisure Limited</span>
     <div class="controls">
-      <button onclick="toggleTheme()">🌓 Toggle theme</button>
+      <button onclick="window.location.href='../../index.html'">Home</button>
+      <button onclick="window.location.href='Gambling_&_Gaming.html'">Gambling and gaming overview</button>
+      <button onclick="toggleTheme()">🌓 Theme</button>
       <button onclick="window.print()">🖨️ Print or PDF</button>
     </div>
   </h1>
@@ -310,7 +318,7 @@
     <a href="https://github.com/hab3x/Sustainability_Database" target="_blank">View on GitHub</a>
   </div>
 
-  <!-- Centralised search loader: assuming this file lives at businesses/<category>/ALL.html -->
+  <!-- Centralised search loader: this file lives at businesses/Gambling_&_Gaming/ALL.html -->
   <script src="../../search-config.js"></script>
 
   <script>
