@@ -1,7 +1,4 @@
-// search-config.js
-
 const SEARCH_PAGES = [
-  // Core pages
   { title: "Home", file: "index.html" },
   { title: "About Us", file: "about_us.html" },
   { title: "Directory", file: "directory.html" },
@@ -13,12 +10,12 @@ const SEARCH_PAGES = [
   { title: "FAYT The Label", file: "businesses/fashion/faytthelabel.html" },
 
   // Infrastructure & Industry
-  { title: "Infrastructure & Industry", file: "businesses/Infrastructure_&_industry/Infrastructure_&_industry.html" },
-  { title: "AGL Energy Limited", file: "businesses/Infrastructure_&_industry/agl.html" },
-  { title: "ALS Limited", file: "businesses/Infrastructure_&_industry/als.html" },
-  { title: "Amcor plc", file: "businesses/Infrastructure_&_industry/amc.html" },
-  { title: "Ampol Limited", file: "businesses/Infrastructure_&_industry/ald.html" },
-  { title: "APA Group", file: "businesses/Infrastructure_&_industry/apa.html" },
+  { title: "Infrastructure & Industry", file: "businesses/Infrastructure_&_Industry/infrastructure_&_industry.html" },
+  { title: "AGL Energy Limited", file: "businesses/Infrastructure_&_Industry/agl.html" },
+  { title: "ALS Limited", file: "businesses/Infrastructure_&_Industry/als.html" },
+  { title: "Amcor plc", file: "businesses/Infrastructure_&_Industry/amc.html" },
+  { title: "Ampol Limited", file: "businesses/Infrastructure_&_Industry/ald.html" },
+  { title: "APA Group", file: "businesses/Infrastructure_&_Industry/apa.html" },
 
   // Finance
   { title: "Finance", file: "businesses/finance/finance.html" },
@@ -30,7 +27,7 @@ const SEARCH_PAGES = [
   { title: "Aristocrat Leisure Limited", file: "businesses/Gambling_&_Gaming/all.html" },
 
   // Example
-  { title: "Ethical Threads", file: "businesses/example/ethical-threads.html" }
+  { title: "Ethical Threads", file: "businesses/Example/ethical-threads.html" }
 ];
 
 const SEARCH_SETTINGS = {
