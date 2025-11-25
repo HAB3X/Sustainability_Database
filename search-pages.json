@@ -28,11 +28,23 @@
     "file": "finance.html"
   },
   {
+    "title": "Infrastructure & Industry Overview",
+    "file": "businesses/Infrastructure_and_Industry/Infrastructure_and_Industry.html"
+  },
+  {
     "title": "AGL Energy Limited",
     "file": "businesses/Infrastructure_and_Industry/AGL.html"
   },
   {
-    "title": "Infrastructure & Industry",
-    "file": "energy.html"
+    "title": "ALS Limited",
+    "file": "businesses/Infrastructure_and_Industry/ALS.html"
+  },
+  {
+    "title": "Amcor plc",
+    "file": "businesses/Infrastructure_and_Industry/AMC.html"
+  },
+  {
+    "title": "Ampol Limited",
+    "file": "businesses/Infrastructure_and_Industry/ALD.html"
   }
 ]
