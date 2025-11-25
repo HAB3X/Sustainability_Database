@@ -125,6 +125,8 @@
       display: flex;
       gap: 1rem;
       align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     .controls button {
@@ -161,6 +163,8 @@
   <h1>
     <span><i class="fas fa-gas-pump"></i> APA Group</span>
     <div class="controls">
+      <button onclick="window.location.href='../../index.html'">Home</button>
+      <button onclick="window.location.href='Infrastructure_&_Industry.html'">Infrastructure overview</button>
       <button onclick="toggleTheme()">🌓 Toggle theme</button>
       <button onclick="window.print()">🖨️ Print or PDF</button>
     </div>
@@ -331,7 +335,7 @@
     <a href="https://github.com/hab3x/Sustainability_Database" target="_blank">View on GitHub</a>
   </div>
 
-  <!-- Centralised search loader: this file lives at repo root -->
+  <!-- Centralised search loader: this file lives two levels down from root -->
   <script src="../../search-config.js"></script>
 
   <script>
