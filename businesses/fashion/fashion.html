@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fashion Industry – Sustainability Overview</title>
+  <title>Fashion Industry: Sustainability overview</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
   <style>
@@ -18,6 +18,17 @@
       --border: #2c352f;
     }
 
+    [data-theme='light'] {
+      --bg: #f5fef5;
+      --card: #ffffff;
+      --text: #1a2e1a;
+      --muted: #607d60;
+      --accent: #3ca974;
+      --accent-dark: #176f3b;
+      --accent-light: #e0f7eb;
+      --border: #d2e3d2;
+    }
+
     * { box-sizing: border-box; }
 
     body {
@@ -29,14 +40,27 @@
       max-width: 900px;
       margin-inline: auto;
       line-height: 1.8;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    h1, h2 {
+      color: var(--text);
+      font-weight: 600;
     }
 
     h1 {
-      font-size: 2.2rem;
+      font-size: 2.0rem;
       border-bottom: 3px solid var(--accent);
       padding-bottom: 0.5rem;
       margin-bottom: 1.5rem;
       display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      justify-content: space-between;
+    }
+
+    h1 span {
+      display: inline-flex;
       align-items: center;
       gap: 0.6rem;
     }
@@ -49,7 +73,6 @@
       margin-top: 2.5rem;
       margin-bottom: 1rem;
       padding-bottom: 0.3rem;
-      color: var(--text);
     }
 
     p { margin-top: 1rem; }
@@ -92,9 +115,29 @@
       margin-top: 4rem;
       font-size: 0.9rem;
       color: var(--muted);
-      text-align: center;
+      text-align: centre;
       border-top: 1px solid var(--border);
       padding-top: 1.5rem;
+    }
+
+    .controls {
+      display: flex;
+      gap: 1rem;
+      align-items: centre;
+    }
+
+    .controls button {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      padding: 0.4rem 0.8rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+
+    .controls button:hover {
+      background: #74fca0;
     }
 
     #search-container { margin-top: 2rem; }
@@ -130,9 +173,15 @@
     }
   </style>
 </head>
-<body>
+<body data-theme="dark">
 
-  <h1><i class="fas fa-tshirt"></i> Fashion Industry – Sustainability Overview</h1>
+  <h1>
+    <span><i class="fas fa-tshirt"></i> Fashion Industry – Sustainability overview</span>
+    <div class="controls">
+      <button onclick="toggleTheme()">🌓 Toggle Theme</button>
+      <button onclick="window.print()">🖨️ Print / PDF</button>
+    </div>
+  </h1>
 
   <div id="search-container">
     <input type="text" id="search-input" placeholder="Search businesses, sectors, or topics...">
@@ -140,9 +189,9 @@
   </div>
 
   <div class="card">
-    <h2>About the Fashion Industry</h2>
+    <h2>About the fashion industry</h2>
     <p>
-      The fashion industry covers the design, production, marketing, and sale of clothing, footwear, and accessories. It is one of the world's largest industries by employment and economic output, but also among the most resource-intensive. The sector spans fast fashion, luxury design, local manufacturing, and emerging sustainable labels.
+      The fashion industry covers the design, production, marketing, and sale of clothing, footwear, and accessories. It is one of the world's largest industries by employment and economic output, but also among the most resource intensive. The sector spans fast fashion, luxury design, local manufacturing, and emerging sustainable labels.
     </p>
     <p>
       Fashion intersects directly with global sustainability challenges. Its supply chains depend on raw materials such as cotton, wool, and synthetics, often linked to high water use, chemical pollution, and labour issues. Sustainable fashion therefore seeks to balance aesthetics and affordability with responsibility toward people, animals, and the planet.
@@ -150,11 +199,11 @@
   </div>
 
   <div class="card">
-    <h2>Key Sustainability Factors</h2>
-    <p>When assessing sustainability within the fashion sector, our database evaluates companies on factors such as:</p>
+    <h2>Key sustainability factors</h2>
+    <p>When assessing sustainability within the fashion sector, this database evaluates companies on factors such as:</p>
     <ul>
       <li>Transparency in sourcing and manufacturing processes.</li>
-      <li>Use of sustainable and recycled materials (organic cotton, hemp, Tencel, recycled polyester).</li>
+      <li>Use of sustainable and recycled materials (for example organic cotton, hemp, Tencel, recycled polyester).</li>
       <li>Fair labour practices, worker safety, and equitable wages.</li>
       <li>Waste reduction through circular models such as repair, resale, and recycling.</li>
       <li>Minimising environmental impact across dyeing, water use, and carbon footprint.</li>
@@ -164,23 +213,23 @@
   </div>
 
   <div class="card">
-    <h2>Common Certifications & Sustainable Practices</h2>
+    <h2>Common certifications and sustainable practices</h2>
     <p>Recognised certifications and sustainability initiatives include:</p>
     <ul>
       <li><strong>Global Organic Textile Standard (GOTS):</strong> certifies organic fibres and ethical processing.</li>
       <li><strong>Fair Trade Certified:</strong> ensures fair wages and working conditions.</li>
       <li><strong>B Corp Certification:</strong> measures social and environmental performance across businesses.</li>
-      <li><strong>OEKO-TEX Standard 100:</strong> verifies textiles free from harmful substances.</li>
-      <li><strong>Carbon Neutral / Climate Active:</strong> recognises verified emissions measurement and offsetting.</li>
-      <li><strong>Australian Made Campaign:</strong> supports on-shore manufacturing and shorter supply chains.</li>
+      <li><strong>OEKO TEX Standard 100:</strong> verifies textiles free from harmful substances.</li>
+      <li><strong>Carbon neutral / Climate Active:</strong> recognises verified emissions measurement and offsetting.</li>
+      <li><strong>Australian Made Campaign:</strong> supports on shore manufacturing and shorter supply chains.</li>
     </ul>
     <p>
-      Additional best practices include local production, closed-loop fabric systems, second-hand and vintage marketplaces, and education campaigns promoting responsible consumption.
+      Additional best practices include local production, closed loop fabric systems, second hand and vintage marketplaces, and education campaigns promoting responsible consumption.
     </p>
   </div>
 
   <div class="card">
-    <h2>Why Sustainable Fashion Matters</h2>
+    <h2>Why sustainable fashion matters</h2>
     <p>
       Globally, the fashion sector accounts for an estimated 8–10% of carbon emissions and 20% of wastewater. Transforming the industry is critical for meeting <strong>UN SDG 12 – Responsible Consumption and Production</strong> and <strong>SDG 8 – Decent Work and Economic Growth</strong>. Supporting ethical, transparent, and environmentally responsible brands helps reduce harm and create fairer systems from fibre to finished garment.
     </p>
@@ -188,51 +237,82 @@
 
   <div class="footer">
     &copy; 2025 Sustainability Database Project ·
-    <a href="https://github.com/hab3x/Sustainability_Database">View Source on GitHub</a>
+    <a href="https://github.com/hab3x/Sustainability_Database">View source on GitHub</a>
   </div>
 
-  <!-- Search System -->
-  <script src="../search-config.js"></script>
+  <!-- Centralised search loader: from businesses/fashion/ back to repo root -->
+  <script src="../../search-config.js"></script>
   <script>
+    function toggleTheme() {
+      const current = document.body.getAttribute('data-theme');
+      document.body.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+    }
+
     const input = document.getElementById("search-input");
     const results = document.getElementById("results");
 
-    async function loadPages() {
-      try {
-        const res = await fetch("../search-pages.json");
-        if (!res.ok) throw new Error("No JSON found");
-        return await res.json();
-      } catch {
-        return (typeof SEARCH_PAGES !== "undefined") ? SEARCH_PAGES : [];
-      }
+    const minChars = (typeof SEARCH_SETTINGS !== "undefined" && SEARCH_SETTINGS.minChars)
+      ? SEARCH_SETTINGS.minChars
+      : 2;
+
+    if (typeof SEARCH_SETTINGS !== "undefined" && SEARCH_SETTINGS.placeholder) {
+      input.placeholder = SEARCH_SETTINGS.placeholder;
     }
 
-    loadPages().then(pages => {
-      input.addEventListener("input", () => {
-        const query = input.value.toLowerCase();
-        results.innerHTML = "";
-        if (!query || query.length < 2) return;
+    const BASE_PATH = "../../";
 
-        const filtered = pages.filter(page =>
-          page.title.toLowerCase().includes(query)
-        );
+    function buildHref(file) {
+      if (/^https?:\/\//.test(file)) {
+        return file;
+      }
+      return BASE_PATH + file.replace(/^\//, "");
+    }
 
-        if (filtered.length === 0) {
-          const li = document.createElement("li");
-          li.textContent = "No results found.";
-          results.appendChild(li);
-          return;
-        }
+    function loadPages() {
+      return (typeof SEARCH_PAGES !== "undefined") ? SEARCH_PAGES : [];
+    }
 
-        filtered.forEach(page => {
-          const li = document.createElement("li");
-          const a = document.createElement("a");
-          a.href = page.file.startsWith('../') ? page.file : '../' + page.file;
-          a.textContent = page.title;
-          li.appendChild(a);
-          results.appendChild(li);
-        });
+    function renderResults(query, pages) {
+      const q = query.trim().toLowerCase();
+      results.innerHTML = "";
+
+      if (!q || q.length < minChars) {
+        return;
+      }
+
+      const filtered = pages.filter(page =>
+        page.title.toLowerCase().includes(q)
+      );
+
+      if (filtered.length === 0) {
+        const li = document.createElement("li");
+        li.textContent = "No results found.";
+        results.appendChild(li);
+        return;
+      }
+
+      filtered.forEach(page => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = buildHref(page.file);
+        a.textContent = page.title;
+        li.appendChild(a);
+        results.appendChild(li);
       });
+    }
+
+    const pages = loadPages();
+
+    const params = new URLSearchParams(window.location.search);
+    const initialQuery = params.get("q") || params.get("query") || "";
+
+    if (initialQuery) {
+      input.value = initialQuery;
+      renderResults(initialQuery, pages);
+    }
+
+    input.addEventListener("input", () => {
+      renderResults(input.value, pages);
     });
   </script>
 </body>
