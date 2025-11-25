@@ -10,13 +10,12 @@ const SEARCH_PAGES = [
   { title: "Espire Clothing", file: "businesses/fashion/espireclothing.html" },
   { title: "FAYT The Label", file: "businesses/fashion/faytthelabel.html" },
 
-    // Infrastructure & Industry
-  { title: "AGL Energy Limited", file: "businesses/Infrastructure & Industry/AGL.html" },
- 
-  
-  // Example directory
-  { title: "Ethical Threads", file: "businesses/Example/ethical-threads.html" },
+  // Infrastructure & Industry
+  { title: "AGL Energy Limited", file: "businesses/Infrastructure_and_Industry/AGL.html" },
 
+  // Example directory
+  { title: "Ethical Threads", file: "businesses/Example/ethical-threads.html" }
+];
 
 const SEARCH_SETTINGS = {
   placeholder: "Search businesses, sectors, or topics...",
