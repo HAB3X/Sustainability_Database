@@ -13,11 +13,14 @@
       --text: #e0f0e0;
       --muted: #93b293;
       --accent: #4ade80;
+      --accent-dark: #166534;
       --accent-light: #273c2f;
       --border: #2c352f;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -30,6 +33,7 @@
       line-height: 1.8;
     }
 
+    /* Shared navigation */
     .nav {
       display: flex;
       justify-content: space-between;
@@ -64,6 +68,12 @@
       text-decoration: underline;
     }
 
+    h1, h2, h3 {
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
     h1 {
       font-size: 2.2rem;
       border-bottom: 3px solid var(--accent);
@@ -73,7 +83,29 @@
       gap: 0.6rem;
     }
 
-    h1 i { color: var(--accent); }
+    h1 i {
+      color: var(--accent);
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      margin-top: 2.5rem;
+      padding-bottom: 0.3rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-top: 2rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    p {
+      margin-top: 1rem;
+    }
 
     .card {
       background: var(--card);
@@ -82,22 +114,13 @@
       padding: 1.5rem;
       margin-top: 2rem;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
     }
 
-    h2 {
-      margin-top: 1.5rem;
-      font-size: 1.6rem;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.3rem;
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
     }
-
-    h3 {
-      margin-top: 1.5rem;
-      font-size: 1.2rem;
-      color: var(--muted);
-    }
-
-    p { margin-top: 1rem; }
 
     ul {
       margin: 1rem 0 1.5rem 1.5rem;
@@ -107,30 +130,28 @@
       margin-bottom: 0.4rem;
     }
 
-    .tag {
-      display: inline-block;
-      background: var(--accent-light);
-      color: var(--accent);
-      border-radius: 20px;
-      padding: 0.35rem 0.8rem;
-      margin: 0.3rem 0.4rem 0.3rem 0;
-      font-size: 0.9rem;
-      text-decoration: none;
-    }
-
-    .tag:hover {
-      background: var(--accent);
-      color: #101412;
-    }
-
     a {
       color: var(--accent);
       text-decoration: none;
     }
 
-    a:hover { text-decoration: underline; }
+    a:hover {
+      text-decoration: underline;
+    }
 
-    #search-container { margin-top: 1.5rem; }
+    .footer {
+      margin-top: 4rem;
+      text-align: centre;
+      font-size: 0.9rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+    }
+
+    /* Search */
+    #search-container {
+      margin-top: 1.5rem;
+    }
 
     #search-input {
       width: 100%;
@@ -140,6 +161,12 @@
       border: 1px solid var(--border);
       background-color: #101412;
       color: var(--text);
+      transition: border 0.3s;
+    }
+
+    #search-input:focus {
+      outline: none;
+      border-color: var(--accent);
     }
 
     #results {
@@ -148,15 +175,39 @@
       margin-top: 1rem;
     }
 
-    #results li { margin-bottom: 0.5rem; }
+    #results li {
+      margin-bottom: 0.5rem;
+    }
 
-    .footer {
-      margin-top: 3rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: var(--muted);
-      border-top: 1px solid var(--border);
-      padding-top: 1.5rem;
+    .tag {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 20px;
+      font-size: 0.85rem;
+      padding: 0.3rem 0.8rem;
+      margin: 0.25rem 0.5rem 0.25rem 0;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .tag:hover {
+      background: var(--accent);
+      color: #101412;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+
+      .card {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
@@ -183,82 +234,160 @@
 
   <div class="card">
     <p>
-      This project is a free, open-source directory of businesses and sectors across Australia and New Zealand with a focus on sustainability, governance and social impact.
+      The <strong>Sustainability Database</strong> is a free, open source project that compiles factual profiles of businesses across Australia and New Zealand. It is designed for people who want to understand how companies operate, rather than relying on marketing language or unverified branding.
     </p>
     <p>
-      Entries are grouped into three major sectors: Fashion, Infrastructure & Industry, and Finance. Each profile summarises what the company does, where it operates, and how it performs on key environmental, social and governance indicators.
+      Each entry focuses on location, sector, key practices, risks, and governance, supported where possible by primary sources. The aim is not to promote or condemn individual businesses, but to provide enough structured information for users to make their own judgements.
     </p>
     <p>
-      All content is backed by public sources and documented in a transparent way using GitHub, Markdown files and structured data.
+      The project is maintained using GitHub, with research notes, sources, and changes tracked in a transparent way. You can return to the <a href="index.html">home page</a> or browse all current listings via the <a href="directory.html">directory</a>.
     </p>
   </div>
 
   <div class="card">
-    <h2>Sector overviews</h2>
+    <h2>How sustainability is defined here</h2>
+    <p>
+      Sustainability is treated as the intersection of environmental impact, social responsibility, and long term economic resilience. The focus is on what a business actually does, not what it claims in marketing material.
+    </p>
 
-    <h3>Fashion</h3>
-    <p>Clothing and apparel basics, with emphasis on local manufacturing, ethical sourcing and durability.</p>
-    <a class="tag" href="businesses/fashion/fashion.html">Fashion overview</a>
-
-    <h3>Infrastructure & Industry</h3>
-    <p>Energy, utilities and industrial infrastructure that underpin the wider economy.</p>
-    <a class="tag" href="businesses/Infrastructure_&_Industry/Infrastructure_&_Industry.html">
-      Infrastructure & Industry overview
-    </a>
-
-    <h3>Finance</h3>
-    <p>Banks, asset managers and other financial institutions allocating capital and shaping economic incentives.</p>
-    <a class="tag" href="businesses/finance/Finance.html">Finance overview</a>
-  </div>
-
-  <div class="card">
-    <h2>How the directory is built</h2>
+    <h3><i class="fas fa-recycle"></i> Environmental sustainability</h3>
     <ul>
-      <li>Profiles draw on company reports, regulatory filings, credible news coverage and independent databases.</li>
-      <li>Information is structured consistently to help users compare companies and sectors.</li>
-      <li>Research notes, issues and updates are managed via GitHub for transparency.</li>
+      <li>Designing products and services to be durable, repairable, and less resource intensive.</li>
+      <li>Reducing waste through better design, reuse, recycling, and circular models.</li>
+      <li>Managing emissions, water use, and pollution in a measurable way.</li>
+      <li>Using materials and energy sources with lower long term environmental impact.</li>
     </ul>
-    <p>You can browse all current entries on the directory page.</p>
-    <p><a href="directory.html">Open the full directory →</a></p>
+
+    <h3><i class="fas fa-people-group"></i> Social responsibility</h3>
+    <ul>
+      <li>Providing safe, fairly paid, and non exploitative work throughout the supply chain.</li>
+      <li>Offering products and services that do not harm health, dignity, or basic rights.</li>
+      <li>Contributing positively to communities rather than extracting value without regard for consequences.</li>
+      <li>Being transparent about ownership, governance, and decision making structures.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>How businesses are grouped</h2>
+    <p>
+      For clarity, profiles are organised under a small number of umbrella sector pages. These summarise common issues and link through to individual companies.
+    </p>
+
+    <h3><i class="fas fa-shirt"></i> Fashion and consumer goods</h3>
+    <p>
+      Covers clothing, footwear, accessories, and related consumer products where supply chains, labour standards, and material choices are core issues.
+    </p>
+    <div>
+      <a class="tag" href="businesses/fashion/fashion.html">Fashion overview</a>
+      <a class="tag" href="businesses/fashion/Australianstitch.html">Australian Stitch</a>
+      <a class="tag" href="businesses/fashion/espireclothing.html">Espire Clothing</a>
+      <a class="tag" href="businesses/fashion/faytthelabel.html">FAYT The Label</a>
+    </div>
+
+    <h3><i class="fas fa-industry"></i> Infrastructure and industry</h3>
+    <p>
+      Includes large scale utilities, energy providers, and industrial firms where infrastructure, emissions, and long term environmental impacts are central.
+    </p>
+    <div>
+      <a class="tag" href="businesses/Infrastructure_&_Industry/Infrastructure_&_Industry.html">Infrastructure & Industry overview</a>
+      <a class="tag" href="businesses/Infrastructure_&_Industry/AGL.html">AGL Energy Limited</a>
+      <a class="tag" href="businesses/Infrastructure_&_Industry/ALS.html">ALS Limited</a>
+      <a class="tag" href="businesses/Infrastructure_&_Industry/AMC.html">Amcor plc</a>
+      <a class="tag" href="businesses/Infrastructure_&_Industry/ALD.html">Ampol Limited</a>
+      <a class="tag" href="businesses/Infrastructure_&_Industry/APA.HTML">APA Group</a>
+    </div>
+
+    <h3><i class="fas fa-scale-balanced"></i> Finance and capital</h3>
+    <p>
+      Covers banks, asset managers, and financial institutions that allocate capital and shape which activities are funded or starved of resources.
+    </p>
+    <div>
+      <a class="tag" href="businesses/finance/Finance.html">Finance overview</a>
+      <a class="tag" href="businesses/finance/ANZ.html">ANZ Group Holdings Limited</a>
+      <a class="tag" href="businesses/finance/ARG.HTML">Argo Investments Limited</a>
+    </div>
+
+    <h3><i class="fas fa-dice"></i> Gambling and gaming</h3>
+    <p>
+      Includes companies whose core business model depends on gambling revenue or gambling-like mechanics, where social harm and regulatory risk are key concerns.
+    </p>
+    <div>
+      <a class="tag" href="businesses/Gambling_&_Gaming/ALL.HTML">Aristocrat Leisure Limited</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>How to navigate the database</h2>
+    <ul>
+      <li>Use the search box at the top of this page to find specific businesses or sectors.</li>
+      <li>Open umbrella sector pages (fashion, infrastructure and industry, finance, gambling and gaming) for context and links.</li>
+      <li>Visit the <a href="directory.html">directory</a> for a plain list of every page currently published.</li>
+      <li>Return to the <a href="index.html">home page</a> for a quick overview and entry point.</li>
+    </ul>
   </div>
 
   <div class="footer">
     &copy; 2025 Sustainability Database Project
   </div>
 
+  <!-- Centralised Search Loader -->
   <script src="search-config.js"></script>
   <script>
     const input = document.getElementById("search-input");
     const results = document.getElementById("results");
 
+    const minChars = (typeof SEARCH_SETTINGS !== "undefined" && SEARCH_SETTINGS.minChars)
+      ? SEARCH_SETTINGS.minChars
+      : 2;
+
+    if (typeof SEARCH_SETTINGS !== "undefined" && SEARCH_SETTINGS.placeholder) {
+      input.placeholder = SEARCH_SETTINGS.placeholder;
+    }
+
     async function loadPages() {
       try {
         const res = await fetch("search-pages.json");
-        if (!res.ok) throw new Error("Missing JSON");
+        if (!res.ok) {
+          throw new Error("No JSON found");
+        }
         return await res.json();
       } catch {
         return (typeof SEARCH_PAGES !== "undefined") ? SEARCH_PAGES : [];
       }
     }
 
+    function renderResults(query, pages) {
+      const q = query.trim().toLowerCase();
+      results.innerHTML = "";
+
+      if (!q || q.length < minChars) {
+        return;
+      }
+
+      const filtered = pages.filter(page =>
+        page.title.toLowerCase().includes(q)
+      );
+
+      if (filtered.length === 0) {
+        const li = document.createElement("li");
+        li.textContent = "No results found.";
+        results.appendChild(li);
+        return;
+      }
+
+      filtered.forEach(page => {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = page.file;
+        a.textContent = page.title;
+        li.appendChild(a);
+        results.appendChild(li);
+      });
+    }
+
     loadPages().then(pages => {
       input.addEventListener("input", () => {
-        const q = input.value.toLowerCase();
-        results.innerHTML = "";
-        if (q.length < 2) return;
-
-        const matches = pages.filter(p => p.title.toLowerCase().includes(q));
-
-        if (matches.length === 0) {
-          results.innerHTML = "<li>No results found.</li>";
-          return;
-        }
-
-        matches.forEach(p => {
-          const li = document.createElement("li");
-          li.innerHTML = `<a href="${p.file}">${p.title}</a>`;
-          results.appendChild(li);
-        });
+        renderResults(input.value, pages);
       });
     });
   </script>
