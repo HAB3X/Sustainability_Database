@@ -11,11 +11,11 @@ const SEARCH_PAGES = [
   { title: "FAYT The Label", file: "businesses/fashion/faytthelabel.html" },
 
   // Infrastructure & Industry
-  { title: "Infrastructure & Industry Overview", file: "businesses/Infrastructure & Industry/Infrastructure_and_Industry.html" },
-  { title: "AGL Energy Limited", file: "businesses/Infrastructure & Industry/AGL.html" },
-  { title: "ALS Limited", file: "businesses/Infrastructure & Industry/ALS.html" },
-  { title: "Amcor plc", file: "businesses/Infrastructure & Industry/AMC.html" },
-  { title: "Ampol Limited", file: "businesses/Infrastructure & Industry/ALD.html" },
+  { title: "Infrastructure & Industry Overview", file: "businesses/Infrastructure & Industry/Infrastructure_&_Industry.html" },
+  { title: "AGL Energy Limited", file: "businesses/Infrastructure_&_Industry/AGL.html" },
+  { title: "ALS Limited", file: "businesses/Infrastructure_&_Industry/ALS.html" },
+  { title: "Amcor plc", file: "businesses/Infrastructure_&_Industry/AMC.html" },
+  { title: "Ampol Limited", file: "businesses/Infrastructure_&_Industry/ALD.html" },
 
   // Finance
   { title: "Finance & Banking", file: "businesses/finance/Finance.html" },
